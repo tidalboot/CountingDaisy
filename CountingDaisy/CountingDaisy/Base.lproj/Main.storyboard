@@ -16,19 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykq-P4-u5A">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykq-P4-u5A">
+                                <rect key="frame" x="102" y="269" width="117" height="30"/>
+                                <state key="normal" title="Let's get random">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateRandomNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gcr-vm-Pkm"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-Zu-Z2N">
+                                <rect key="frame" x="91" y="94" width="138" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Gyf-oK-fuW"/>
+                                    <constraint firstAttribute="width" constant="138" id="yXh-g1-dcx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="LI1-Zu-Z2N" secondAttribute="centerX" id="dXS-wl-ihb"/>
+                            <constraint firstItem="ykq-P4-u5A" firstAttribute="top" secondItem="LI1-Zu-Z2N" secondAttribute="bottom" constant="106" id="kXh-t1-d4h"/>
+                            <constraint firstAttribute="centerY" secondItem="ykq-P4-u5A" secondAttribute="centerY" id="pfl-GH-nd6"/>
+                            <constraint firstAttribute="centerX" secondItem="ykq-P4-u5A" secondAttribute="centerX" constant="-0.5" id="z6Q-3o-f9o"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="randomNumberLabel" destination="LI1-Zu-Z2N" id="bkQ-WE-Cbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.66666666666666" y="228.14666666666668"/>
+            <point key="canvasLocation" x="218" y="228"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
