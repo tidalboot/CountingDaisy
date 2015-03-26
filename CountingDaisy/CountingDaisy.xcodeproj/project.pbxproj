@@ -12,7 +12,8 @@
 		FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */; };
 		FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */; };
 		FC2330E21AC49B2F00F6BCF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2330E01AC49B2F00F6BCF2 /* LaunchScreen.xib */; };
-		FC2330EE1AC49B2F00F6BCF2 /* CountingDaisyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */; };
+		FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */; };
+		FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,8 @@
 		FC2330E11AC49B2F00F6BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingDaisyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330EC1AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingDaisyTests.swift; sourceTree = "<group>"; };
+		FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculatorTests.swift; sourceTree = "<group>"; };
+		FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
+				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
 				FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
@@ -98,8 +101,8 @@
 		FC2330EA1AC49B2F00F6BCF2 /* CountingDaisyTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */,
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
+				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
 			);
 			path = CountingDaisyTests;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2330DA1AC49B2F00F6BCF2 /* ViewController.swift in Sources */,
+				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2330EE1AC49B2F00F6BCF2 /* CountingDaisyTests.swift in Sources */,
+				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
