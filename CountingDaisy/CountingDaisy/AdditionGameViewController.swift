@@ -11,7 +11,13 @@ import UIKit
 class AdditionGameViewController: UIViewController {
 
     let randomNumberCalculator = RandomNumberCalculator()
+    let additionGameHandler = AdditionGameHandler()
+    
     @IBOutlet var randomNumberLabel: UILabel!
+    @IBOutlet var augendLabel: UILabel!
+    @IBOutlet var addendLAbel: UILabel!
+    @IBOutlet var summationLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +33,16 @@ class AdditionGameViewController: UIViewController {
 
     
     @IBAction func generateRandomNumber(sender: AnyObject) {
-        var randomNumber = randomNumberCalculator.generateRandomNumbers(1, minumumValue: 1, maximumValue: 1000)
         
-        randomNumberLabel.text = "\(randomNumber[0])"
+        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 50)
+        
+        var augend = arrayOfRandomNumbers[0] as! Int
+        var addend = arrayOfRandomNumbers[1] as! Int
+        
+        augendLabel.text = "\(augend)"
+        addendLAbel.text = "\(addend)"
+        summationLabel.text = "\(additionGameHandler.generateResult(augend, addend: addend))"
+        
     }
 
 }
