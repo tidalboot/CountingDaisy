@@ -31,9 +31,8 @@ class randomNumberCalculatorTests: XCTestCase {
                 numberOfMatchesFound++
             }
             
-            XCTAssertEqual(numberOfMatchesFound, 3, "Random tolerance too low as \(numberOfMatchesFound * 2) matches were found after \(randomPairsToCheck) random number requests")
+            XCTAssertNotEqual(numberOfMatchesFound, 3, "Random tolerance too low as \(numberOfMatchesFound * 2) matches were found after \(randomPairsToCheck) random number requests")
         }
-
     }
     
     func test_that_generate_random_numbers_produces_numbers_within_the_specified_range () {

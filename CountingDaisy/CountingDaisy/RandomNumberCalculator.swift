@@ -14,10 +14,18 @@ public class RandomNumberCalculator {
         
     }
     
-    public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int, maximumValue: Int) -> NSArray {
-        var array = NSArray()
+    public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: UInt32, maximumValue: UInt32) -> NSArray {
+        var arrayToReturn: [Int] = []
         
-        return array
+        var i = 0
+        
+        while i < quantityOfNumbersToGenerate {
+            var randomNumber = Int(arc4random_uniform(maximumValue) + minumumValue)
+            arrayToReturn.append(randomNumber)
+            i++
+        }
+        
+        return arrayToReturn
     }
     
 }
