@@ -14,6 +14,7 @@
 		FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */; };
 		FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */; };
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
+		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculatorTests.swift; sourceTree = "<group>"; };
 		FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculator.swift; sourceTree = "<group>"; };
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
+		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
 				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
+				FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */,
 			);
 			path = CountingDaisyTests;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */,
 				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
