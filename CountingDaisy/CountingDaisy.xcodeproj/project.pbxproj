@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */; };
-		FC2330DA1AC49B2F00F6BCF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */; };
+		FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */; };
 		FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */; };
 		FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */; };
 		FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */; };
 		FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */; };
+		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingDaisy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		FC2330DC1AC49B2F00F6BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingDaisyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330EC1AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculatorTests.swift; sourceTree = "<group>"; };
 		FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculator.swift; sourceTree = "<group>"; };
+		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,9 @@
 		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
 			isa = PBXGroup;
 			children = (
+				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
 				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
-				FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
@@ -110,6 +112,15 @@
 				FC2330EC1AC49B2F00F6BCF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2330FE1AC4B33600F6BCF2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */,
+				FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2330DA1AC49B2F00F6BCF2 /* ViewController.swift in Sources */,
+				FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */,
+				FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */,
 				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 			);
