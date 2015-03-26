@@ -12,11 +12,11 @@ import CountingDaisy
 
 class AdditionGameHandlerTests: XCTestCase {
     
-    var additionGameHandlerTests: AdditionGameHandler? = nil
+    var additionGameHandler: AdditionGameHandler? = nil
     
     override func setUp() {
         super.setUp()
-        additionGameHandlerTests = AdditionGameHandler()
+        additionGameHandler = AdditionGameHandler()
     }
     
     override func tearDown() {
@@ -28,16 +28,14 @@ class AdditionGameHandlerTests: XCTestCase {
         var timesToTest: Int
         var numberOfExactResults = 0
         
-        
-        for timesToTest = 0; timesToTest < 10; timesToTest++ {
-            var additionResult = additionGameHandler.generateResult(1, 2)
+        for timesToTest = 0; timesToTest < 100; timesToTest++ {
+            var additionResult = additionGameHandler!.generateResult(1,addend: 2)
             
             if additionResult == 3 {
                 numberOfExactResults++
             }
             
-            XCTAssertNotEqual(numberOfExactResults, 7, "Random tolerance is too low. \(numberOfExactResults) numbers were returned as correct which is above the 50% allowed")
-        }
+            XCTAssertNotEqual(numberOfExactResults, 70, "Too many returned exact results")        }
     }
     
 }

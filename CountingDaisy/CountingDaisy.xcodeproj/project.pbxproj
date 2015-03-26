@@ -15,6 +15,7 @@
 		FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */; };
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
+		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculator.swift; sourceTree = "<group>"; };
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
+		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
+				FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */,
 				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
@@ -228,6 +231,7 @@
 				FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */,
 				FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */,
 				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
+				FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */,
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

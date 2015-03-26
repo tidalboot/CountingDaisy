@@ -14,6 +14,11 @@ public class RandomNumberCalculator {
         
     }
     
+    func generateRandomNumber (minumumValue: UInt32, maximumValue: UInt32) -> Int {
+        var randomNumber = Int(arc4random_uniform(maximumValue) + minumumValue)
+        return randomNumber
+    }
+    
     public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: UInt32, maximumValue: UInt32) -> NSArray {
         var arrayToReturn: [Int] = []
         
