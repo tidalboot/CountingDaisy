@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */; };
+		FC2330DA1AC49B2F00F6BCF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */; };
+		FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */; };
+		FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */; };
+		FC2330E21AC49B2F00F6BCF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2330E01AC49B2F00F6BCF2 /* LaunchScreen.xib */; };
+		FC2330EE1AC49B2F00F6BCF2 /* CountingDaisyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC2330E81AC49B2F00F6BCF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2330CA1AC49B2F00F6BCF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC2330D11AC49B2F00F6BCF2;
+			remoteInfo = CountingDaisy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingDaisy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC2330DC1AC49B2F00F6BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FC2330E11AC49B2F00F6BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingDaisyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2330EC1AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingDaisyTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC2330CF1AC49B2F00F6BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2330E41AC49B2F00F6BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC2330C91AC49B2F00F6BCF2 = {
+			isa = PBXGroup;
+			children = (
+				FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */,
+				FC2330EA1AC49B2F00F6BCF2 /* CountingDaisyTests */,
+				FC2330D31AC49B2F00F6BCF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC2330D31AC49B2F00F6BCF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */,
+				FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
+				FC2330D91AC49B2F00F6BCF2 /* ViewController.swift */,
+				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
+				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
+				FC2330E01AC49B2F00F6BCF2 /* LaunchScreen.xib */,
+				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
+			);
+			path = CountingDaisy;
+			sourceTree = "<group>";
+		};
+		FC2330D51AC49B2F00F6BCF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330D61AC49B2F00F6BCF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2330EA1AC49B2F00F6BCF2 /* CountingDaisyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330ED1AC49B2F00F6BCF2 /* CountingDaisyTests.swift */,
+				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
+			);
+			path = CountingDaisyTests;
+			sourceTree = "<group>";
+		};
+		FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2330EC1AC49B2F00F6BCF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisy" */;
+			buildPhases = (
+				FC2330CE1AC49B2F00F6BCF2 /* Sources */,
+				FC2330CF1AC49B2F00F6BCF2 /* Frameworks */,
+				FC2330D01AC49B2F00F6BCF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountingDaisy;
+			productName = CountingDaisy;
+			productReference = FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC2330E61AC49B2F00F6BCF2 /* CountingDaisyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisyTests" */;
+			buildPhases = (
+				FC2330E31AC49B2F00F6BCF2 /* Sources */,
+				FC2330E41AC49B2F00F6BCF2 /* Frameworks */,
+				FC2330E51AC49B2F00F6BCF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC2330E91AC49B2F00F6BCF2 /* PBXTargetDependency */,
+			);
+			name = CountingDaisyTests;
+			productName = CountingDaisyTests;
+			productReference = FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC2330CA1AC49B2F00F6BCF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Nick Jones";
+				TargetAttributes = {
+					FC2330D11AC49B2F00F6BCF2 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					FC2330E61AC49B2F00F6BCF2 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = FC2330D11AC49B2F00F6BCF2;
+					};
+				};
+			};
+			buildConfigurationList = FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "CountingDaisy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC2330C91AC49B2F00F6BCF2;
+			productRefGroup = FC2330D31AC49B2F00F6BCF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */,
+				FC2330E61AC49B2F00F6BCF2 /* CountingDaisyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC2330D01AC49B2F00F6BCF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
+				FC2330E21AC49B2F00F6BCF2 /* LaunchScreen.xib in Resources */,
+				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2330E51AC49B2F00F6BCF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC2330CE1AC49B2F00F6BCF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2330DA1AC49B2F00F6BCF2 /* ViewController.swift in Sources */,
+				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2330E31AC49B2F00F6BCF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2330EE1AC49B2F00F6BCF2 /* CountingDaisyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC2330E91AC49B2F00F6BCF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */;
+			targetProxy = FC2330E81AC49B2F00F6BCF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2330DC1AC49B2F00F6BCF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC2330E01AC49B2F00F6BCF2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2330E11AC49B2F00F6BCF2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC2330EF1AC49B2F00F6BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC2330F01AC49B2F00F6BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC2330F21AC49B2F00F6BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC2330F31AC49B2F00F6BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC2330F51AC49B2F00F6BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CountingDaisyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountingDaisy.app/CountingDaisy";
+			};
+			name = Debug;
+		};
+		FC2330F61AC49B2F00F6BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CountingDaisyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountingDaisy.app/CountingDaisy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "CountingDaisy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2330EF1AC49B2F00F6BCF2 /* Debug */,
+				FC2330F01AC49B2F00F6BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2330F21AC49B2F00F6BCF2 /* Debug */,
+				FC2330F31AC49B2F00F6BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2330F51AC49B2F00F6BCF2 /* Debug */,
+				FC2330F61AC49B2F00F6BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC2330CA1AC49B2F00F6BCF2 /* Project object */;
+}
