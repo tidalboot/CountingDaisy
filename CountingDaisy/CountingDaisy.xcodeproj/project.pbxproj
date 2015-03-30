@@ -18,6 +18,7 @@
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
+		FC83F7DA1ACA0B8A00B9BA15 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
+		FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
 			isa = PBXGroup;
 			children = (
+				FC83F7D81ACA0B7E00B9BA15 /* Controllers */,
 				FC4B9DD71AC9FA71004390E2 /* Sounds */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
@@ -141,6 +144,14 @@
 				FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		FC83F7D81ACA0B7E00B9BA15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */,
+				FC83F7DA1ACA0B8A00B9BA15 /* SoundController.swift in Sources */,
 				FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */,
 				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
 				FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */,

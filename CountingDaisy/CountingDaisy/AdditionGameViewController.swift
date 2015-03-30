@@ -13,8 +13,9 @@ class AdditionGameViewController: UIViewController {
 
     let randomNumberCalculator = RandomNumberCalculator()
     let additionGameHandler = AdditionGameHandler()
+    let soundController = SoundController()
 
-//    var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct", ofType: "wav")!)
+
     var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Success", ofType: "mp3")!)
     var failSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Fail", ofType: "mp3")!)
     var audioPlayer = AVAudioPlayer()
@@ -67,20 +68,12 @@ class AdditionGameViewController: UIViewController {
             scoreLabel.text = "\(score)"
             incorrectLabel.hidden = true
             correctLabel.hidden = false
-            if (audioPlayer.rate > 0) {
-                audioPlayer.currentTime = 0
-            }
-            audioPlayer.play()
+            soundController.playAudio(audioPlayer)
         }
         else {
             incorrectLabel.hidden = false
             correctLabel.hidden = true
-            
-            if (failAudioPlayer.rate > 0) {
-                failAudioPlayer.currentTime = 0
-            }
-            failAudioPlayer.play()
-            
+            soundController.playAudio(failAudioPlayer)
         }
         nextSetOfNumbers()
     }
@@ -91,20 +84,14 @@ class AdditionGameViewController: UIViewController {
             scoreLabel.text = "\(score)"
             incorrectLabel.hidden = true
             correctLabel.hidden = false
-            if (audioPlayer.rate > 0) {
-                audioPlayer.currentTime = 0
-            }
-            audioPlayer.play()
+            soundController.playAudio(audioPlayer)
         }
         else {
             incorrectLabel.hidden = false
             correctLabel.hidden = true
-            
-            if (failAudioPlayer.rate > 0) {
-                failAudioPlayer.currentTime = 0
-            }
-            failAudioPlayer.play()
+            soundController.playAudio(failAudioPlayer)
         }
         nextSetOfNumbers()
     }
+    
 }
