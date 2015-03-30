@@ -16,6 +16,8 @@
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
+		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
+		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
+		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
+		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
 			isa = PBXGroup;
 			children = (
+				FC4B9DD71AC9FA71004390E2 /* Sounds */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
 				FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */,
@@ -127,6 +132,15 @@
 				FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC4B9DD71AC9FA71004390E2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */,
+				FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
+				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +319,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
+				"SDKROOT[arch=*]" = iphoneos8.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -341,9 +358,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -353,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -363,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -421,6 +440,7 @@
 				FC2330F31AC49B2F00F6BCF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisyTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +449,7 @@
 				FC2330F61AC49B2F00F6BCF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

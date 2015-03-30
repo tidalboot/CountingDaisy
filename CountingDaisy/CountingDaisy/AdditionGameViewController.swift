@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AdditionGameViewController: UIViewController {
 
     let randomNumberCalculator = RandomNumberCalculator()
     let additionGameHandler = AdditionGameHandler()
+
+//    var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct", ofType: "wav")!)
+    var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Success", ofType: "mp3")!)
+    var failSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Fail", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
+    var failAudioPlayer = AVAudioPlayer()
+    
     
     var augend: Int = 0
     var addend: Int = 0
@@ -32,6 +40,14 @@ class AdditionGameViewController: UIViewController {
         nextSetOfNumbers()
         incorrectLabel.hidden = true
         correctLabel.hidden = true
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: successSound, error: nil)
+        audioPlayer.prepareToPlay()
+        audioPlayer.volume = 0.4
+        
+        failAudioPlayer = AVAudioPlayer(contentsOfURL: failSound, error: nil)
+        failAudioPlayer.prepareToPlay()
+        failAudioPlayer.volume = 0.4
     }
 
     func nextSetOfNumbers () {
@@ -51,10 +67,20 @@ class AdditionGameViewController: UIViewController {
             scoreLabel.text = "\(score)"
             incorrectLabel.hidden = true
             correctLabel.hidden = false
+            if (audioPlayer.rate > 0) {
+                audioPlayer.currentTime = 0
+            }
+            audioPlayer.play()
         }
         else {
             incorrectLabel.hidden = false
             correctLabel.hidden = true
+            
+            if (failAudioPlayer.rate > 0) {
+                failAudioPlayer.currentTime = 0
+            }
+            failAudioPlayer.play()
+            
         }
         nextSetOfNumbers()
     }
@@ -65,10 +91,19 @@ class AdditionGameViewController: UIViewController {
             scoreLabel.text = "\(score)"
             incorrectLabel.hidden = true
             correctLabel.hidden = false
+            if (audioPlayer.rate > 0) {
+                audioPlayer.currentTime = 0
+            }
+            audioPlayer.play()
         }
         else {
             incorrectLabel.hidden = false
             correctLabel.hidden = true
+            
+            if (failAudioPlayer.rate > 0) {
+                failAudioPlayer.currentTime = 0
+            }
+            failAudioPlayer.play()
         }
         nextSetOfNumbers()
     }

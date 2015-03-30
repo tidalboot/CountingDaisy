@@ -16,21 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counting Daisy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-gJ-Doh">
-                                <rect key="frame" x="30" y="96" width="261" height="48"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" red="0.52072760157456899" green="0.78068066859714957" blue="0.94345801767676774" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time for some maths!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKt-7d-aC2">
-                                <rect key="frame" x="75" y="205" width="171" height="21"/>
+                                <rect key="frame" x="24" y="161" width="171" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.41679819989330447" green="0.70920050036402904" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94345801767676774" green="0.5837356120581586" blue="0.42149310196692796" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbx-Fi-bYC">
-                                <rect key="frame" x="132" y="269" width="58" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <rect key="frame" x="123" y="266" width="77" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Let's go">
                                     <color key="titleColor" red="0.88149323032155424" green="0.90217242073404502" blue="0.90699968434343436" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.41537905586596324" green="0.41485531121490204" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,15 +33,23 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" animates="NO" id="H6Y-rh-bK2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-gJ-Doh">
+                                <rect key="frame" x="24" y="39" width="201" height="114"/>
+                                <string key="text">Counting 
+Daisy</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="0.94345801767676774" green="0.88417709128816957" blue="0.88848639240330285" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.44763490844583659" green="0.049380225635509346" blue="0.78981218434343436" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.43060776035568976" green="0.38180532016354657" blue="0.79452730429292928" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="OvW-gJ-Doh" secondAttribute="centerX" constant="-0.5" id="3nf-s2-IWh"/>
-                            <constraint firstAttribute="centerX" secondItem="SKt-7d-aC2" secondAttribute="centerX" constant="-0.5" id="5z1-yp-dlm"/>
                             <constraint firstAttribute="centerX" secondItem="bbx-Fi-bYC" secondAttribute="centerX" constant="-1" id="9qI-eN-tD5"/>
+                            <constraint firstItem="OvW-gJ-Doh" firstAttribute="leading" secondItem="bbx-Fi-bYC" secondAttribute="trailing" constant="-176" id="A51-EN-Say"/>
+                            <constraint firstItem="SKt-7d-aC2" firstAttribute="top" secondItem="OvW-gJ-Doh" secondAttribute="bottom" constant="8" id="ELW-0i-bNQ"/>
+                            <constraint firstItem="OvW-gJ-Doh" firstAttribute="centerX" secondItem="SKt-7d-aC2" secondAttribute="centerX" constant="15" id="eDG-gm-8FZ"/>
+                            <constraint firstItem="OvW-gJ-Doh" firstAttribute="top" secondItem="Mri-QB-Nyn" secondAttribute="bottom" constant="19" id="elU-RU-w4A"/>
                             <constraint firstAttribute="centerY" secondItem="bbx-Fi-bYC" secondAttribute="centerY" id="kC7-I3-MV2"/>
-                            <constraint firstItem="OvW-gJ-Doh" firstAttribute="top" secondItem="Mri-QB-Nyn" secondAttribute="bottom" constant="76" id="uff-zf-LH3"/>
-                            <constraint firstItem="SKt-7d-aC2" firstAttribute="top" secondItem="OvW-gJ-Doh" secondAttribute="bottom" constant="61" id="wLu-9c-dlN"/>
                         </constraints>
                     </view>
                 </viewController>
