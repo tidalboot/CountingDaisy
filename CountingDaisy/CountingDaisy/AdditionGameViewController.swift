@@ -62,34 +62,36 @@ class AdditionGameViewController: UIViewController {
         summationLabel.text = "\(summation)"
     }
     
+    func correctAnswer () {
+        score++
+        scoreLabel.text = "\(score)"
+        incorrectLabel.hidden = true
+        correctLabel.hidden = false
+        soundController.playAudio(audioPlayer)
+    }
+    
+    func wrongAnswer () {
+        incorrectLabel.hidden = false
+        correctLabel.hidden = true
+        soundController.playAudio(failAudioPlayer)
+    }
+    
     @IBAction func clickedYes(sender: AnyObject) {
         if summation == (augend + addend) {
-            score++
-            scoreLabel.text = "\(score)"
-            incorrectLabel.hidden = true
-            correctLabel.hidden = false
-            soundController.playAudio(audioPlayer)
+            correctAnswer()
         }
         else {
-            incorrectLabel.hidden = false
-            correctLabel.hidden = true
-            soundController.playAudio(failAudioPlayer)
+            wrongAnswer()
         }
         nextSetOfNumbers()
     }
 
     @IBAction func clickedNo(sender: AnyObject) {
         if summation != (augend + addend) {
-            score++
-            scoreLabel.text = "\(score)"
-            incorrectLabel.hidden = true
-            correctLabel.hidden = false
-            soundController.playAudio(audioPlayer)
+            correctAnswer()
         }
         else {
-            incorrectLabel.hidden = false
-            correctLabel.hidden = true
-            soundController.playAudio(failAudioPlayer)
+           wrongAnswer()
         }
         nextSetOfNumbers()
     }
