@@ -15,6 +15,7 @@ class AdditionGameViewController: UIViewController {
     let randomNumberCalculator = RandomNumberCalculator()
     let additionGameHandler = AdditionGameHandler()
     let soundController = SoundController()
+    let nodeHandler = NodeHandler()
 
 
     var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Success", ofType: "mp3")!)
@@ -46,11 +47,8 @@ class AdditionGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextSetOfNumbers()
-        incorrectLabel.hidden = true
-        correctLabel.hidden = true
-        retryButton.hidden = true
         
-        timerLabel.text = ("\(timeLeft)")
+        nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
         
         audioPlayer = AVAudioPlayer(contentsOfURL: successSound, error: nil)
         audioPlayer.prepareToPlay()
@@ -71,12 +69,9 @@ class AdditionGameViewController: UIViewController {
         timerLabel.text = ("\(rounded)")
         
         if timeLeft <= 0 {
-            noButton.hidden = true
-            yesButton.hidden = true
-            timerLabel.hidden = true
-            correctLabel.hidden = true
-            incorrectLabel.hidden = false
-            retryButton.hidden = false
+            
+            nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel])
+            nodeHandler.showNodes([incorrectLabel, retryButton])
             incorrectLabel.text = "Game Over!"
         }
     }
@@ -95,15 +90,15 @@ class AdditionGameViewController: UIViewController {
     func correctAnswer () {
         score++
         scoreLabel.text = "\(score)"
-        incorrectLabel.hidden = true
-        correctLabel.hidden = false
+        nodeHandler.showNodes([correctLabel])
+        nodeHandler.hideNodes([incorrectLabel])
         soundController.playAudio(audioPlayer)
         timeLeft = timeLeft + 1
     }
     
     func wrongAnswer () {
-        incorrectLabel.hidden = false
-        correctLabel.hidden = true
+        nodeHandler.hideNodes([correctLabel])
+        nodeHandler.showNodes([incorrectLabel])
         soundController.playAudio(failAudioPlayer)
         timeLeft = timeLeft - 2
     }
@@ -129,12 +124,9 @@ class AdditionGameViewController: UIViewController {
     }
     
     @IBAction func clickedRetry(sender: AnyObject) {
-        noButton.hidden = false
-        yesButton.hidden = false
-        timerLabel.hidden = false
-        correctLabel.hidden = true
-        incorrectLabel.hidden = true
-        retryButton.hidden = true
+        
+        nodeHandler.showNodes([noButton, yesButton, timerLabel])
+        nodeHandler.hideNodes([correctLabel, incorrectLabel, retryButton])
         incorrectLabel.text = "Not quite"
         score = 0
         timeLeft = 10
