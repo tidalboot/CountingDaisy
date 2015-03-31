@@ -268,7 +268,7 @@
                                     <constraint firstAttribute="width" constant="190" id="Zd5-FI-B18"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
-                                <color key="textColor" red="1" green="0.32934015241696202" blue="0.46985825943848347" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.84313725490196079" green="0.30588235294117649" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-Fa-9oy" userLabel="CorrectLabel">
@@ -278,7 +278,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pnM-L3-fmD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.66846030761847453" blue="0.75171638257575757" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-u6-kA2">
@@ -309,7 +309,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Retry?">
-                                    <color key="titleColor" red="0.3411764705882353" green="0.32156862745098042" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.9882352941176471" green="0.37647058823529411" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
