@@ -86,7 +86,7 @@ class AdditionGameViewController: UIViewController {
         nodeHandler.hideNodes([correctLabel])
         nodeHandler.showNodes([incorrectLabel])
         soundHandler.playAudio(failAudioPlayer)
-        timeLeft = timeLeft - 2
+        timeLeft = timeLeft - 3
     }
     
     

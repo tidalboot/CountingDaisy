@@ -122,7 +122,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.31372549019607843" green="0.30588235294117649" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.32192864547524719" green="0.29994185079302099" blue="0.63780381944444442" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YRa-RE-Vpq" firstAttribute="top" secondItem="bbx-Fi-bYC" secondAttribute="bottom" constant="16" id="2Jo-cr-DB0"/>
                             <constraint firstItem="qgM-xc-iuc" firstAttribute="leading" secondItem="Fz4-6Z-g7p" secondAttribute="trailing" constant="10" id="7U1-ch-nyP"/>
@@ -309,7 +309,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Retry?">
-                                    <color key="titleColor" red="0.9882352941176471" green="0.37647058823529411" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96769699607265858" green="0.9882352941176471" blue="0.97565033443630411" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
