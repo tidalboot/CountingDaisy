@@ -17,10 +17,7 @@ class AdditionGameViewController: UIViewController {
     let soundController = SoundController()
     let nodeHandler = NodeHandler()
 
-
-    var successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Success", ofType: "mp3")!)
-    var failSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop_Fail", ofType: "mp3")!)
-    var audioPlayer = AVAudioPlayer()
+    var successAudioPlayer = AVAudioPlayer()
     var failAudioPlayer = AVAudioPlayer()
     
     var augend: Int = 0
@@ -42,22 +39,12 @@ class AdditionGameViewController: UIViewController {
     @IBOutlet var noButton: UIButton!
     @IBOutlet var retryButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextSetOfNumbers()
-        
         nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
-        
-        audioPlayer = AVAudioPlayer(contentsOfURL: successSound, error: nil)
-        audioPlayer.prepareToPlay()
-        audioPlayer.volume = 0.4
-        
-        failAudioPlayer = AVAudioPlayer(contentsOfURL: failSound, error: nil)
-        failAudioPlayer.prepareToPlay()
-        failAudioPlayer.volume = 0.4
-        
+        successAudioPlayer = soundController.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
+        failAudioPlayer = soundController.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
+        nextSetOfNumbers()
         startTimer()
     }
     
@@ -94,7 +81,7 @@ class AdditionGameViewController: UIViewController {
         scoreLabel.text = "\(score)"
         nodeHandler.showNodes([correctLabel])
         nodeHandler.hideNodes([incorrectLabel])
-        soundController.playAudio(audioPlayer)
+        soundController.playAudio(successAudioPlayer)
         timeLeft = timeLeft + 1
     }
     
