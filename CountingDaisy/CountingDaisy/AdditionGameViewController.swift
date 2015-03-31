@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SpriteKit
 
 class AdditionGameViewController: UIViewController {
 
@@ -21,11 +22,12 @@ class AdditionGameViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     var failAudioPlayer = AVAudioPlayer()
     
-    
     var augend: Int = 0
     var addend: Int = 0
     var summation: Int = 0
     var score: Int = 0
+    var myTimer = NSTimer()
+    var timeLeft = 10.0
     
     @IBOutlet var randomNumberLabel: UILabel!
     @IBOutlet var augendLabel: UILabel!
@@ -34,6 +36,11 @@ class AdditionGameViewController: UIViewController {
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var correctLabel: UILabel!
     @IBOutlet var incorrectLabel: UILabel!
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var yesButton: UIButton!
+    @IBOutlet var noButton: UIButton!
+    @IBOutlet var retryButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -41,6 +48,9 @@ class AdditionGameViewController: UIViewController {
         nextSetOfNumbers()
         incorrectLabel.hidden = true
         correctLabel.hidden = true
+        retryButton.hidden = true
+        
+        timerLabel.text = ("\(timeLeft)")
         
         audioPlayer = AVAudioPlayer(contentsOfURL: successSound, error: nil)
         audioPlayer.prepareToPlay()
@@ -49,8 +59,28 @@ class AdditionGameViewController: UIViewController {
         failAudioPlayer = AVAudioPlayer(contentsOfURL: failSound, error: nil)
         failAudioPlayer.prepareToPlay()
         failAudioPlayer.volume = 0.4
+        
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimerLabel"), userInfo: nil, repeats: true)
     }
+    
+    
+    func updateTimerLabel () {
 
+        timeLeft = timeLeft - 0.1
+        var rounded = round(timeLeft*10)/10
+        timerLabel.text = ("\(rounded)")
+        
+        if timeLeft <= 0 {
+            noButton.hidden = true
+            yesButton.hidden = true
+            timerLabel.hidden = true
+            correctLabel.hidden = true
+            incorrectLabel.hidden = false
+            retryButton.hidden = false
+            incorrectLabel.text = "Game Over!"
+        }
+    }
+    
     func nextSetOfNumbers () {
         var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 50)
         
@@ -68,12 +98,14 @@ class AdditionGameViewController: UIViewController {
         incorrectLabel.hidden = true
         correctLabel.hidden = false
         soundController.playAudio(audioPlayer)
+        timeLeft = timeLeft + 1
     }
     
     func wrongAnswer () {
         incorrectLabel.hidden = false
         correctLabel.hidden = true
         soundController.playAudio(failAudioPlayer)
+        timeLeft = timeLeft - 2
     }
     
     @IBAction func clickedYes(sender: AnyObject) {
@@ -96,4 +128,15 @@ class AdditionGameViewController: UIViewController {
         nextSetOfNumbers()
     }
     
+    @IBAction func clickedRetry(sender: AnyObject) {
+        noButton.hidden = false
+        yesButton.hidden = false
+        timerLabel.hidden = false
+        correctLabel.hidden = true
+        incorrectLabel.hidden = true
+        retryButton.hidden = true
+        incorrectLabel.text = "Not quite"
+        score = 0
+        timeLeft = 10
+    }
 }
