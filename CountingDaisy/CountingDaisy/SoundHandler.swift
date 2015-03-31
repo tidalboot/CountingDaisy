@@ -1,19 +1,11 @@
-//
-//  SoundController.swift
-//  CountingDaisy
-//
-//  Created by Nick Jones on 30/03/2015.
-//  Copyright (c) 2015 Nick Jones. All rights reserved.
-//
 
 import Foundation
 import AVFoundation
 import UIKit
 
-class SoundController {
+class SoundHandler {
     
     func createAudioPlayer (nameOfSoundToPlay: String, extensionOfSound: String) -> AVAudioPlayer {
-        
         var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(nameOfSoundToPlay)", ofType: "\(extensionOfSound)")!)
         var newAudioPlayer = AVAudioPlayer(contentsOfURL: sound, error: nil)
         

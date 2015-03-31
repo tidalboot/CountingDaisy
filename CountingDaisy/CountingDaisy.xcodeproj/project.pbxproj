@@ -16,10 +16,6 @@
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
-		FC6F0A871ACB190100C0C78C /* Divide.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A831ACB190100C0C78C /* Divide.png */; };
-		FC6F0A881ACB190100C0C78C /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A841ACB190100C0C78C /* Minus.png */; };
-		FC6F0A891ACB190100C0C78C /* Multiply.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A851ACB190100C0C78C /* Multiply.png */; };
-		FC6F0A8A1ACB190100C0C78C /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A861ACB190100C0C78C /* Plus.png */; };
 		FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */; };
 		FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */; };
 		FC6F0A911ACB1E7B00C0C78C /* Multiply_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */; };
@@ -27,7 +23,7 @@
 		FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
-		FC83F7DA1ACA0B8A00B9BA15 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */; };
+		FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +50,6 @@
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
-		FC6F0A831ACB190100C0C78C /* Divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Divide.png; sourceTree = "<group>"; };
-		FC6F0A841ACB190100C0C78C /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
-		FC6F0A851ACB190100C0C78C /* Multiply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Multiply.png; sourceTree = "<group>"; };
-		FC6F0A861ACB190100C0C78C /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
 		FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Divide_2.png; sourceTree = "<group>"; };
 		FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus_2.png; sourceTree = "<group>"; };
 		FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Multiply_2.png; sourceTree = "<group>"; };
@@ -65,7 +57,7 @@
 		FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
-		FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
+		FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +99,11 @@
 		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
 			isa = PBXGroup;
 			children = (
+				FC6F0A971ACB410600C0C78C /* Calculators */,
 				FC6F0A931ACB39DF00C0C78C /* Handlers */,
 				FC6F0A811ACB18EC00C0C78C /* Media */,
-				FC83F7D81ACA0B7E00B9BA15 /* Controllers */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
-				FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */,
-				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
@@ -181,10 +171,6 @@
 				FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */,
 				FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */,
 				FC6F0A8E1ACB1E7B00C0C78C /* Plus_2.png */,
-				FC6F0A831ACB190100C0C78C /* Divide.png */,
-				FC6F0A841ACB190100C0C78C /* Minus.png */,
-				FC6F0A851ACB190100C0C78C /* Multiply.png */,
-				FC6F0A861ACB190100C0C78C /* Plus.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -192,17 +178,27 @@
 		FC6F0A931ACB39DF00C0C78C /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				FC6F0A981ACB414500C0C78C /* GameHandlers */,
+				FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */,
 				FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
 		};
-		FC83F7D81ACA0B7E00B9BA15 /* Controllers */ = {
+		FC6F0A971ACB410600C0C78C /* Calculators */ = {
 			isa = PBXGroup;
 			children = (
-				FC83F7D91ACA0B8A00B9BA15 /* SoundController.swift */,
+				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
 			);
-			name = Controllers;
+			name = Calculators;
+			sourceTree = "<group>";
+		};
+		FC6F0A981ACB414500C0C78C /* GameHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */,
+			);
+			name = GameHandlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,17 +281,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6F0A881ACB190100C0C78C /* Minus.png in Resources */,
-				FC6F0A871ACB190100C0C78C /* Divide.png in Resources */,
 				FC6F0A921ACB1E7B00C0C78C /* Plus_2.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
-				FC6F0A891ACB190100C0C78C /* Multiply.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
 				FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */,
 				FC6F0A911ACB1E7B00C0C78C /* Multiply_2.png in Resources */,
-				FC6F0A8A1ACB190100C0C78C /* Plus.png in Resources */,
 				FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */,
-				FC83F7DA1ACA0B8A00B9BA15 /* SoundController.swift in Sources */,
+				FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */,
 				FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */,
 				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
 				FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */,

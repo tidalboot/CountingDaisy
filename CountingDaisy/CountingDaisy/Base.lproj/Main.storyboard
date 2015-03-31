@@ -358,7 +358,6 @@
                         <outlet property="correctLabel" destination="F6m-Fa-9oy" id="EN5-2z-agc"/>
                         <outlet property="incorrectLabel" destination="54h-ZO-c8i" id="hdy-7u-X8E"/>
                         <outlet property="noButton" destination="B6q-CP-86H" id="KjB-Lb-ZRO"/>
-                        <outlet property="randomNumberLabel" destination="LI1-Zu-Z2N" id="IZt-ao-P1b"/>
                         <outlet property="retryButton" destination="AzV-7N-lQd" id="9x7-Ro-zrk"/>
                         <outlet property="scoreLabel" destination="Yfm-u6-kA2" id="1Lf-d7-kkD"/>
                         <outlet property="summationLabel" destination="8O0-H1-ggq" id="kZn-kx-ol4"/>
