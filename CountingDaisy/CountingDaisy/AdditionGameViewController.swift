@@ -58,27 +58,29 @@ class AdditionGameViewController: UIViewController {
         failAudioPlayer.prepareToPlay()
         failAudioPlayer.volume = 0.4
         
+        startTimer()
+    }
+    
+    func startTimer () {
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimerLabel"), userInfo: nil, repeats: true)
     }
     
-    
     func updateTimerLabel () {
-
-        timeLeft = timeLeft - 0.1
         var rounded = round(timeLeft*10)/10
-        timerLabel.text = ("\(rounded)")
-        
         if timeLeft <= 0 {
-            
+            myTimer.invalidate()
             nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel])
             nodeHandler.showNodes([incorrectLabel, retryButton])
             incorrectLabel.text = "Game Over!"
+        }
+        else {
+            timeLeft = timeLeft - 0.1
+            timerLabel.text = ("\(rounded)")
         }
     }
     
     func nextSetOfNumbers () {
         var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 50)
-        
         augend = arrayOfRandomNumbers[0] as! Int
         addend = arrayOfRandomNumbers[1] as! Int
         summation = additionGameHandler.generateResult(augend, addend: addend)
@@ -124,11 +126,11 @@ class AdditionGameViewController: UIViewController {
     }
     
     @IBAction func clickedRetry(sender: AnyObject) {
-        
         nodeHandler.showNodes([noButton, yesButton, timerLabel])
         nodeHandler.hideNodes([correctLabel, incorrectLabel, retryButton])
         incorrectLabel.text = "Not quite"
         score = 0
         timeLeft = 10
+        startTimer()
     }
 }
