@@ -17,7 +17,9 @@
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
 		FC3656181B1397110068D806 /* diamondCapsule.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3656171B1397110068D806 /* diamondCapsule.png */; };
-		FC43B4981ACECBB1001CC989 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43B4971ACECBB1001CC989 /* CloudKit.framework */; };
+		FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36561B1B139C650068D806 /* Default-568h@2x.png */; };
+		FC36562D1B139EF60068D806 /* Kazu.app in Resources */ = {isa = PBXBuildFile; fileRef = FC2330D21AC49B2F00F6BCF2 /* Kazu.app */; };
+		FC36562E1B139EF80068D806 /* KazuTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = FC2330E71AC49B2F00F6BCF2 /* KazuTests.xctest */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
 		FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */; };
@@ -41,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingDaisy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2330D21AC49B2F00F6BCF2 /* Kazu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		FC2330DC1AC49B2F00F6BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingDaisyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2330E71AC49B2F00F6BCF2 /* KazuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KazuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330EC1AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculatorTests.swift; sourceTree = "<group>"; };
 		FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberCalculator.swift; sourceTree = "<group>"; };
@@ -55,10 +57,10 @@
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
 		FC3656171B1397110068D806 /* diamondCapsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamondCapsule.png; sourceTree = "<group>"; };
-		FC43B4971ACECBB1001CC989 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FC3656191B139A4A0068D806 /* Kazu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kazu.entitlements; sourceTree = SOURCE_ROOT; };
+		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudHandlerTests.swift; sourceTree = "<group>"; };
 		FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHandler.swift; sourceTree = "<group>"; };
-		FC5A6BED1ACEC5FA0036177E /* CountingDaisy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CountingDaisy.entitlements; sourceTree = "<group>"; };
 		FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Divide_2.png; sourceTree = "<group>"; };
 		FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus_2.png; sourceTree = "<group>"; };
 		FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Multiply_2.png; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC43B4981ACECBB1001CC989 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +92,9 @@
 		FC2330C91AC49B2F00F6BCF2 = {
 			isa = PBXGroup;
 			children = (
-				FC43B4971ACECBB1001CC989 /* CloudKit.framework */,
-				FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */,
-				FC2330EA1AC49B2F00F6BCF2 /* CountingDaisyTests */,
+				FC36561B1B139C650068D806 /* Default-568h@2x.png */,
+				FC2330D41AC49B2F00F6BCF2 /* Kazu */,
+				FC2330EA1AC49B2F00F6BCF2 /* KazuTests */,
 				FC2330D31AC49B2F00F6BCF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,16 +102,16 @@
 		FC2330D31AC49B2F00F6BCF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */,
-				FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */,
+				FC2330D21AC49B2F00F6BCF2 /* Kazu.app */,
+				FC2330E71AC49B2F00F6BCF2 /* KazuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC2330D41AC49B2F00F6BCF2 /* CountingDaisy */ = {
+		FC2330D41AC49B2F00F6BCF2 /* Kazu */ = {
 			isa = PBXGroup;
 			children = (
-				FC5A6BED1ACEC5FA0036177E /* CountingDaisy.entitlements */,
+				FC3656191B139A4A0068D806 /* Kazu.entitlements */,
 				FC6F0A971ACB410600C0C78C /* Calculators */,
 				FC6F0A931ACB39DF00C0C78C /* Handlers */,
 				FC6F0A811ACB18EC00C0C78C /* Media */,
@@ -120,8 +121,9 @@
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
 			);
-			path = CountingDaisy;
-			sourceTree = "<group>";
+			name = Kazu;
+			path = "/Users/nickjones/Documents/My Apps/Kazu/Kazu/Kazu";
+			sourceTree = "<absolute>";
 		};
 		FC2330D51AC49B2F00F6BCF2 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -131,7 +133,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FC2330EA1AC49B2F00F6BCF2 /* CountingDaisyTests */ = {
+		FC2330EA1AC49B2F00F6BCF2 /* KazuTests */ = {
 			isa = PBXGroup;
 			children = (
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
@@ -139,7 +141,7 @@
 				FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */,
 				FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */,
 			);
-			path = CountingDaisyTests;
+			path = KazuTests;
 			sourceTree = "<group>";
 		};
 		FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */ = {
@@ -219,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */ = {
+		FC2330D11AC49B2F00F6BCF2 /* Kazu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisy" */;
+			buildConfigurationList = FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "Kazu" */;
 			buildPhases = (
 				FC2330CE1AC49B2F00F6BCF2 /* Sources */,
 				FC2330CF1AC49B2F00F6BCF2 /* Frameworks */,
@@ -231,14 +233,14 @@
 			);
 			dependencies = (
 			);
-			name = CountingDaisy;
+			name = Kazu;
 			productName = CountingDaisy;
-			productReference = FC2330D21AC49B2F00F6BCF2 /* CountingDaisy.app */;
+			productReference = FC2330D21AC49B2F00F6BCF2 /* Kazu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC2330E61AC49B2F00F6BCF2 /* CountingDaisyTests */ = {
+		FC2330E61AC49B2F00F6BCF2 /* KazuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisyTests" */;
+			buildConfigurationList = FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "KazuTests" */;
 			buildPhases = (
 				FC2330E31AC49B2F00F6BCF2 /* Sources */,
 				FC2330E41AC49B2F00F6BCF2 /* Frameworks */,
@@ -249,9 +251,9 @@
 			dependencies = (
 				FC2330E91AC49B2F00F6BCF2 /* PBXTargetDependency */,
 			);
-			name = CountingDaisyTests;
+			name = KazuTests;
 			productName = CountingDaisyTests;
-			productReference = FC2330E71AC49B2F00F6BCF2 /* CountingDaisyTests.xctest */;
+			productReference = FC2330E71AC49B2F00F6BCF2 /* KazuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +280,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "CountingDaisy" */;
+			buildConfigurationList = FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "Kazu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -291,8 +293,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */,
-				FC2330E61AC49B2F00F6BCF2 /* CountingDaisyTests */,
+				FC2330D11AC49B2F00F6BCF2 /* Kazu */,
+				FC2330E61AC49B2F00F6BCF2 /* KazuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +306,9 @@
 			files = (
 				FC6F0A921ACB1E7B00C0C78C /* Plus_2.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
+				FC36562D1B139EF60068D806 /* Kazu.app in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
+				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
 				FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */,
@@ -318,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC36562E1B139EF80068D806 /* KazuTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +359,7 @@
 /* Begin PBXTargetDependency section */
 		FC2330E91AC49B2F00F6BCF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC2330D11AC49B2F00F6BCF2 /* CountingDaisy */;
+			target = FC2330D11AC49B2F00F6BCF2 /* Kazu */;
 			targetProxy = FC2330E81AC49B2F00F6BCF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,13 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CountingDaisy/CountingDaisy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -472,13 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CountingDaisy/CountingDaisy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = CountingDaisy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -495,10 +500,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CountingDaisyTests/Info.plist;
+				INFOPLIST_FILE = KazuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountingDaisy.app/CountingDaisy";
+				PRODUCT_NAME = KazuTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
 			};
 			name = Debug;
 		};
@@ -510,17 +515,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CountingDaisyTests/Info.plist;
+				INFOPLIST_FILE = KazuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountingDaisy.app/CountingDaisy";
+				PRODUCT_NAME = KazuTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "CountingDaisy" */ = {
+		FC2330CD1AC49B2F00F6BCF2 /* Build configuration list for PBXProject "Kazu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC2330EF1AC49B2F00F6BCF2 /* Debug */,
@@ -529,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisy" */ = {
+		FC2330F11AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "Kazu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC2330F21AC49B2F00F6BCF2 /* Debug */,
@@ -538,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "CountingDaisyTests" */ = {
+		FC2330F41AC49B2F00F6BCF2 /* Build configuration list for PBXNativeTarget "KazuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC2330F51AC49B2F00F6BCF2 /* Debug */,

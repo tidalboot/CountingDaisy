@@ -1,6 +1,6 @@
 //
 //  AdditionGameHandlerTests.swift
-//  CountingDaisy
+//  Kazu
 //
 //  Created by Nick Jones on 26/03/2015.
 //  Copyright (c) 2015 Nick Jones. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import CountingDaisy
+import Kazu
 
 class AdditionGameHandlerTests: XCTestCase {
     

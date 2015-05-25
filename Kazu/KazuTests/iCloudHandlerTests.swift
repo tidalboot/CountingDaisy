@@ -1,6 +1,6 @@
 //
 //  iCloudHandlerTests.swift
-//  CountingDaisy
+//  Kazu
 //
 //  Created by Nick Jones on 03/04/2015.
 //  Copyright (c) 2015 Nick Jones. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 import CloudKit
-import CountingDaisy
+import Kazu
 
 class iCloudHandlerTests:XCTestCase  {
     

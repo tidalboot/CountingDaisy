@@ -2,7 +2,7 @@
 
 import Foundation
 import XCTest
-import CountingDaisy
+import Kazu
 
 class randomNumberCalculatorTests: XCTestCase {
     

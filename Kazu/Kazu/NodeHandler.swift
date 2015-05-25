@@ -1,6 +1,6 @@
 //
 //  NodeHandler.swift
-//  CountingDaisy
+//  Kazu
 //
 //  Created by Nick Jones on 31/03/2015.
 //  Copyright (c) 2015 Nick Jones. All rights reserved.
