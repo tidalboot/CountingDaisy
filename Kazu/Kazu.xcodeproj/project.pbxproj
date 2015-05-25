@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFA1B13BC2B00B270F8 /* Lock.png */; };
+		FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFE1B13CD6300B270F8 /* SectionLock.png */; };
 		FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */; };
 		FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */; };
 		FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */; };
@@ -20,10 +22,6 @@
 		FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36561B1B139C650068D806 /* Default-568h@2x.png */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
-		FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */; };
-		FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */; };
-		FC6F0A911ACB1E7B00C0C78C /* Multiply_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */; };
-		FC6F0A921ACB1E7B00C0C78C /* Plus_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8E1ACB1E7B00C0C78C /* Plus_2.png */; };
 		FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
@@ -41,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC08FBFA1B13BC2B00B270F8 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
+		FC08FBFE1B13CD6300B270F8 /* SectionLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SectionLock.png; sourceTree = "<group>"; };
 		FC2330D21AC49B2F00F6BCF2 /* Kazu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +59,6 @@
 		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudHandlerTests.swift; sourceTree = "<group>"; };
 		FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHandler.swift; sourceTree = "<group>"; };
-		FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Divide_2.png; sourceTree = "<group>"; };
-		FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus_2.png; sourceTree = "<group>"; };
-		FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Multiply_2.png; sourceTree = "<group>"; };
-		FC6F0A8E1ACB1E7B00C0C78C /* Plus_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus_2.png; sourceTree = "<group>"; };
 		FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
@@ -181,10 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				FC3656171B1397110068D806 /* diamondCapsule.png */,
-				FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */,
-				FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */,
-				FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */,
-				FC6F0A8E1ACB1E7B00C0C78C /* Plus_2.png */,
+				FC08FBFE1B13CD6300B270F8 /* SectionLock.png */,
+				FC08FBFA1B13BC2B00B270F8 /* Lock.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -260,7 +254,7 @@
 		FC2330CA1AC49B2F00F6BCF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Nick Jones";
 				TargetAttributes = {
 					FC2330D11AC49B2F00F6BCF2 = {
@@ -302,16 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6F0A921ACB1E7B00C0C78C /* Plus_2.png in Resources */,
+				FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
-				FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */,
-				FC6F0A911ACB1E7B00C0C78C /* Multiply_2.png in Resources */,
+				FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */,
 				FC3656181B1397110068D806 /* diamondCapsule.png in Resources */,
-				FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +402,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphoneos8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				"SDKROOT[arch=*]" = iphoneos8.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -449,7 +441,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos8.3;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -457,7 +449,6 @@
 		FC2330F21AC49B2F00F6BCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -477,7 +468,6 @@
 		FC2330F31AC49B2F00F6BCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
