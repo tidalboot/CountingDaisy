@@ -16,6 +16,7 @@
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
+		FC3656181B1397110068D806 /* diamondCapsule.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3656171B1397110068D806 /* diamondCapsule.png */; };
 		FC43B4981ACECBB1001CC989 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43B4971ACECBB1001CC989 /* CloudKit.framework */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
@@ -53,6 +54,7 @@
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
+		FC3656171B1397110068D806 /* diamondCapsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamondCapsule.png; sourceTree = "<group>"; };
 		FC43B4971ACECBB1001CC989 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudHandlerTests.swift; sourceTree = "<group>"; };
 		FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHandler.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		FC6F0A821ACB18F500C0C78C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FC3656171B1397110068D806 /* diamondCapsule.png */,
 				FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */,
 				FC6F0A8C1ACB1E7B00C0C78C /* Minus_2.png */,
 				FC6F0A8D1ACB1E7B00C0C78C /* Multiply_2.png */,
@@ -306,6 +309,7 @@
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
 				FC6F0A901ACB1E7B00C0C78C /* Minus_2.png in Resources */,
 				FC6F0A911ACB1E7B00C0C78C /* Multiply_2.png in Resources */,
+				FC3656181B1397110068D806 /* diamondCapsule.png in Resources */,
 				FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@ public class AdditionGameHandler {
         if coinToss > 5 {
             var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(1, maximumValue: 5)
             summationToReturn = (augend + addend) - randomNumberToMinus
-        }else {
+        } else {
             summationToReturn = augend + addend
         }
         
