@@ -45,6 +45,10 @@ class AdditionGameViewController: UIViewController {
         startTimer()
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     func nextSetOfNumbers () {
         var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 50)
         augend = arrayOfRandomNumbers[0] as! Int

@@ -18,8 +18,6 @@
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
 		FC3656181B1397110068D806 /* diamondCapsule.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3656171B1397110068D806 /* diamondCapsule.png */; };
 		FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36561B1B139C650068D806 /* Default-568h@2x.png */; };
-		FC36562D1B139EF60068D806 /* Kazu.app in Resources */ = {isa = PBXBuildFile; fileRef = FC2330D21AC49B2F00F6BCF2 /* Kazu.app */; };
-		FC36562E1B139EF80068D806 /* KazuTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = FC2330E71AC49B2F00F6BCF2 /* KazuTests.xctest */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
 		FC6F0A8F1ACB1E7B00C0C78C /* Divide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6F0A8B1ACB1E7B00C0C78C /* Divide_2.png */; };
@@ -306,7 +304,6 @@
 			files = (
 				FC6F0A921ACB1E7B00C0C78C /* Plus_2.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
-				FC36562D1B139EF60068D806 /* Kazu.app in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
@@ -322,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC36562E1B139EF80068D806 /* KazuTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +410,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos8.3;
 				"SDKROOT[arch=*]" = iphoneos8.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -461,6 +457,7 @@
 		FC2330F21AC49B2F00F6BCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -468,14 +465,19 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
 		FC2330F31AC49B2F00F6BCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -483,8 +485,12 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
@@ -504,6 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = KazuTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
@@ -519,6 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = KazuTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
