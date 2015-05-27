@@ -5,9 +5,7 @@ public class AdditionGameHandler {
     
     var randomNumberCalculator = RandomNumberCalculator()
     
-    public init () {
-        
-    }
+    public init () {}
     
     public func generateResult (augend: Int, addend: Int) -> Int {
         

@@ -9,6 +9,7 @@ class AdditionGameViewController: UIViewController {
     let additionGameHandler = AdditionGameHandler()
     let soundHandler = SoundHandler()
     let nodeHandler = NodeHandler()
+    let highScoreHandler = HighScoreHandler()
     
     //Frigging outlets..... Spam my code will you...
     //Label Outlets
@@ -83,6 +84,7 @@ class AdditionGameViewController: UIViewController {
         nodeHandler.showNodes([correctLabel])
         nodeHandler.hideNodes([incorrectLabel])
         soundHandler.playAudio(successAudioPlayer)
+        highScoreHandler.setHighScore(score)
         timeLeft = timeLeft + 1
     }
     

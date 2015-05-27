@@ -464,13 +464,16 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="additionHighScoreLabel" destination="BOP-zW-rIb" id="a5t-s9-Z2S"/>
                         <outlet property="additionImage" destination="Yb9-nE-jS4" id="fnG-rb-Rr9"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="gameScene" id="HnT-Sw-yf0"/>
+                        <outlet property="rankLabel" destination="wwB-pK-Gnx" id="Fgn-Gl-zCs"/>
+                        <outlet property="totalScoreLabel" destination="asn-vF-PEx" id="wvP-UQ-JMX"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="gameScene" modalTransitionStyle="crossDissolve" id="HnT-Sw-yf0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38f-6J-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="0.0"/>
+            <point key="canvasLocation" x="-342" y="14"/>
         </scene>
         <!--Addition Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -674,7 +677,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BLY-u8-WWv" kind="modal" id="vDu-fG-fm9"/>
+                                    <segue destination="DPW-eD-cBW" kind="unwind" unwindAction="unwindToHomeScreen:" id="si9-nq-239"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -739,8 +742,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="DPW-eD-cBW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="66" y="-192"/>
+            <point key="canvasLocation" x="68" y="14"/>
         </scene>
     </scenes>
     <resources>
