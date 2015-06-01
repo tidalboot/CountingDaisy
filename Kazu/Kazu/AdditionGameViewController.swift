@@ -14,12 +14,14 @@ class AdditionGameViewController: UIViewController {
     //Frigging outlets..... Spam my code will you...
     //Label Outlets
     @IBOutlet var augendLabel: UILabel!
-    @IBOutlet var addendLAbel: UILabel!
+    @IBOutlet var addendLabel: UILabel!
     @IBOutlet var summationLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var correctLabel: UILabel!
     @IBOutlet var incorrectLabel: UILabel!
     @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var operatorLabel: UILabel!
+    @IBOutlet var equalsLabel: UILabel!
     //Button Outlets
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
@@ -32,14 +34,16 @@ class AdditionGameViewController: UIViewController {
     var myTimer = NSTimer()
     var augend: Int = 0
     var addend: Int = 0
-    var summation: Int = 0
+    var answers: (answer: Int, answerIsCorrect: Bool)!
     var score: Int = 0
     var timeLeft = 10.0
+    var gameTypeToLoad: String!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
+        operatorLabel.text = gameTypeToLoad
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
         nextSetOfNumbers()
@@ -51,13 +55,13 @@ class AdditionGameViewController: UIViewController {
     }
     
     func nextSetOfNumbers () {
-        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 50)
+        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 20)
         augend = arrayOfRandomNumbers[0] as! Int
         addend = arrayOfRandomNumbers[1] as! Int
-        summation = additionGameHandler.generateResult(augend, addend: addend)
+        answers = additionGameHandler.generateResult(gameTypeToLoad, augend: augend, addend: addend)
         augendLabel.text = "\(augend)"
-        addendLAbel.text = "\(addend)"
-        summationLabel.text = "\(summation)"
+        addendLabel.text = "\(addend)"
+        summationLabel.text = "\(answers.answer)"
     }
     
     func startTimer () {
@@ -68,7 +72,7 @@ class AdditionGameViewController: UIViewController {
         var rounded = round(timeLeft*10)/10
         if timeLeft <= 0 {
             myTimer.invalidate()
-            nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel])
+            nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
             nodeHandler.showNodes([incorrectLabel, retryButton])
             highScoreHandler.setHighScore(score)
             incorrectLabel.text = "Game Over!"
@@ -79,46 +83,47 @@ class AdditionGameViewController: UIViewController {
         }
     }
     
-    func correctAnswer () {
-        score++
-        scoreLabel.text = "\(score)"
-        nodeHandler.showNodes([correctLabel])
-        nodeHandler.hideNodes([incorrectLabel])
-        soundHandler.playAudio(successAudioPlayer)
-        timeLeft = timeLeft + 1
-    }
-    
-    func wrongAnswer () {
-        nodeHandler.hideNodes([correctLabel])
-        nodeHandler.showNodes([incorrectLabel])
-        soundHandler.playAudio(failAudioPlayer)
-        timeLeft = timeLeft - 3
-    }
-    
-    
-    //Button clicks
-    @IBAction func clickedYes(sender: AnyObject) {
-        if summation == (augend + addend) {
-            correctAnswer()
+
+    func answer (correctAnswer: Bool) {
+        if correctAnswer {
+            score++
+            scoreLabel.text = "\(score)"
+            nodeHandler.showNodes([correctLabel])
+            nodeHandler.hideNodes([incorrectLabel])
+            soundHandler.playAudio(successAudioPlayer)
+            timeLeft = timeLeft + 1
         }
         else {
-            wrongAnswer()
+            nodeHandler.hideNodes([correctLabel])
+            nodeHandler.showNodes([incorrectLabel])
+            soundHandler.playAudio(failAudioPlayer)
+            timeLeft = timeLeft - 5
         }
         nextSetOfNumbers()
+    }
+    
+    @IBAction func userSelectedAnswer(sender: UIButton) {
+        if sender.titleLabel?.text! == "Yes" {
+            if answers.answerIsCorrect {
+                answer(true)
+            }
+            else {
+                answer(false)
+            }
+        }
+        else {
+            if answers.answerIsCorrect {
+                answer(false)
+            }
+            else {
+                answer(true)
+            }
+        }
     }
 
-    @IBAction func clickedNo(sender: AnyObject) {
-        if summation != (augend + addend) {
-            correctAnswer()
-        }
-        else {
-           wrongAnswer()
-        }
-        nextSetOfNumbers()
-    }
-    
+
     @IBAction func clickedRetry(sender: AnyObject) {
-        nodeHandler.showNodes([noButton, yesButton, timerLabel])
+        nodeHandler.showNodes([noButton, yesButton, timerLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
         nodeHandler.hideNodes([correctLabel, incorrectLabel, retryButton])
         incorrectLabel.text = "Not quite"
         score = 0

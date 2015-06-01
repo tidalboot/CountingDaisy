@@ -7,19 +7,33 @@ public class AdditionGameHandler {
     
     public init () {}
     
-    public func generateResult (augend: Int, addend: Int) -> Int {
+    public func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
         
-        var summationToReturn: Int
+        var answerToReturn: Int = 0
+        var isAnswerCorrect: Bool
         var coinToss = Int(arc4random_uniform(10))
         
         if coinToss > 5 {
             var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(1, maximumValue: 5)
-            summationToReturn = (augend + addend) - randomNumberToMinus
-        } else {
-            summationToReturn = augend + addend
+            switch operatorToUse {
+            case "+": answerToReturn = (augend + addend) - randomNumberToMinus
+            case "−": answerToReturn = (augend - addend) + randomNumberToMinus
+            case "×": answerToReturn = (augend * addend) - randomNumberToMinus
+            case "÷": answerToReturn = (augend / addend) + randomNumberToMinus
+            default: break
+            }
+            isAnswerCorrect = false
         }
-        
-        return summationToReturn
+        else {
+            switch operatorToUse {
+            case "+": answerToReturn = (augend + addend)
+            case "−": answerToReturn = (augend - addend)
+            case "×": answerToReturn = (augend * addend)
+            case "÷": answerToReturn = (augend / addend)
+            default: break
+            }
+            isAnswerCorrect = true
+        }
+        return (answerToReturn, isAnswerCorrect)
     }
-    
 }

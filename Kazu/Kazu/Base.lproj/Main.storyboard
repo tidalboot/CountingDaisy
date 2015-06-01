@@ -107,6 +107,74 @@
                                 <color key="textColor" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g83-NS-nP2" userLabel="AdditionButton">
+                                <rect key="frame" x="5" y="249" width="155" height="155"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userSelectedGameType:" destination="BLY-u8-WWv" eventType="touchUpInside" id="uD7-da-ELp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="追加" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-8m-yWt" userLabel="AdditionKanji">
+                                <rect key="frame" x="65" y="295" width="34" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="11g-8Q-vhN"/>
+                                    <constraint firstAttribute="width" constant="34" id="n6j-fL-ANR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg1-9T-C4i" userLabel="AdditionLabel">
+                                <rect key="frame" x="50" y="315.5" width="62.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="18"/>
+                                <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Tsuika)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpq-xX-Dy7" userLabel="AdditionJapaneseLabel">
+                                <rect key="frame" x="59" y="339" width="46" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="8Gy-qm-tAv"/>
+                                    <constraint firstAttribute="width" constant="46" id="E0g-xi-MWp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="11"/>
+                                <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-zW-rIb" userLabel="AdditionScoreLabel">
+                                <rect key="frame" x="63" y="358" width="39" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="7i0-GT-68c"/>
+                                    <constraint firstAttribute="height" constant="21" id="oO6-2W-wq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="+" image="diamondCapsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-nE-jS4" userLabel="AdditionDiamond">
+                                <rect key="frame" x="5" y="249" width="155" height="155"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="1jM-iq-bOq"/>
+                                    <constraint firstAttribute="height" constant="155" id="Put-eA-VI1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0H-c1-981" userLabel="AdditionFirstUnderline">
+                                <rect key="frame" x="50" y="334" width="63" height="1"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="0Vy-kj-saQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-f8-IYc" userLabel="AdditionSecondUnderline">
+                                <rect key="frame" x="50" y="336" width="63" height="1"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ue1-36-fBk"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="引き算" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-h8-zlX" userLabel="SubtractionKanji">
                                 <rect key="frame" x="211" y="296" width="51" height="21"/>
                                 <constraints>
@@ -146,6 +214,16 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX9-R8-9SI" userLabel="SubtractionButton">
+                                <rect key="frame" x="159" y="249" width="155" height="155"/>
+                                <state key="normal" title="−">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userSelectedGameType:" destination="BLY-u8-WWv" eventType="touchUpInside" id="bah-AP-Pxz"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamondCapsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cqw-Tp-KwX" userLabel="SubtractionDiamond">
                                 <rect key="frame" x="159" y="249" width="155" height="155"/>
                                 <constraints>
@@ -196,6 +274,16 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTQ-MG-ksk" userLabel="DivisionButton">
+                                <rect key="frame" x="6" y="404" width="155" height="155"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userSelectedGameType:" destination="BLY-u8-WWv" eventType="touchUpInside" id="Xkv-hO-EDs"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamondCapsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-vN-EBG" userLabel="DivisionDiamond">
                                 <rect key="frame" x="6" y="404" width="155" height="155"/>
                                 <constraints>
@@ -256,6 +344,16 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu3-m3-wxg" userLabel="MultiplicationButton">
+                                <rect key="frame" x="160" y="404" width="155" height="155"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userSelectedGameType:" destination="BLY-u8-WWv" eventType="touchUpInside" id="KJp-WJ-o0y"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamondCapsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="mN1-PG-Khx" userLabel="MultiplicationDiamond">
                                 <rect key="frame" x="160" y="404" width="155" height="155"/>
                                 <constraints>
@@ -275,64 +373,6 @@
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="bVJ-7g-hdN"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="追加" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-8m-yWt" userLabel="AdditionKanji">
-                                <rect key="frame" x="65" y="295" width="34" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="11g-8Q-vhN"/>
-                                    <constraint firstAttribute="width" constant="34" id="n6j-fL-ANR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
-                                <color key="textColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg1-9T-C4i" userLabel="AdditionLabel">
-                                <rect key="frame" x="50" y="315" width="62.5" height="21.5"/>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="18"/>
-                                <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Tsuika)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpq-xX-Dy7" userLabel="AdditionJapaneseLabel">
-                                <rect key="frame" x="59" y="339" width="46" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="8Gy-qm-tAv"/>
-                                    <constraint firstAttribute="width" constant="46" id="E0g-xi-MWp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="11"/>
-                                <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-zW-rIb" userLabel="AdditionScoreLabel">
-                                <rect key="frame" x="63" y="358" width="39" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="7i0-GT-68c"/>
-                                    <constraint firstAttribute="height" constant="21" id="oO6-2W-wq9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
-                                <color key="textColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamondCapsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-nE-jS4" userLabel="AdditionDiamond">
-                                <rect key="frame" x="5" y="249" width="155" height="155"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="1jM-iq-bOq"/>
-                                    <constraint firstAttribute="height" constant="155" id="Put-eA-VI1"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0H-c1-981" userLabel="AdditionFirstUnderline">
-                                <rect key="frame" x="50" y="334" width="63" height="1"/>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="0Vy-kj-saQ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyK-f8-IYc" userLabel="AdditionSecondUnderline">
-                                <rect key="frame" x="50" y="336" width="63" height="1"/>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="ue1-36-fBk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-ms-aUz">
@@ -368,12 +408,17 @@
                             <constraint firstItem="Zb4-T7-oky" firstAttribute="top" secondItem="iYC-bI-vpi" secondAttribute="bottom" constant="-3" id="2q3-qH-hIV"/>
                             <constraint firstItem="hBz-qO-EOp" firstAttribute="centerX" secondItem="Cqw-Tp-KwX" secondAttribute="centerX" id="3Ak-Gb-xab"/>
                             <constraint firstItem="O5u-Bf-KrB" firstAttribute="centerY" secondItem="Cqw-Tp-KwX" secondAttribute="centerY" constant="0.25" id="3NQ-1t-J1A"/>
+                            <constraint firstItem="Zu3-m3-wxg" firstAttribute="centerY" secondItem="mN1-PG-Khx" secondAttribute="centerY" id="3os-1V-pSk"/>
                             <constraint firstItem="26Q-2a-HSC" firstAttribute="width" secondItem="O5u-Bf-KrB" secondAttribute="width" id="3vG-9k-2Ew"/>
+                            <constraint firstItem="Zu3-m3-wxg" firstAttribute="height" secondItem="mN1-PG-Khx" secondAttribute="height" id="4Rm-pM-8KC"/>
+                            <constraint firstItem="Yb9-nE-jS4" firstAttribute="height" secondItem="g83-NS-nP2" secondAttribute="height" id="5FS-PZ-a2E"/>
                             <constraint firstAttribute="centerX" secondItem="NLJ-Bi-reL" secondAttribute="centerX" id="5vi-qv-FAH"/>
+                            <constraint firstItem="Zu3-m3-wxg" firstAttribute="centerX" secondItem="mN1-PG-Khx" secondAttribute="centerX" id="6tl-G7-9Ym"/>
                             <constraint firstItem="wW4-XO-3vU" firstAttribute="centerX" secondItem="xAz-vN-EBG" secondAttribute="centerX" id="74M-6i-U2E"/>
                             <constraint firstItem="GCe-ms-aUz" firstAttribute="leading" secondItem="xAz-vN-EBG" secondAttribute="trailing" constant="-13" id="7tO-dY-egh"/>
                             <constraint firstItem="mg1-9T-C4i" firstAttribute="width" secondItem="cyK-f8-IYc" secondAttribute="width" id="7xu-ql-S9P"/>
                             <constraint firstItem="iYC-bI-vpi" firstAttribute="width" secondItem="Zb4-T7-oky" secondAttribute="width" id="86w-Vk-ONt"/>
+                            <constraint firstItem="JTQ-MG-ksk" firstAttribute="centerX" secondItem="xAz-vN-EBG" secondAttribute="centerX" id="87z-38-I7t"/>
                             <constraint firstItem="NLJ-Bi-reL" firstAttribute="top" secondItem="Yg1-vJ-YfC" secondAttribute="bottom" constant="10" id="9DA-ER-uhS"/>
                             <constraint firstItem="fco-lv-p0D" firstAttribute="top" secondItem="26Q-2a-HSC" secondAttribute="bottom" constant="1" id="9hZ-Tu-EYy"/>
                             <constraint firstItem="9GI-ES-eqY" firstAttribute="top" secondItem="asn-vF-PEx" secondAttribute="bottom" constant="1" id="ANx-DM-nR4"/>
@@ -388,21 +433,28 @@
                             <constraint firstAttribute="centerX" secondItem="wwB-pK-Gnx" secondAttribute="centerX" constant="0.5" id="GBi-4e-e6A"/>
                             <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerX" secondItem="BOP-zW-rIb" secondAttribute="centerX" id="GSe-0v-rZl"/>
                             <constraint firstItem="cpq-xX-Dy7" firstAttribute="centerX" secondItem="Yb9-nE-jS4" secondAttribute="centerX" id="HGk-Ih-727"/>
+                            <constraint firstItem="VX9-R8-9SI" firstAttribute="centerY" secondItem="Cqw-Tp-KwX" secondAttribute="centerY" id="JPN-IW-cb6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mhI-Ec-10Y" secondAttribute="trailing" constant="-16" id="K5n-qO-o34"/>
+                            <constraint firstItem="JTQ-MG-ksk" firstAttribute="height" secondItem="xAz-vN-EBG" secondAttribute="height" id="LOz-Vp-XeP"/>
                             <constraint firstItem="PYn-7l-FcC" firstAttribute="top" secondItem="hBz-qO-EOp" secondAttribute="bottom" constant="-40" id="MuN-lc-GPg"/>
                             <constraint firstItem="mN1-PG-Khx" firstAttribute="centerX" secondItem="2bE-Yb-ILB" secondAttribute="centerX" id="NPV-zh-Ivq"/>
                             <constraint firstAttribute="centerX" secondItem="asn-vF-PEx" secondAttribute="centerX" constant="-0.5" id="NiR-B8-awx"/>
                             <constraint firstItem="mN1-PG-Khx" firstAttribute="centerY" secondItem="zIL-98-G2b" secondAttribute="centerY" id="OI4-iT-GI6"/>
                             <constraint firstItem="mg1-9T-C4i" firstAttribute="top" secondItem="cpq-xX-Dy7" secondAttribute="bottom" constant="-40" id="OaC-yo-9zx"/>
+                            <constraint firstItem="VX9-R8-9SI" firstAttribute="centerX" secondItem="Cqw-Tp-KwX" secondAttribute="centerX" id="PX5-GG-KT8"/>
                             <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerX" secondItem="I0H-c1-981" secondAttribute="centerX" constant="1" id="PaG-fm-o67"/>
+                            <constraint firstItem="Zu3-m3-wxg" firstAttribute="width" secondItem="mN1-PG-Khx" secondAttribute="width" id="Pav-BY-SNL"/>
                             <constraint firstItem="mN1-PG-Khx" firstAttribute="centerX" secondItem="qDm-XC-oRF" secondAttribute="centerX" id="Pur-76-DlN"/>
                             <constraint firstItem="iYC-bI-vpi" firstAttribute="top" secondItem="wW4-XO-3vU" secondAttribute="bottom" constant="-1" id="QYg-w0-wCF"/>
+                            <constraint firstItem="JTQ-MG-ksk" firstAttribute="centerY" secondItem="xAz-vN-EBG" secondAttribute="centerY" id="R0H-Ae-BrK"/>
                             <constraint firstItem="PYn-7l-FcC" firstAttribute="centerX" secondItem="Cqw-Tp-KwX" secondAttribute="centerX" id="SAO-0a-dr4"/>
+                            <constraint firstItem="VX9-R8-9SI" firstAttribute="height" secondItem="Cqw-Tp-KwX" secondAttribute="height" id="Sdq-bf-0id"/>
                             <constraint firstItem="mN1-PG-Khx" firstAttribute="centerX" secondItem="ikI-an-FCL" secondAttribute="centerX" id="TOg-ng-IO2"/>
                             <constraint firstItem="mhI-Ec-10Y" firstAttribute="top" secondItem="Mri-QB-Nyn" secondAttribute="bottom" id="U8E-Pe-U4i"/>
                             <constraint firstItem="PI0-iJ-LhS" firstAttribute="top" secondItem="wwB-pK-Gnx" secondAttribute="bottom" constant="8" id="UAi-on-bWw"/>
                             <constraint firstItem="mN1-PG-Khx" firstAttribute="centerX" secondItem="zIL-98-G2b" secondAttribute="centerX" id="UgO-AK-5U9"/>
                             <constraint firstAttribute="centerX" secondItem="9GI-ES-eqY" secondAttribute="centerX" constant="1" id="V34-Cc-hAK"/>
+                            <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerY" secondItem="g83-NS-nP2" secondAttribute="centerY" id="VJM-yO-eMb"/>
                             <constraint firstItem="Yg1-vJ-YfC" firstAttribute="leading" secondItem="viy-Nk-rIn" secondAttribute="leadingMargin" constant="5" id="Vof-3q-aO7"/>
                             <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerX" secondItem="mg1-9T-C4i" secondAttribute="centerX" constant="0.5" id="WBA-eO-xAx"/>
                             <constraint firstItem="xAz-vN-EBG" firstAttribute="centerX" secondItem="Zb4-T7-oky" secondAttribute="centerX" constant="1" id="WoX-fg-CV8"/>
@@ -426,6 +478,7 @@
                             <constraint firstItem="zIL-98-G2b" firstAttribute="width" secondItem="g7s-8y-ABV" secondAttribute="width" id="gg8-U2-Lme"/>
                             <constraint firstItem="GCe-ms-aUz" firstAttribute="leading" secondItem="Yb9-nE-jS4" secondAttribute="trailing" constant="-12" id="ghN-MC-tMx"/>
                             <constraint firstItem="I8x-bK-fKW" firstAttribute="top" secondItem="Mri-QB-Nyn" secondAttribute="bottom" constant="31" id="gol-H6-ZQe"/>
+                            <constraint firstItem="JTQ-MG-ksk" firstAttribute="width" secondItem="xAz-vN-EBG" secondAttribute="width" id="hEY-A8-lee"/>
                             <constraint firstItem="Yb9-nE-jS4" firstAttribute="top" secondItem="NLJ-Bi-reL" secondAttribute="bottom" constant="14" id="hZI-jp-P37"/>
                             <constraint firstItem="mg1-9T-C4i" firstAttribute="top" secondItem="MKA-8m-yWt" secondAttribute="bottom" constant="-1" id="hb1-tA-1Dw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5dk-k5-hM7" secondAttribute="trailing" constant="-16" id="hf5-F5-zn8"/>
@@ -452,12 +505,15 @@
                             <constraint firstItem="mhI-Ec-10Y" firstAttribute="leading" secondItem="viy-Nk-rIn" secondAttribute="leadingMargin" constant="-16" id="qsK-ph-Jzt"/>
                             <constraint firstAttribute="centerX" secondItem="DKF-1L-po0" secondAttribute="centerX" constant="1" id="s0y-3l-cy4"/>
                             <constraint firstAttribute="centerY" secondItem="NU1-mh-JxB" secondAttribute="centerY" id="stL-E1-M1j"/>
+                            <constraint firstItem="VX9-R8-9SI" firstAttribute="width" secondItem="Cqw-Tp-KwX" secondAttribute="width" id="syy-3y-807"/>
                             <constraint firstItem="RzG-t1-zkL" firstAttribute="top" secondItem="2bE-Yb-ILB" secondAttribute="bottom" constant="-40" id="t7s-Ja-4aE"/>
                             <constraint firstItem="zIL-98-G2b" firstAttribute="top" secondItem="RzG-t1-zkL" secondAttribute="bottom" constant="-40" id="uBd-qo-Map"/>
                             <constraint firstItem="xAz-vN-EBG" firstAttribute="top" secondItem="Yb9-nE-jS4" secondAttribute="bottom" id="uNu-vw-goU"/>
                             <constraint firstItem="mg1-9T-C4i" firstAttribute="width" secondItem="I0H-c1-981" secondAttribute="width" id="ucu-fd-kfD"/>
                             <constraint firstItem="O5u-Bf-KrB" firstAttribute="top" secondItem="PYn-7l-FcC" secondAttribute="bottom" constant="-40" id="uyw-Iu-dp7"/>
+                            <constraint firstItem="Yb9-nE-jS4" firstAttribute="width" secondItem="g83-NS-nP2" secondAttribute="width" id="vXK-Rd-Bx2"/>
                             <constraint firstItem="DKF-1L-po0" firstAttribute="top" secondItem="mhI-Ec-10Y" secondAttribute="bottom" constant="8" id="vtK-hC-sm3"/>
+                            <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerX" secondItem="g83-NS-nP2" secondAttribute="centerX" id="x4s-IC-QhA"/>
                             <constraint firstItem="Yb9-nE-jS4" firstAttribute="centerX" secondItem="cyK-f8-IYc" secondAttribute="centerX" constant="1" id="yBF-Ys-HhI"/>
                             <constraint firstItem="STa-9v-vgB" firstAttribute="top" secondItem="TV2-G1-mYR" secondAttribute="bottom" constant="-40" id="zJi-Pt-qzC"/>
                         </constraints>
@@ -465,8 +521,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="additionHighScoreLabel" destination="BOP-zW-rIb" id="a5t-s9-Z2S"/>
-                        <outlet property="additionImage" destination="Yb9-nE-jS4" id="fnG-rb-Rr9"/>
                         <outlet property="rankLabel" destination="wwB-pK-Gnx" id="Fgn-Gl-zCs"/>
+                        <outlet property="subtractionHighScoreLabel" destination="hBz-qO-EOp" id="uN8-Ad-mJd"/>
                         <outlet property="totalScoreLabel" destination="asn-vF-PEx" id="wvP-UQ-JMX"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="gameScene" modalTransitionStyle="crossDissolve" id="HnT-Sw-yf0"/>
                     </connections>
@@ -551,7 +607,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickedYes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mwe-U9-Cys"/>
+                                    <action selector="userSelectedAnswer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F1d-TN-DFk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6q-CP-86H">
@@ -562,7 +618,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickedNo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TML-h7-PYH"/>
+                                    <action selector="userSelectedAnswer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OB5-n1-jqm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-L9-B5C" userLabel="CenterLabel">
@@ -729,11 +785,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="PX0-2q-X6l"/>
                     <connections>
-                        <outlet property="addendLAbel" destination="3MI-KI-KgP" id="YWS-gV-e9j"/>
+                        <outlet property="addendLabel" destination="3MI-KI-KgP" id="AZe-AK-Riu"/>
                         <outlet property="augendLabel" destination="LI1-Zu-Z2N" id="3bD-uK-qRc"/>
                         <outlet property="correctLabel" destination="F6m-Fa-9oy" id="EN5-2z-agc"/>
+                        <outlet property="equalsLabel" destination="UCH-sm-Nfn" id="qmz-U7-WJz"/>
                         <outlet property="incorrectLabel" destination="54h-ZO-c8i" id="hdy-7u-X8E"/>
                         <outlet property="noButton" destination="B6q-CP-86H" id="KjB-Lb-ZRO"/>
+                        <outlet property="operatorLabel" destination="VkO-qn-7UK" id="gui-vL-s0o"/>
                         <outlet property="retryButton" destination="AzV-7N-lQd" id="9x7-Ro-zrk"/>
                         <outlet property="scoreLabel" destination="Yfm-u6-kA2" id="1Lf-d7-kkD"/>
                         <outlet property="summationLabel" destination="8O0-H1-ggq" id="kZn-kx-ol4"/>
