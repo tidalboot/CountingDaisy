@@ -18,6 +18,7 @@
 		FC2330FD1AC4B33000F6BCF2 /* AdditionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */; };
 		FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */; };
 		FC2331041AC4BAB800F6BCF2 /* AdditionGameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */; };
+		FC31C1171B1C732B00EE5A82 /* HighScoreHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */; };
 		FC3656181B1397110068D806 /* diamondCapsule.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3656171B1397110068D806 /* diamondCapsule.png */; };
 		FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36561B1B139C650068D806 /* Default-568h@2x.png */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
@@ -55,6 +56,7 @@
 		FC2330FC1AC4B33000F6BCF2 /* AdditionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameViewController.swift; sourceTree = "<group>"; };
 		FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandlerTests.swift; sourceTree = "<group>"; };
 		FC2331031AC4BAB800F6BCF2 /* AdditionGameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionGameHandler.swift; sourceTree = "<group>"; };
+		FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreHandlerTests.swift; sourceTree = "<group>"; };
 		FC3656171B1397110068D806 /* diamondCapsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamondCapsule.png; sourceTree = "<group>"; };
 		FC3656191B139A4A0068D806 /* Kazu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kazu.entitlements; sourceTree = SOURCE_ROOT; };
 		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
 				FC2331011AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift */,
 				FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */,
+				FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */,
 			);
 			path = KazuTests;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				FC2331021AC4B81800F6BCF2 /* AdditionGameHandlerTests.swift in Sources */,
 				FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */,
 				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
+				FC31C1171B1C732B00EE5A82 /* HighScoreHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

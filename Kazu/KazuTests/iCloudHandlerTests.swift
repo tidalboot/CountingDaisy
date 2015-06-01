@@ -28,13 +28,14 @@ class iCloudHandlerTests:XCTestCase  {
         super.tearDown()
     }
     
-    func test_does_user_have_iCloud_account_returns_the_iCloud_status_of_the_current_user () {
-        
-        var doesUserHaveiCloudAccount = cloudKitHandler!.doesUserHaveiCloudAccount()
-        println("\(doesUserHaveiCloudAccount)")
-        XCTAssertTrue(doesUserHaveiCloudAccount, "Found false when checking whether user has an iCloud account, check that an account is logged in on the simulator, if so then true should be returned.")
-    }
-    
+//    
+//    func test_does_user_have_iCloud_account_returns_the_iCloud_status_of_the_current_user () {
+//        
+//        var doesUserHaveiCloudAccount = cloudKitHandler!.doesUserHaveiCloudAccount()
+//        println("\(doesUserHaveiCloudAccount)")
+//        XCTAssertTrue(doesUserHaveiCloudAccount, "Found false when checking whether user has an iCloud account, check that an account is logged in on the simulator, if so then true should be returned.")
+//    }
+//    
 //    func test_get_current_user_ID_returns_the_correct_user_ID () {
 //        let myUserID = "_a57181cf1088a3e86db00719d57c3bc6"
 //        let expectation = expectationWithDescription("...")

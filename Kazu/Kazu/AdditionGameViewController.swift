@@ -70,6 +70,7 @@ class AdditionGameViewController: UIViewController {
             myTimer.invalidate()
             nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel])
             nodeHandler.showNodes([incorrectLabel, retryButton])
+            highScoreHandler.setHighScore(score)
             incorrectLabel.text = "Game Over!"
         }
         else {
@@ -84,7 +85,6 @@ class AdditionGameViewController: UIViewController {
         nodeHandler.showNodes([correctLabel])
         nodeHandler.hideNodes([incorrectLabel])
         soundHandler.playAudio(successAudioPlayer)
-        highScoreHandler.setHighScore(score)
         timeLeft = timeLeft + 1
     }
     
