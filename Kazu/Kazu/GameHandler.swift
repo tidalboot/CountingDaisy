@@ -1,7 +1,7 @@
 
 import Foundation
 
-public class AdditionGameHandler {
+public class GameHandler {
     
     var randomNumberCalculator = RandomNumberCalculator()
     

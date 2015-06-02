@@ -1,5 +1,5 @@
 //
-//  AdditionGameHandlerTests.swift
+//  GameHandlerTests.swift
 //  Kazu
 //
 //  Created by Nick Jones on 26/03/2015.
@@ -10,13 +10,13 @@ import Foundation
 import XCTest
 import Kazu
 
-class AdditionGameHandlerTests: XCTestCase {
+class GameHandlerTests: XCTestCase {
     
-    var additionGameHandler: AdditionGameHandler? = nil
+    var gameHandler: GameHandler? = nil
     
     override func setUp() {
         super.setUp()
-        additionGameHandler = AdditionGameHandler()
+        gameHandler = GameHandler()
     }
     
     override func tearDown() {
@@ -29,7 +29,7 @@ class AdditionGameHandlerTests: XCTestCase {
         var numberOfExactResults = 0
         
         for timesToTest = 0; timesToTest < 100; timesToTest++ {
-            var additionResult = additionGameHandler!.generateResult("+", augend: 1, addend: 2)
+            var additionResult = gameHandler!.generateResult("+", augend: 1, addend: 2)
             
             if additionResult.answer == 3 {
                 numberOfExactResults++

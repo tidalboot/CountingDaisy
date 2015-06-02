@@ -34,31 +34,21 @@ public class HighScoreHandler {
     }
     
     public func resetHighScore() {
-        
-        for item in iCloudStore.dictionaryRepresentation.keys {
-                iCloudStore.removeObjectForKey(item as! String)
-        }
+//        for item in iCloudStore.dictionaryRepresentation.keys {
+//                iCloudStore.removeObjectForKey(item as! String)
+//        }
+//        iCloudStore.synchronize()
+
         for item in userDefaults.dictionaryRepresentation().keys {
                 userDefaults.removeObjectForKey(item as! String)
         }
-        iCloudStore.synchronize()
 
     }
     
-    func checkScoreStore () {
-        for item in iCloudStore.dictionaryRepresentation.keys {
-            println("iCloud key - \(item as! String)")
-        }
-        
-        for item in userDefaults.dictionaryRepresentation().keys {
-            println("Default key - \(item as! String)")
-        }
-    }
-    
-    func updateiCloudHighScore (newHighScore: Double, highScoreToSet: String) {
-        iCloudStore.setDouble(Double(newHighScore), forKey: "\(highScoreToSet)")
-        iCloudStore.synchronize()
-    }
+//    func updateiCloudHighScore (newHighScore: Double, highScoreToSet: String) {
+//        iCloudStore.setDouble(Double(newHighScore), forKey: "\(highScoreToSet)")
+//        iCloudStore.synchronize()
+//    }
     
     func updateUserDefaultHighScore (newHighScore: Int, highScoreToSet: String) {
         userDefaults.setInteger(newHighScore, forKey: "\(highScoreToSet)")

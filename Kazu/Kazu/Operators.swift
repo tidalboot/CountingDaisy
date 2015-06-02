@@ -8,6 +8,8 @@
 
 import Foundation
 
-class Operators {
+public class Operators {
+    
+    public init() {}
     
 }

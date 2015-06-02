@@ -3,10 +3,10 @@ import UIKit
 import AVFoundation
 import SpriteKit
 
-class AdditionGameViewController: UIViewController {
+class GameViewController: UIViewController {
     
     let randomNumberCalculator = RandomNumberCalculator()
-    let additionGameHandler = AdditionGameHandler()
+    let gameHandler = GameHandler()
     let soundHandler = SoundHandler()
     let nodeHandler = NodeHandler()
     let highScoreHandler = HighScoreHandler()
@@ -58,7 +58,7 @@ class AdditionGameViewController: UIViewController {
         var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
         augend = arrayOfRandomNumbers[0] as! Int
         addend = arrayOfRandomNumbers[1] as! Int
-        answers = additionGameHandler.generateResult(gameTypeToLoad, augend: augend, addend: addend)
+        answers = gameHandler.generateResult(gameTypeToLoad, augend: augend, addend: addend)
         augendLabel.text = "\(augend)"
         addendLabel.text = "\(addend)"
         summationLabel.text = "\(answers.answer)"

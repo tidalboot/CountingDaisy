@@ -39,14 +39,9 @@ class MainMenuViewController: UIViewController {
         updateHighScores()
     }
     
-    //Remove on release
-    @IBAction func checkScores(sender: AnyObject) {
-        highScoreHandler.checkScoreStore()
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "gameScene" {
-            let gameSceneController = segue.destinationViewController as! AdditionGameViewController
+            let gameSceneController = segue.destinationViewController as! GameViewController
             let optionSelected = sender as! String
             gameSceneController.gameTypeToLoad = optionSelected
         }
