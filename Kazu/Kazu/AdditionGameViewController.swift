@@ -55,7 +55,7 @@ class AdditionGameViewController: UIViewController {
     }
     
     func nextSetOfNumbers () {
-        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 20)
+        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
         augend = arrayOfRandomNumbers[0] as! Int
         addend = arrayOfRandomNumbers[1] as! Int
         answers = additionGameHandler.generateResult(gameTypeToLoad, augend: augend, addend: addend)

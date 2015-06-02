@@ -14,18 +14,31 @@ public class RandomNumberCalculator {
         
     }
     
-    func generateRandomNumber (minumumValue: UInt32, maximumValue: UInt32) -> Int {
-        var randomNumber = Int(arc4random_uniform(maximumValue) + minumumValue)
+    func generateRandomNumber (minumumValue: Int32, maximumValue: Int32) -> Int {
+        
+        if maximumValue < minumumValue {
+            return 0
+        }
+        
+        
+        if (maximumValue < 0 && minumumValue < 0) {
+            let minimumValueAsPositive = UInt32(minumumValue - (minumumValue * 2))
+            let maximumValueAsPositive = UInt32(maximumValue - (maximumValue * 2))
+            var randomNumber = Int(arc4random_uniform(minimumValueAsPositive - maximumValueAsPositive) + maximumValueAsPositive)
+            return randomNumber - (randomNumber * 2)
+        }
+        
+        var randomNumber = Int(arc4random_uniform(UInt32(maximumValue - minumumValue))) + Int(minumumValue)
         return randomNumber
     }
     
-    public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: UInt32, maximumValue: UInt32) -> NSArray {
+    public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int32, maximumValue: Int32) -> NSArray {
         var arrayToReturn: [Int] = []
         
         var i = 0
         
         while i < quantityOfNumbersToGenerate {
-            var randomNumber = Int(arc4random_uniform(maximumValue) + minumumValue)
+            var randomNumber = generateRandomNumber(minumumValue, maximumValue: maximumValue)
             arrayToReturn.append(randomNumber)
             i++
         }

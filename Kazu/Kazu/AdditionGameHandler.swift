@@ -14,11 +14,11 @@ public class AdditionGameHandler {
         var coinToss = Int(arc4random_uniform(10))
         
         if coinToss > 5 {
-            var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(1, maximumValue: 5)
+            var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(-10, maximumValue: 10)
             switch operatorToUse {
-            case "+": answerToReturn = (augend + addend) - randomNumberToMinus
+            case "+": answerToReturn = (augend + addend) + randomNumberToMinus
             case "−": answerToReturn = (augend - addend) + randomNumberToMinus
-            case "×": answerToReturn = (augend * addend) - randomNumberToMinus
+            case "×": answerToReturn = (augend * addend) + randomNumberToMinus
             case "÷": answerToReturn = (augend / addend) + randomNumberToMinus
             default: break
             }
