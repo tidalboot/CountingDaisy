@@ -15,25 +15,23 @@ public class GameHandler {
         
         if coinToss > 5 {
             var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(-10, maximumValue: 10)
-            switch operatorToUse {
-            case "+": answerToReturn = (augend + addend) + randomNumberToMinus
-            case "−": answerToReturn = (augend - addend) + randomNumberToMinus
-            case "×": answerToReturn = (augend * addend) + randomNumberToMinus
-            case "÷": answerToReturn = (augend / addend) + randomNumberToMinus
-            default: break
-            }
-            isAnswerCorrect = false
+            return (calculate(operatorToUse, firstNumber: augend, secondNumber: addend) + randomNumberToMinus, false)
         }
         else {
-            switch operatorToUse {
-            case "+": answerToReturn = (augend + addend)
-            case "−": answerToReturn = (augend - addend)
-            case "×": answerToReturn = (augend * addend)
-            case "÷": answerToReturn = (augend / addend)
-            default: break
-            }
-            isAnswerCorrect = true
+            return (calculate(operatorToUse, firstNumber: addend, secondNumber: augend), true)
         }
-        return (answerToReturn, isAnswerCorrect)
+    }
+    
+    func calculate (operatorToUse: String, firstNumber: Int, secondNumber: Int) -> Int {
+        var answerToReturn: Int = 0
+        
+        switch operatorToUse {
+        case "+": answerToReturn = (firstNumber + secondNumber)
+        case "−": answerToReturn = (firstNumber - secondNumber)
+        case "×": answerToReturn = (firstNumber * secondNumber)
+        case "÷": answerToReturn = (firstNumber / secondNumber)
+        default: break
+        }
+        return answerToReturn
     }
 }
