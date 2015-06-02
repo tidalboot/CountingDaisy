@@ -128,7 +128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg1-9T-C4i" userLabel="AdditionLabel">
-                                <rect key="frame" x="50" y="315.5" width="62.5" height="21.5"/>
+                                <rect key="frame" x="50" y="315" width="62.5" height="21.5"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="18"/>
                                 <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -401,6 +401,24 @@
                                 <color key="textColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-Uv-qc4">
+                                <rect key="frame" x="139" y="506" width="40" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetScores:" destination="BLY-u8-WWv" eventType="touchUpInside" id="i6k-0S-NTE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njg-HH-0tB">
+                                <rect key="frame" x="137" y="529" width="44" height="30"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkScores:" destination="BLY-u8-WWv" eventType="touchUpInside" id="uih-Ml-U2m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -521,6 +539,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="additionHighScoreLabel" destination="BOP-zW-rIb" id="a5t-s9-Z2S"/>
+                        <outlet property="divisionHighScoreLabel" destination="TV2-G1-mYR" id="a3v-OK-Ipv"/>
+                        <outlet property="multiplicationHighScoreLabel" destination="2bE-Yb-ILB" id="rlE-qY-9As"/>
                         <outlet property="rankLabel" destination="wwB-pK-Gnx" id="Fgn-Gl-zCs"/>
                         <outlet property="subtractionHighScoreLabel" destination="hBz-qO-EOp" id="uN8-Ad-mJd"/>
                         <outlet property="totalScoreLabel" destination="asn-vF-PEx" id="wvP-UQ-JMX"/>

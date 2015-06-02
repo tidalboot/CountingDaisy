@@ -40,9 +40,9 @@ class HighScoreHandlerTests: XCTestCase {
     }
     
     func test_reset_highscore_resets_the_highscore () {
-        highScoreHandler?.setHighScore(100)
+        highScoreHandler?.setHighScore(100, "+")
         highScoreHandler?.resetHighScore()
-        var highestScore = highScoreHandler?.retrieveHighScore()
+        var highestScore = highScoreHandler?.retrieveHighScore("+")
         
         XCTAssert(highestScore == 0, "Expected 0 but got \(highestScore)")
     }

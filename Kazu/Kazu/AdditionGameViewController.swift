@@ -74,7 +74,7 @@ class AdditionGameViewController: UIViewController {
             myTimer.invalidate()
             nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
             nodeHandler.showNodes([incorrectLabel, retryButton])
-            highScoreHandler.setHighScore(score)
+            highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
             incorrectLabel.text = "Game Over!"
         }
         else {
