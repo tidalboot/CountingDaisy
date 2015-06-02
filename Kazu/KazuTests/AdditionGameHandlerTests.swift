@@ -29,9 +29,9 @@ class AdditionGameHandlerTests: XCTestCase {
         var numberOfExactResults = 0
         
         for timesToTest = 0; timesToTest < 100; timesToTest++ {
-            var additionResult = additionGameHandler!.generateResult(1,addend: 2)
+            var additionResult = additionGameHandler!.generateResult("+", augend: 1, addend: 2)
             
-            if additionResult == 3 {
+            if additionResult.answer == 3 {
                 numberOfExactResults++
             }
             

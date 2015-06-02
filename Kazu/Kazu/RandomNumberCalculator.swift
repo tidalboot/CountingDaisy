@@ -10,16 +10,11 @@ import Foundation
 
 public class RandomNumberCalculator {
     
-    public init () {
-        
-    }
+    public init () {}
     
     func generateRandomNumber (minumumValue: Int32, maximumValue: Int32) -> Int {
         
-        if maximumValue < minumumValue {
-            return 0
-        }
-        
+        if maximumValue < minumumValue {return 0}
         
         if (maximumValue < 0 && minumumValue < 0) {
             let minimumValueAsPositive = UInt32(minumumValue - (minumumValue * 2))
@@ -28,8 +23,7 @@ public class RandomNumberCalculator {
             return randomNumber - (randomNumber * 2)
         }
         
-        var randomNumber = Int(arc4random_uniform(UInt32(maximumValue - minumumValue))) + Int(minumumValue)
-        return randomNumber
+        return Int(arc4random_uniform(UInt32(maximumValue - minumumValue))) + Int(minumumValue)
     }
     
     public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int32, maximumValue: Int32) -> NSArray {
