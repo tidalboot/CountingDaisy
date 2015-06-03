@@ -2,6 +2,9 @@
 import UIKit
 import AVFoundation
 import SpriteKit
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 class GameViewController: UIViewController {
     
@@ -10,6 +13,7 @@ class GameViewController: UIViewController {
     let soundHandler = SoundHandler()
     let nodeHandler = NodeHandler()
     let highScoreHandler = HighScoreHandler()
+    let socialMediaHandler = SocialMediaHandler()
     
     //Frigging outlets..... Spam my code will you...
     //Label Outlets
@@ -32,16 +36,21 @@ class GameViewController: UIViewController {
     var failAudioPlayer = AVAudioPlayer()
     
     var myTimer = NSTimer()
-    var augend: Int = 0
-    var addend: Int = 0
+    var firstNumber: Int = 0
+    var secondNumber: Int = 0
     var answers: (answer: Int, answerIsCorrect: Bool)!
     var score: Int = 0
     var timeLeft = 10.0
     var gameTypeToLoad: String!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let facebookLoginButton: FBSDKLoginButton = FBSDKLoginButton()
+//        facebookLoginButton.center = self.view.center
+//        self.view.addSubview(facebookLoginButton)
+        
         nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
         operatorLabel.text = gameTypeToLoad
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
@@ -50,17 +59,18 @@ class GameViewController: UIViewController {
         startTimer()
     }
     
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
     func nextSetOfNumbers () {
         var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
-        augend = arrayOfRandomNumbers[0] as! Int
-        addend = arrayOfRandomNumbers[1] as! Int
-        answers = gameHandler.generateResult(gameTypeToLoad, augend: augend, addend: addend)
-        augendLabel.text = "\(augend)"
-        addendLabel.text = "\(addend)"
+        firstNumber = arrayOfRandomNumbers[0] as! Int
+        secondNumber = arrayOfRandomNumbers[1] as! Int
+        answers = gameHandler.generateResult(gameTypeToLoad, augend: firstNumber, addend: secondNumber)
+        augendLabel.text = "\(firstNumber)"
+        addendLabel.text = "\(secondNumber)"
         summationLabel.text = "\(answers.answer)"
     }
     
@@ -100,6 +110,11 @@ class GameViewController: UIViewController {
             timeLeft = timeLeft - 5
         }
         nextSetOfNumbers()
+    }
+
+    
+    @IBAction func facebookShare(sender: AnyObject) {
+        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
     }
     
     @IBAction func userSelectedAnswer(sender: UIButton) {

@@ -747,6 +747,17 @@
                                     <segue destination="DPW-eD-cBW" kind="unwind" unwindAction="unwindToHomeScreen:" id="si9-nq-239"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-LE-PcD">
+                                <rect key="frame" x="263" y="8" width="40" height="30"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookShare:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5wy-PG-6KW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

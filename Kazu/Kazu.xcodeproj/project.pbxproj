@@ -23,6 +23,11 @@
 		FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC36561B1B139C650068D806 /* Default-568h@2x.png */; };
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
+		FC6ECA841B1EEB5800B26708 /* SocialMediaHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6ECA831B1EEB5800B26708 /* SocialMediaHandler.swift */; };
+		FC6ECA8C1B1EEF2200B26708 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */; };
+		FC6ECA8D1B1EEF2200B26708 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */; };
+		FC6ECA8E1B1EEF2200B26708 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */; };
+		FC6ECA901B1F003C00B26708 /* FacebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */; };
 		FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
@@ -64,6 +69,11 @@
 		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudHandlerTests.swift; sourceTree = "<group>"; };
 		FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHandler.swift; sourceTree = "<group>"; };
+		FC6ECA831B1EEB5800B26708 /* SocialMediaHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaHandler.swift; sourceTree = "<group>"; };
+		FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookIcon.png; sourceTree = "<group>"; };
 		FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
@@ -78,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6ECA8C1B1EEF2200B26708 /* FBSDKCoreKit.framework in Frameworks */,
+				FC6ECA8D1B1EEF2200B26708 /* FBSDKShareKit.framework in Frameworks */,
+				FC6ECA8E1B1EEF2200B26708 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				FC36561B1B139C650068D806 /* Default-568h@2x.png */,
+				FC6ECA8B1B1EEEF500B26708 /* Frameworks */,
 				FC2330D41AC49B2F00F6BCF2 /* Kazu */,
 				FC2330EA1AC49B2F00F6BCF2 /* KazuTests */,
 				FC2330D31AC49B2F00F6BCF2 /* Products */,
@@ -175,6 +189,16 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		FC6ECA8B1B1EEEF500B26708 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */,
+				FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */,
+				FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC6F0A811ACB18EC00C0C78C /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3656171B1397110068D806 /* diamondCapsule.png */,
+				FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */,
 				FC08FBFE1B13CD6300B270F8 /* SectionLock.png */,
 				FC08FBFA1B13BC2B00B270F8 /* Lock.png */,
 			);
@@ -202,6 +227,7 @@
 				FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */,
 				FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */,
 				FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */,
+				FC6ECA831B1EEB5800B26708 /* SocialMediaHandler.swift */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -301,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */,
+				FC6ECA901B1F003C00B26708 /* FacebookIcon.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
@@ -325,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6ECA841B1EEB5800B26708 /* SocialMediaHandler.swift in Sources */,
 				FC2330FD1AC4B33000F6BCF2 /* GameViewController.swift in Sources */,
 				FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */,
 				FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */,
@@ -461,6 +489,10 @@
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nickjones/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +512,10 @@
 				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nickjones/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Kazu/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

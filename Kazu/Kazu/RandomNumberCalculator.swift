@@ -28,7 +28,6 @@ public class RandomNumberCalculator {
     
     public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int32, maximumValue: Int32) -> NSArray {
         var arrayToReturn: [Int] = []
-        
         var i = 0
         
         while i < quantityOfNumbersToGenerate {
@@ -36,8 +35,8 @@ public class RandomNumberCalculator {
             arrayToReturn.append(randomNumber)
             i++
         }
-        
         return arrayToReturn
     }
     
+    func reflect (num: Int32) -> Int32 {return num - (num * 2)}
 }

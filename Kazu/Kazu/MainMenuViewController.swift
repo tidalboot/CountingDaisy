@@ -16,7 +16,6 @@ class MainMenuViewController: UIViewController {
         updateHighScores()
     }
     
-    
     func updateHighScores () {
         let additionHighScore = highScoreHandler.retrieveHighScore("+")
         let subtractionHighScore = highScoreHandler.retrieveHighScore("−")
