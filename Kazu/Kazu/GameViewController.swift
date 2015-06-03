@@ -2,11 +2,8 @@
 import UIKit
 import AVFoundation
 import SpriteKit
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     let randomNumberCalculator = RandomNumberCalculator()
     let gameHandler = GameHandler()
@@ -43,14 +40,19 @@ class GameViewController: UIViewController {
     var score: Int = 0
     var timeLeft = 10.0
     var gameTypeToLoad: String!
+    var gameOverViewController: GameOverViewController!
+    var popoverView: UIView!
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameOverViewController = GameOverViewController()
+        var customViewObject: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
+        gameOverViewController = customViewObject as! GameOverViewController
+        popoverView = gameOverViewController.view
         
-//        let facebookLoginButton: FBSDKLoginButton = FBSDKLoginButton()
-//        facebookLoginButton.center = self.view.center
-//        self.view.addSubview(facebookLoginButton)
+
         
         nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
         operatorLabel.text = gameTypeToLoad
@@ -87,7 +89,8 @@ class GameViewController: UIViewController {
             nodeHandler.showNodes([incorrectLabel, retryButton])
             highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
             incorrectLabel.text = "Game Over!"
-            viewHandler.fadeCurrentView(self)
+            gameOverViewController.scoreLabel.text = "\(score)"
+            viewHandler.fadeCurrentView(self, viewToOverlay: popoverView)
         }
         else {
             timeLeft = timeLeft - 0.1
@@ -118,6 +121,7 @@ class GameViewController: UIViewController {
     @IBAction func facebookShare(sender: AnyObject) {
         socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
     }
+
     
     @IBAction func userSelectedAnswer(sender: UIButton) {
         if sender.titleLabel?.text! == "Yes" {
