@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     let nodeHandler = NodeHandler()
     let highScoreHandler = HighScoreHandler()
     let socialMediaHandler = SocialMediaHandler()
+    let viewHandler = ViewHandler()
     
     //Frigging outlets..... Spam my code will you...
     //Label Outlets
@@ -58,7 +59,7 @@ class GameViewController: UIViewController {
         nextSetOfNumbers()
         startTimer()
     }
-    
+
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -86,6 +87,7 @@ class GameViewController: UIViewController {
             nodeHandler.showNodes([incorrectLabel, retryButton])
             highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
             incorrectLabel.text = "Game Over!"
+            viewHandler.fadeCurrentView(self)
         }
         else {
             timeLeft = timeLeft - 0.1

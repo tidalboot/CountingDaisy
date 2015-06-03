@@ -402,7 +402,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-Uv-qc4">
-                                <rect key="frame" x="139" y="506" width="40" height="30"/>
+                                <rect key="frame" x="145" y="507" width="40" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -527,6 +527,7 @@
                             <constraint firstItem="STa-9v-vgB" firstAttribute="top" secondItem="TV2-G1-mYR" secondAttribute="bottom" constant="-40" id="zJi-Pt-qzC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="muG-kw-OPb"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="additionHighScoreLabel" destination="BOP-zW-rIb" id="a5t-s9-Z2S"/>
@@ -540,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38f-6J-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342" y="14"/>
+            <point key="canvasLocation" x="722" y="14"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -758,6 +759,12 @@
                                     <action selector="facebookShare:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5wy-PG-6KW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnC-k0-cKJ">
+                                <rect key="frame" x="132" y="315" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -824,7 +831,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="DPW-eD-cBW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="68" y="14"/>
+            <point key="canvasLocation" x="1106" y="14"/>
         </scene>
     </scenes>
     <resources>
