@@ -830,7 +830,7 @@
         <!--Game Over View Controller-->
         <scene sceneID="9Vn-Zs-cNM">
             <objects>
-                <viewController storyboardIdentifier="GameOver" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K2v-gv-6vT" customClass="GameOverViewController" customModule="Kazu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameOver" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K2v-gv-6vT" customClass="GameOverViewController" customModule="Kazu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xbv-Lp-66S"/>
                         <viewControllerLayoutGuide type="bottom" id="4y3-Ub-BZX"/>
@@ -870,9 +870,13 @@
                                 <state key="normal" title="Try again?">
                                     <color key="titleColor" red="0.40392156862745099" green="0.47843137254901963" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchedRetry:" destination="K2v-gv-6vT" eventType="touchUpInside" id="r8V-Qg-S31"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95985243055555558" green="0.94056556576398764" blue="0.94810942452085867" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Xym-KY-p4n" secondAttribute="centerX" id="1yd-Cb-ihF"/>
                             <constraint firstItem="oOH-he-ebq" firstAttribute="top" secondItem="wCB-nk-cnW" secondAttribute="bottom" constant="35.5" id="6ut-w5-7RH"/>
@@ -888,6 +892,7 @@
                     <size key="freeformSize" width="250" height="350"/>
                     <connections>
                         <outlet property="contentView" destination="1wO-iO-UH2" id="p7T-oC-RSC"/>
+                        <outlet property="retryButton" destination="oOH-he-ebq" id="gxI-uY-DZB"/>
                         <outlet property="scoreLabel" destination="wCB-nk-cnW" id="7cX-Ok-KyW"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,8 @@ import UIKit
 
 class ViewHandler {
     
+    var viewsAdded = []
+    
     func fadeCurrentView (viewToFade: UIViewController, viewToOverlay: UIView) {
         var fadeView = UIView(frame: CGRect(x: 0, y: 0, width: viewToFade.view.frame.width, height: viewToFade.view.frame.height))
         fadeView.backgroundColor = viewToFade.view.backgroundColor
@@ -25,10 +27,17 @@ class ViewHandler {
             viewToOverlay.center.y = viewToFade.view.center.y
         })
         
+        viewsAdded = [fadeView, viewToOverlay]
         
         viewToFade.view.addSubview(fadeView)
         viewToFade.view.addSubview(viewToOverlay)
-        viewToFade.view.bringSubviewToFront(viewToOverlay)
+    }
+    
+    func removeViews (viewToRemoveViewsFrom: UIViewController) {
+        for views in viewsAdded {
+            var viewToRemove = views as! UIView
+            viewToRemove.removeFromSuperview()
+        }
     }
     
 }

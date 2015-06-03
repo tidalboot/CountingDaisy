@@ -47,12 +47,13 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameOverViewController = GameOverViewController()
+        self.gameOverViewController = GameOverViewController.new()
         var customViewObject: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
         gameOverViewController = customViewObject as! GameOverViewController
         popoverView = gameOverViewController.view
+ 
+        gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         
-
         
         nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
         operatorLabel.text = gameTypeToLoad
@@ -61,7 +62,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         nextSetOfNumbers()
         startTimer()
     }
-
+    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -143,13 +144,14 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     }
 
 
-    @IBAction func clickedRetry(sender: AnyObject) {
+    func clickedRetry () {
         nodeHandler.showNodes([noButton, yesButton, timerLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
         nodeHandler.hideNodes([correctLabel, incorrectLabel, retryButton])
         incorrectLabel.text = "Not quite"
         score = 0
         timeLeft = 10
         startTimer()
+        viewHandler.removeViews(self)
     }
 }
 
