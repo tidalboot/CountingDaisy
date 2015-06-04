@@ -23,7 +23,7 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         scoreLabel.text = "lolol"
         contentView.frame = CGRect(x: 0, y: 0, width: 250, height: 350)
-        contentView.layer.cornerRadius = 5
+        contentView.layer.cornerRadius = 2
         
         let facebookLoginButton: FBSDKLoginButton = FBSDKLoginButton()
         facebookLoginButton.center.x = self.view.center.x
