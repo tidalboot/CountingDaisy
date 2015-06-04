@@ -28,12 +28,6 @@ class MainMenuViewController: UIViewController {
         totalScoreLabel.text = "\(additionHighScore + subtractionHighScore + multiplicationHighScore + divisionHighScore)"
     }
     
-    //Remove on release
-//    @IBAction func resetScores(sender: AnyObject) {
-//        highScoreHandler.resetHighScore()
-//        updateHighScores()
-//    }
-    
     @IBAction func unwindToHomeScreen (segue: UIStoryboardSegue) {
         updateHighScores()
     }

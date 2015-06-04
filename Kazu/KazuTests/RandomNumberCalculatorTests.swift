@@ -18,7 +18,7 @@ class randomNumberCalculatorTests: XCTestCase {
     }
     
     
-    func test_that_generate_random_numbers_produces_2_acceptablly_random_numbers_between_1_and_100 () {
+    func test_generate_random_numbers_produces_2_acceptablly_random_numbers_between_1_and_100 () {
         var randomPairsToCheck: Int
         var numberOfMatchesFound = 0
         
@@ -35,7 +35,7 @@ class randomNumberCalculatorTests: XCTestCase {
         }
     }
     
-    func test_that_generate_random_numbers_produces_numbers_within_the_specified_range () {
+    func test_generate_random_numbers_produces_numbers_within_the_specified_range () {
         
         var arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(1,minumumValue: 10,maximumValue: 50)
         
@@ -46,7 +46,7 @@ class randomNumberCalculatorTests: XCTestCase {
     }
     
     
-    func test_that_generate_random_numbers_procudes_an_array_with_the_correct_number_of_objects_specifed () {
+    func test_generate_random_numbers_procudes_an_array_with_the_correct_number_of_objects_specifed () {
         
         var arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(20,minumumValue: 1,maximumValue: 100)
         var numberOfObjectsInArray = arrayOfRandomNumbers.count
@@ -55,6 +55,20 @@ class randomNumberCalculatorTests: XCTestCase {
         
     }
     
+    func test_generate_random_numbers_returns_a_descending_sorted_array_of_numbers () {
+        let arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(3, minumumValue: 1, maximumValue: 10)
+        var numbersAreSorted = false
+        
+        let firstNumberInArray = arrayOfRandomNumbers[0] as! Int
+        let secondNumberInArray = arrayOfRandomNumbers[1] as! Int
+        let thirdNumberInArray = arrayOfRandomNumbers[2] as! Int
+        
+        if ((firstNumberInArray > secondNumberInArray) && (secondNumberInArray > thirdNumberInArray)) {
+            numbersAreSorted = true
+        }
+        
+        XCTAssertFalse(numbersAreSorted, "Numbers were not sorted correctly in descending order")
+    }
     
 }
 

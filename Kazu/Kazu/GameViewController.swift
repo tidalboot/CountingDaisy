@@ -13,8 +13,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     let socialMediaHandler = SocialMediaHandler()
     let viewHandler = ViewHandler()
     
-    //Frigging outlets..... Spam my code will you...
-    //Label Outlets
     @IBOutlet var augendLabel: UILabel!
     @IBOutlet var addendLabel: UILabel!
     @IBOutlet var summationLabel: UILabel!
@@ -24,6 +22,8 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var operatorLabel: UILabel!
     @IBOutlet var equalsLabel: UILabel!
+    @IBOutlet var countDownLabel: UILabel!
+    
     //Button Outlets
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
@@ -31,47 +31,62 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     //Ahhhh lovely variables
     var successAudioPlayer = AVAudioPlayer()
     var failAudioPlayer = AVAudioPlayer()
+    var countdownAudioPlayer = AVAudioPlayer()
     
     var myTimer = NSTimer()
+    var countDownTimer = NSTimer()
+    var score: Int = 0
     var firstNumber: Int = 0
     var secondNumber: Int = 0
-    var answers: (answer: Int, answerIsCorrect: Bool)!
-    var score: Int = 0
+    var countDown = 4
     var timeLeft = 10.0
+    var answerIsCorrect: Bool!
     var gameTypeToLoad: String!
     var gameOverViewController: GameOverViewController!
     
     override func viewDidLoad() {
-        self.gameOverViewController = GameOverViewController.new()
-        var customViewObject: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
-        gameOverViewController = customViewObject as! GameOverViewController
+        var gameOverStoryboardView: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
+        gameOverViewController = gameOverStoryboardView as! GameOverViewController
         let popoverView = gameOverViewController.view
  
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
+        gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
+
         
         operatorLabel.text = gameTypeToLoad
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
-        startNewGame()
+        countdownAudioPlayer = soundHandler.createAudioPlayer("Countdown", extensionOfSound: "mp3")
+        startCountdown()
     }
     
     
     func nextSetOfNumbers () {
-        var arrayOfRandomNumbers = []
-        if gameTypeToLoad == "×" {
-            arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 15)
-        }
-        else {
-            arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
-        }
-        firstNumber = arrayOfRandomNumbers[0] as! Int
-        secondNumber = arrayOfRandomNumbers[1] as! Int
-        
-        answers = gameHandler.generateResult(gameTypeToLoad, augend: firstNumber, addend: secondNumber)
-
-        nodeHandler.updateLabelsWithText([augendLabel, addendLabel, summationLabel], textToUpdateLabelsWith: ["\(firstNumber)", "\(secondNumber)", "\(answers.answer)" ])
+        answerIsCorrect = gameHandler.getNextSetOfNumbers(gameTypeToLoad, augendLabel: augendLabel, addendLabel: addendLabel, answerLabel: summationLabel)
     }
     
+    
+    func startCountdown () {
+        var genericView = UILabel()
+        viewHandler.fadeCurrentView(self, viewToOverlay: genericView)
+        countDownLabel.hidden = false
+        self.view.bringSubviewToFront(countDownLabel)
+        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: Selector("runCountdown"), userInfo: nil, repeats: true)
+    }
+    
+    func runCountdown () {
+        countDown--
+        soundHandler.playAudio(countdownAudioPlayer)
+            if countDown <= 0 {
+                countDown = 4
+                countDownTimer.invalidate()
+                viewHandler.removeViews(self)
+                countDownLabel.hidden = true
+                nodeHandler.showNodes([noButton, yesButton, timerLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
+                startNewGame()
+            }
+        countDownLabel.text = ("\(countDown)")
+    }
     
     //Timer handling
     func startNewGame () {
@@ -95,8 +110,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         var rounded = round(timeLeft*10)/10
         if timeLeft <= 0 {
             gameOver()
-        }
-        else {
+        } else {
             timeLeft = timeLeft - 0.1
             timerLabel.text = ("\(rounded)")
         }
@@ -111,8 +125,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
             nodeHandler.hideNodes([incorrectLabel])
             soundHandler.playAudio(successAudioPlayer)
             timeLeft = timeLeft + 1
-        }
-        else {
+        } else {
             nodeHandler.hideNodes([correctLabel])
             nodeHandler.showNodes([incorrectLabel])
             soundHandler.playAudio(failAudioPlayer)
@@ -124,32 +137,22 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     //Button handling
     @IBAction func userSelectedAnswer(sender: UIButton) {
         if sender.titleLabel?.text! == "Yes" {
-            if answers.answerIsCorrect {
-                answer(true)
-            }
-            else {
-                answer(false)
-            }
+            if answerIsCorrect! {answer(true)}
+            else {answer(false)}
         }
-        else {
-            if answers.answerIsCorrect {
-                answer(false)
-            }
-            else {
-                answer(true)
-            }
+        else {if answerIsCorrect! {answer(false)}
+            else {answer(true)}
         }
     }
 
-    @IBAction func facebookShare(sender: AnyObject) {
+    func facebookShare() {
         socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
     }
 
     func clickedRetry () {
-        nodeHandler.showNodes([noButton, yesButton, timerLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
         nodeHandler.hideNodes([correctLabel, incorrectLabel])
         viewHandler.removeViews(self)
-        startNewGame()
+        startCountdown()
     }
 }
 

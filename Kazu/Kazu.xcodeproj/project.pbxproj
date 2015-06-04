@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFA1B13BC2B00B270F8 /* Lock.png */; };
 		FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFE1B13CD6300B270F8 /* SectionLock.png */; };
+		FC18CC1A1B20A2F3006061E9 /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC18CC191B20A2F3006061E9 /* Countdown.mp3 */; };
 		FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */; };
 		FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */; };
 		FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		FC08FBFA1B13BC2B00B270F8 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
 		FC08FBFE1B13CD6300B270F8 /* SectionLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SectionLock.png; sourceTree = "<group>"; };
+		FC18CC191B20A2F3006061E9 /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
 		FC2330D21AC49B2F00F6BCF2 /* Kazu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		FC4B9DD71AC9FA71004390E2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FC18CC191B20A2F3006061E9 /* Countdown.mp3 */,
 				FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */,
 				FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */,
 			);
@@ -338,6 +341,7 @@
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
+				FC18CC1A1B20A2F3006061E9 /* Countdown.mp3 in Resources */,
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
 				FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */,
 				FC3656181B1397110068D806 /* diamondCapsule.png in Resources */,

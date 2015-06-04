@@ -35,8 +35,9 @@ public class RandomNumberCalculator {
             arrayToReturn.append(randomNumber)
             i++
         }
-        return arrayToReturn
+        
+        var newArrayToReturn = sorted(arrayToReturn, >)
+        return newArrayToReturn
     }
-    
-    func reflect (num: Int32) -> Int32 {return num - (num * 2)}
+
 }

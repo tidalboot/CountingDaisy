@@ -15,6 +15,7 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
 
     let viewHandler = ViewHandler()
     
+    @IBOutlet var facebookShareButton: UIButton!
     @IBOutlet var contentView: UIView!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var retryButton: UIButton!
