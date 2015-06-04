@@ -639,7 +639,7 @@
                                 <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not quite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54h-ZO-c8i" userLabel="IncorrectLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not quite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54h-ZO-c8i" userLabel="IncorrectLabel">
                                 <rect key="frame" x="65" y="436" width="190" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EZM-Q3-K9M"/>
@@ -649,7 +649,7 @@
                                 <color key="textColor" red="0.82745098039215681" green="0.30588235294117649" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-Fa-9oy" userLabel="CorrectLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6m-Fa-9oy" userLabel="CorrectLabel">
                                 <rect key="frame" x="85" y="436" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="YqB-oh-9vn"/>
@@ -679,21 +679,6 @@
                                 <color key="textColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzV-7N-lQd">
-                                <rect key="frame" x="102" y="499" width="113" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="4U8-KD-i3w"/>
-                                    <constraint firstAttribute="width" constant="113" id="qho-7d-Ldn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Retry?">
-                                    <color key="titleColor" red="0.96769699607265858" green="0.9882352941176471" blue="0.97565033443630411" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickedRetry:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aht-fK-6c7"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bk-mW-1je">
                                 <rect key="frame" x="26" y="125" width="268" height="2"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -750,15 +735,6 @@
                                     <action selector="facebookShare:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5wy-PG-6KW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-FE-o2Q">
-                                <rect key="frame" x="223" y="476" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gameOver:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6ry-Dm-TjZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -771,7 +747,6 @@
                             <constraint firstItem="54h-ZO-c8i" firstAttribute="top" secondItem="wSZ-L9-B5C" secondAttribute="bottom" constant="146" id="94Z-t3-rrb"/>
                             <constraint firstItem="3MI-KI-KgP" firstAttribute="leading" secondItem="VkO-qn-7UK" secondAttribute="trailing" constant="3" id="DaN-IS-8I9"/>
                             <constraint firstAttribute="centerY" secondItem="wSZ-L9-B5C" secondAttribute="centerY" constant="-5.5" id="Di4-B7-wQd"/>
-                            <constraint firstItem="AzV-7N-lQd" firstAttribute="top" secondItem="wSZ-L9-B5C" secondAttribute="bottom" constant="209" id="Eym-B8-RmG"/>
                             <constraint firstAttribute="centerX" secondItem="Yfm-u6-kA2" secondAttribute="centerX" constant="-2.5" id="FPc-bn-MQk"/>
                             <constraint firstItem="GhL-dK-arn" firstAttribute="leading" secondItem="dGc-VN-oA3" secondAttribute="trailing" constant="-91" id="GDM-wD-Xyh"/>
                             <constraint firstAttribute="centerX" secondItem="IXr-7u-wCC" secondAttribute="centerX" id="Gin-Ev-zxu"/>
@@ -787,7 +762,6 @@
                             <constraint firstItem="wSZ-L9-B5C" firstAttribute="leading" secondItem="dGc-VN-oA3" secondAttribute="trailing" constant="38" id="UYz-cL-BIe"/>
                             <constraint firstItem="dwK-3i-c7S" firstAttribute="top" secondItem="wSZ-L9-B5C" secondAttribute="bottom" constant="80" id="a5w-xJ-Bxl"/>
                             <constraint firstAttribute="centerX" secondItem="ymL-Z6-oyd" secondAttribute="centerX" id="aFA-xD-EdR"/>
-                            <constraint firstAttribute="centerX" secondItem="AzV-7N-lQd" secondAttribute="centerX" constant="1.5" id="ahK-EQ-bC0"/>
                             <constraint firstItem="B6q-CP-86H" firstAttribute="leading" secondItem="wSZ-L9-B5C" secondAttribute="trailing" constant="38" id="amh-V3-Myl"/>
                             <constraint firstAttribute="centerX" secondItem="zuJ-Sf-Tqv" secondAttribute="centerX" id="c4S-gQ-zmF"/>
                             <constraint firstItem="B6q-CP-86H" firstAttribute="top" secondItem="80u-tt-XNZ" secondAttribute="bottom" constant="-85" id="d6a-X4-6B0"/>
@@ -815,7 +789,6 @@
                         <outlet property="incorrectLabel" destination="54h-ZO-c8i" id="hdy-7u-X8E"/>
                         <outlet property="noButton" destination="B6q-CP-86H" id="KjB-Lb-ZRO"/>
                         <outlet property="operatorLabel" destination="VkO-qn-7UK" id="gui-vL-s0o"/>
-                        <outlet property="retryButton" destination="AzV-7N-lQd" id="9x7-Ro-zrk"/>
                         <outlet property="scoreLabel" destination="Yfm-u6-kA2" id="1Lf-d7-kkD"/>
                         <outlet property="summationLabel" destination="8O0-H1-ggq" id="kZn-kx-ol4"/>
                         <outlet property="timerLabel" destination="Cj5-9H-ckT" id="GD1-es-Ijd"/>

@@ -27,7 +27,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     //Button Outlets
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
-    @IBOutlet var retryButton: UIButton!
 
     //Ahhhh lovely variables
     var successAudioPlayer = AVAudioPlayer()
@@ -41,57 +40,61 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     var timeLeft = 10.0
     var gameTypeToLoad: String!
     var gameOverViewController: GameOverViewController!
-    var popoverView: UIView!
-
-    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.gameOverViewController = GameOverViewController.new()
         var customViewObject: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
         gameOverViewController = customViewObject as! GameOverViewController
-        popoverView = gameOverViewController.view
+        let popoverView = gameOverViewController.view
  
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         
-        
-        nodeHandler.hideNodes([incorrectLabel, correctLabel, retryButton])
         operatorLabel.text = gameTypeToLoad
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
-        nextSetOfNumbers()
-        startTimer()
+        startNewGame()
     }
     
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
     
     func nextSetOfNumbers () {
-        var arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
+        var arrayOfRandomNumbers = []
+        if gameTypeToLoad == "×" {
+            arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 15)
+        }
+        else {
+            arrayOfRandomNumbers = randomNumberCalculator.generateRandomNumbers(2, minumumValue: 1, maximumValue: 30)
+        }
         firstNumber = arrayOfRandomNumbers[0] as! Int
         secondNumber = arrayOfRandomNumbers[1] as! Int
+        
         answers = gameHandler.generateResult(gameTypeToLoad, augend: firstNumber, addend: secondNumber)
-        augendLabel.text = "\(firstNumber)"
-        addendLabel.text = "\(secondNumber)"
-        summationLabel.text = "\(answers.answer)"
+
+        nodeHandler.updateLabelsWithText([augendLabel, addendLabel, summationLabel], textToUpdateLabelsWith: ["\(firstNumber)", "\(secondNumber)", "\(answers.answer)" ])
     }
     
-    func startTimer () {
+    
+    //Timer handling
+    func startNewGame () {
+        score = 0
+        scoreLabel.text = "\(score)"
+        timeLeft = 10
+        nextSetOfNumbers()
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimerLabel"), userInfo: nil, repeats: true)
+    }
+    
+    func gameOver () {
+        myTimer.invalidate()
+        nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
+        nodeHandler.showNodes([incorrectLabel])
+        highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
+        gameOverViewController.scoreLabel.text = "\(score)"
+        viewHandler.fadeCurrentView(self, viewToOverlay: gameOverViewController.view)
     }
     
     func updateTimerLabel () {
         var rounded = round(timeLeft*10)/10
         if timeLeft <= 0 {
-            myTimer.invalidate()
-            nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
-            nodeHandler.showNodes([incorrectLabel, retryButton])
-            highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
-            incorrectLabel.text = "Game Over!"
-            gameOverViewController.scoreLabel.text = "\(score)"
-            viewHandler.fadeCurrentView(self, viewToOverlay: popoverView)
+            gameOver()
         }
         else {
             timeLeft = timeLeft - 0.1
@@ -99,7 +102,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         }
     }
     
-
+    //Game handlers
     func answer (correctAnswer: Bool) {
         if correctAnswer {
             score++
@@ -117,13 +120,8 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         }
         nextSetOfNumbers()
     }
-
     
-    @IBAction func facebookShare(sender: AnyObject) {
-        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
-    }
-
-    
+    //Button handling
     @IBAction func userSelectedAnswer(sender: UIButton) {
         if sender.titleLabel?.text! == "Yes" {
             if answers.answerIsCorrect {
@@ -143,15 +141,15 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         }
     }
 
+    @IBAction func facebookShare(sender: AnyObject) {
+        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
+    }
 
     func clickedRetry () {
         nodeHandler.showNodes([noButton, yesButton, timerLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
-        nodeHandler.hideNodes([correctLabel, incorrectLabel, retryButton])
-        incorrectLabel.text = "Not quite"
-        score = 0
-        timeLeft = 10
-        startTimer()
+        nodeHandler.hideNodes([correctLabel, incorrectLabel])
         viewHandler.removeViews(self)
+        startNewGame()
     }
 }
 

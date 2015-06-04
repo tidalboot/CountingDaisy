@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 public class GameHandler {
     
@@ -18,7 +19,7 @@ public class GameHandler {
             return (calculate(operatorToUse, firstNumber: augend, secondNumber: addend) + randomNumberToMinus, false)
         }
         else {
-            return (calculate(operatorToUse, firstNumber: addend, secondNumber: augend), true)
+            return (calculate(operatorToUse, firstNumber: augend, secondNumber: addend), true)
         }
     }
     

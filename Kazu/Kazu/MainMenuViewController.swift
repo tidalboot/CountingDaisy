@@ -29,10 +29,10 @@ class MainMenuViewController: UIViewController {
     }
     
     //Remove on release
-    @IBAction func resetScores(sender: AnyObject) {
-        highScoreHandler.resetHighScore()
-        updateHighScores()
-    }
+//    @IBAction func resetScores(sender: AnyObject) {
+//        highScoreHandler.resetHighScore()
+//        updateHighScores()
+//    }
     
     @IBAction func unwindToHomeScreen (segue: UIStoryboardSegue) {
         updateHighScores()

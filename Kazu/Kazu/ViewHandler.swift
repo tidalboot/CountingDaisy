@@ -28,7 +28,6 @@ class ViewHandler {
         })
         
         viewsAdded = [fadeView, viewToOverlay]
-        
         viewToFade.view.addSubview(fadeView)
         viewToFade.view.addSubview(viewToOverlay)
     }
@@ -39,5 +38,4 @@ class ViewHandler {
             viewToRemove.removeFromSuperview()
         }
     }
-    
 }

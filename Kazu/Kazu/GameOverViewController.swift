@@ -18,10 +18,10 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var contentView: UIView!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var retryButton: UIButton!
+    @IBAction func touchedRetry(sender: AnyObject) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        scoreLabel.text = "lolol"
         contentView.frame = CGRect(x: 0, y: 0, width: 250, height: 350)
         contentView.layer.cornerRadius = 2
         
@@ -30,19 +30,4 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
         facebookLoginButton.center.y = self.view.center.y + 150
         self.view.addSubview(facebookLoginButton)
     }
-
-    override func viewDidDisappear(animated: Bool) {
-        println("It's dead Jim")
-    }
-    
-    @IBAction func touchedRetry(sender: AnyObject) {
-//        println("asda")
-//        self.removeFromParentViewController()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }

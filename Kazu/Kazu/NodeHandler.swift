@@ -36,4 +36,17 @@ class NodeHandler {
             }
         }
     }
+    
+    func updateLabelsWithText (labelsToUpdate: [UILabel], textToUpdateLabelsWith: [String]) {
+        for (index, label) in enumerate(labelsToUpdate) {
+            label.text = textToUpdateLabelsWith[index]
+        }
+    }
+    
+//    func updateLabelsWithNumbers (labelsToUpdate: [UILabel], textToUpdateLabelsWith: [Float]) {
+//        for (index, label) in enumerate(labelsToUpdate) {
+//            label.text = "\(textToUpdateLabelsWith[index])"
+//        }
+//    }
+    
 }
