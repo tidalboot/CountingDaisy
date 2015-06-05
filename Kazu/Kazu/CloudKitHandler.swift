@@ -37,23 +37,8 @@ public class CloudKitHandler {
         container!.fetchUserRecordIDWithCompletionHandler({
             recordID, error in
             var userIDToReturn = recordID.recordName
-            println("It got here")
             userID = userIDToReturn
         })
         return userID
     }
-    
-//    public func getUserID (callback: (userID: String) -> ()) {
-//        var userID : String!
-//        
-//        container!.fetchUserRecordIDWithCompletionHandler({
-//            recordID, error in
-//            var userIDToReturn = recordID.recordName
-//            println("It got here")
-//            return callback(userID: userIDToReturn)
-//        })
-//        return
-//    }
-    
-    
 }

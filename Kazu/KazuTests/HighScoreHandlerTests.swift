@@ -21,13 +21,25 @@ class HighScoreHandlerTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        highScoreHandler?.resetHighScore()
+    }
+    
+    func test_retrieve_high_scores_correctly_returns_an_array_of_all_scores () {
+        highScoreHandler?.resetHighScore()
+        highScoreHandler?.setHighScore(20, highScoreToSet: "First")
+        highScoreHandler?.setHighScore(30, highScoreToSet: "Second")
+        highScoreHandler?.setHighScore(40, highScoreToSet: "Third")
+        
+        var totalScore = highScoreHandler?.retrieveHighScores()
+        
+        XCTAssertEqual(totalScore!.count, 3, "foo")
     }
     
     func test_set_highscore_updates_the_highscore_if_new_score_is_higher_than_stored_highscore() {
         highScoreHandler?.setHighScore(10, highScoreToSet: "+")
         highScoreHandler?.setHighScore(20, highScoreToSet: "+")
         var highestScore = highScoreHandler?.retrieveHighScore("+")
-        
+
         XCTAssert(highestScore == 20, "Expected 20 but got \(highestScore)")
     }
     

@@ -13,24 +13,25 @@ class ViewHandler {
     
     var viewsAdded = []
     
-    func fadeCurrentView (viewToFade: UIViewController, viewToOverlay: UIView) {
-        var fadeView = UIView(frame: CGRect(x: 0, y: 0, width: viewToFade.view.frame.width, height: viewToFade.view.frame.height))
-        fadeView.backgroundColor = viewToFade.view.backgroundColor
+    func addPopoverViewWithFade (viewToPopover: UIView, viewControllerToFade: UIViewController) {
+        var fadeView = UIView(frame: CGRect(x: 0, y: 0, width: viewControllerToFade.view.frame.width, height: viewControllerToFade.view.frame.height))
+        fadeView.backgroundColor = viewControllerToFade.view.backgroundColor
         fadeView.alpha = 0
-        viewToOverlay.alpha = 0
-        viewToOverlay.center.x = viewToFade.view.center.x
-        viewToOverlay.center.y = viewToFade.view.center.y + 100
+        viewToPopover.alpha = 0
+        viewToPopover.center = viewControllerToFade.view.center
+        viewToPopover.center.y += 100
         
         UIView.animateWithDuration(0.5, animations: {
             fadeView.alpha = 0.8
-            viewToOverlay.alpha = 1
-            viewToOverlay.center.y = viewToFade.view.center.y
+            viewToPopover.alpha = 1
+            viewToPopover.center.y = viewControllerToFade.view.center.y
         })
         
-        viewsAdded = [fadeView, viewToOverlay]
-        viewToFade.view.addSubview(fadeView)
-        viewToFade.view.addSubview(viewToOverlay)
+        viewsAdded = [fadeView, viewToPopover]
+        viewControllerToFade.view.addSubview(fadeView)
+        viewControllerToFade.view.addSubview(viewToPopover)
     }
+    
     
     func removeViews (viewToRemoveViewsFrom: UIViewController) {
         for views in viewsAdded {

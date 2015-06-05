@@ -17,6 +17,8 @@ class MainMenuViewController: UIViewController {
     }
     
     func updateHighScores () {
+        let highScores = highScoreHandler.retrieveHighScores()
+        var totalScore = highScores.reduce(0, combine: +)
         let additionHighScore = highScoreHandler.retrieveHighScore("+")
         let subtractionHighScore = highScoreHandler.retrieveHighScore("−")
         let multiplicationHighScore = highScoreHandler.retrieveHighScore("×")
@@ -25,7 +27,7 @@ class MainMenuViewController: UIViewController {
         subtractionHighScoreLabel.text = "\(subtractionHighScore)"
         divisionHighScoreLabel.text = "\(divisionHighScore)"
         multiplicationHighScoreLabel.text = "\(multiplicationHighScore)"
-        totalScoreLabel.text = "\(additionHighScore + subtractionHighScore + multiplicationHighScore + divisionHighScore)"
+        totalScoreLabel.text = "\(totalScore)"
     }
     
     @IBAction func unwindToHomeScreen (segue: UIStoryboardSegue) {
@@ -42,17 +44,8 @@ class MainMenuViewController: UIViewController {
     
     @IBAction func userSelectedGameType(sender: UIButton) {
         if let optionSelected = sender.titleLabel?.text {
-            userTappedScreen(optionSelected)
+            self.performSegueWithIdentifier("gameScene", sender: optionSelected)
         }
-    }
-    
-    func userTappedScreen (optionSelected: String) {
-        self.performSegueWithIdentifier("gameScene", sender: optionSelected)
-    }
-    
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
     }
 }
 

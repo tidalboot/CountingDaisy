@@ -52,7 +52,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
-        
         operatorLabel.text = gameTypeToLoad
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
@@ -61,14 +60,9 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     }
     
     
-    func nextSetOfNumbers () {
-        answerIsCorrect = gameHandler.getNextSetOfNumbers(gameTypeToLoad, augendLabel: augendLabel, addendLabel: addendLabel, answerLabel: summationLabel)
-    }
-    
-    
     func startCountdown () {
         var genericView = UILabel()
-        viewHandler.fadeCurrentView(self, viewToOverlay: genericView)
+        viewHandler.addPopoverViewWithFade(genericView, viewControllerToFade: self)
         countDownLabel.hidden = false
         self.view.bringSubviewToFront(countDownLabel)
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(0.9, target: self, selector: Selector("runCountdown"), userInfo: nil, repeats: true)
@@ -97,15 +91,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimerLabel"), userInfo: nil, repeats: true)
     }
     
-    func gameOver () {
-        myTimer.invalidate()
-        nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
-        nodeHandler.showNodes([incorrectLabel])
-        highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
-        gameOverViewController.scoreLabel.text = "\(score)"
-        viewHandler.fadeCurrentView(self, viewToOverlay: gameOverViewController.view)
-    }
-    
     func updateTimerLabel () {
         var rounded = round(timeLeft*10)/10
         if timeLeft <= 0 {
@@ -116,7 +101,15 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         }
     }
     
-    //Game handlers
+    func gameOver () {
+        myTimer.invalidate()
+        nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
+        nodeHandler.showNodes([incorrectLabel])
+        highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
+        gameOverViewController.scoreLabel.text = "\(score)"
+        viewHandler.addPopoverViewWithFade(gameOverViewController.view,viewControllerToFade: self)
+    }
+    
     func answer (correctAnswer: Bool) {
         if correctAnswer {
             score++
@@ -134,6 +127,10 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         nextSetOfNumbers()
     }
     
+    func nextSetOfNumbers () {
+        answerIsCorrect = gameHandler.getNextSetOfNumbers(gameTypeToLoad, augendLabel: augendLabel, addendLabel: addendLabel, answerLabel: summationLabel)
+    }
+    
     //Button handling
     @IBAction func userSelectedAnswer(sender: UIButton) {
         if sender.titleLabel?.text! == "Yes" {
@@ -145,14 +142,14 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         }
     }
 
-    func facebookShare() {
-        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
-    }
-
     func clickedRetry () {
         nodeHandler.hideNodes([correctLabel, incorrectLabel])
         viewHandler.removeViews(self)
         startCountdown()
+    }
+    
+    func facebookShare() {
+        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
     }
 }
 

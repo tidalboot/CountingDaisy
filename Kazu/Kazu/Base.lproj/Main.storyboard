@@ -715,7 +715,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsX-ju-kgF">
-                                <rect key="frame" x="96" y="222" width="124" height="55"/>
+                                <rect key="frame" x="51" y="222" width="214" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="0LO-ng-6Dt"/>
                                     <constraint firstAttribute="width" constant="214" id="gaQ-36-Cu4"/>

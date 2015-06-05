@@ -21,10 +21,5 @@ class SocialMediaHandler {
             faceBookViewController.setInitialText("\(textToPost) \nCheck it out at: \nhttp://apple.co/1OVtyFI")
             destinationViewController.presentViewController(faceBookViewController, animated: true, completion: nil)
         }
-        else {
-            println("Log in to Facebook")
-        }
     }
-
-    
 }

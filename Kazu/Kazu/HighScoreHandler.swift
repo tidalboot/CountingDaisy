@@ -29,8 +29,15 @@ public class HighScoreHandler {
     public func retrieveHighScore(highScoreToGet: String) -> (Int) {
         var localHighScore = userDefaults.integerForKey("\(highScoreToGet)")
         var iCloudHighScore = Int(iCloudStore.doubleForKey("\(highScoreToGet)"))
-        
         return max(localHighScore, iCloudHighScore)
+    }
+    
+    public func retrieveHighScores () -> Array<Int> {
+        var arrayToReturn: Array<Int> = Array()
+        for score in iCloudStore.dictionaryRepresentation.keys {
+            arrayToReturn.append(retrieveHighScore(score as! String))
+        }
+        return arrayToReturn
     }
     
     public func resetHighScore() {
