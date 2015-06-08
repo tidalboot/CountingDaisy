@@ -524,6 +524,7 @@
                         <outlet property="additionHighScoreLabel" destination="BOP-zW-rIb" id="a5t-s9-Z2S"/>
                         <outlet property="divisionHighScoreLabel" destination="TV2-G1-mYR" id="a3v-OK-Ipv"/>
                         <outlet property="multiplicationHighScoreLabel" destination="2bE-Yb-ILB" id="rlE-qY-9As"/>
+                        <outlet property="pointsToNextRankLabel" destination="9GI-ES-eqY" id="vGJ-G3-fae"/>
                         <outlet property="rankLabel" destination="wwB-pK-Gnx" id="Fgn-Gl-zCs"/>
                         <outlet property="subtractionHighScoreLabel" destination="hBz-qO-EOp" id="uN8-Ad-mJd"/>
                         <outlet property="totalScoreLabel" destination="asn-vF-PEx" id="wvP-UQ-JMX"/>
@@ -864,7 +865,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not logged in?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-iv-9HX">
                                 <rect key="frame" x="88" y="291" width="75" height="14.5"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1a-H9-uUj">

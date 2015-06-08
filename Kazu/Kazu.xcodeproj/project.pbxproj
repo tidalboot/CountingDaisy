@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC04020F1B25B1C100BE1184 /* RankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04020E1B25B1C100BE1184 /* RankTests.swift */; };
 		FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFA1B13BC2B00B270F8 /* Lock.png */; };
 		FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFE1B13CD6300B270F8 /* SectionLock.png */; };
 		FC18CC1A1B20A2F3006061E9 /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC18CC191B20A2F3006061E9 /* Countdown.mp3 */; };
@@ -35,6 +36,7 @@
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
 		FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */; };
 		FCAE9EA61B1F196C00BBBAD0 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */; };
+		FCCC06C21B25AB2000485357 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC06C11B25AB2000485357 /* Rank.swift */; };
 		FCD8ACE51B16761C0052910B /* HighScoreHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */; };
 		FCEC9EDD1B21ECA8008C8BD3 /* RankCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC04020E1B25B1C100BE1184 /* RankTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTests.swift; sourceTree = "<group>"; };
 		FC08FBFA1B13BC2B00B270F8 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
 		FC08FBFE1B13CD6300B270F8 /* SectionLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SectionLock.png; sourceTree = "<group>"; };
 		FC18CC191B20A2F3006061E9 /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
 		FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 		FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHandler.swift; sourceTree = "<group>"; };
+		FCCC06C11B25AB2000485357 /* Rank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rank.swift; path = ../Rank.swift; sourceTree = "<group>"; };
 		FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreHandler.swift; sourceTree = "<group>"; };
 		FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3656191B139A4A0068D806 /* Kazu.entitlements */,
+				FCCC06C11B25AB2000485357 /* Rank.swift */,
 				FC6F0A971ACB410600C0C78C /* Calculators */,
 				FC6F0A931ACB39DF00C0C78C /* Handlers */,
 				FC6F0A811ACB18EC00C0C78C /* Media */,
@@ -159,6 +164,7 @@
 				FCEC9EDF1B21ECFC008C8BD3 /* CalculatorTests */,
 				FCEC9EDE1B21ECF5008C8BD3 /* HandlerTests */,
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
+				FC04020E1B25B1C100BE1184 /* RankTests.swift */,
 			);
 			path = KazuTests;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				FCD8ACE51B16761C0052910B /* HighScoreHandler.swift in Sources */,
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 				FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */,
+				FCCC06C21B25AB2000485357 /* Rank.swift in Sources */,
 				FC74D74A1B1F4B64006CD223 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +406,7 @@
 				FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */,
 				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
 				FC31C1171B1C732B00EE5A82 /* HighScoreHandlerTests.swift in Sources */,
+				FC04020F1B25B1C100BE1184 /* RankTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

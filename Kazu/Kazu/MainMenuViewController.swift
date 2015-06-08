@@ -10,6 +10,7 @@ class MainMenuViewController: UIViewController {
     @IBOutlet var divisionHighScoreLabel: UILabel!
     @IBOutlet var multiplicationHighScoreLabel: UILabel!
     @IBOutlet var rankLabel: UILabel!
+    @IBOutlet var pointsToNextRankLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,8 @@ class MainMenuViewController: UIViewController {
     func updateHighScores () {
         let highScores = highScoreHandler.retrieveHighScores()
         var totalScore = highScores.reduce(0, combine: +)
+        let rank = Rank(currentScore: totalScore)
+        
         let additionHighScore = highScoreHandler.retrieveHighScore("+")
         let subtractionHighScore = highScoreHandler.retrieveHighScore("−")
         let multiplicationHighScore = highScoreHandler.retrieveHighScore("×")
@@ -28,6 +31,8 @@ class MainMenuViewController: UIViewController {
         divisionHighScoreLabel.text = "\(divisionHighScore)"
         multiplicationHighScoreLabel.text = "\(multiplicationHighScore)"
         totalScoreLabel.text = "\(totalScore)"
+        rankLabel.text = "\(rank.currentRank)"
+        pointsToNextRankLabel.text = "\(rank.pointsToNextRank) points to next rank"
     }
     
     @IBAction func unwindToHomeScreen (segue: UIStoryboardSegue) {
