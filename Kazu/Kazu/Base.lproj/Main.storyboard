@@ -375,14 +375,14 @@
                                     <constraint firstAttribute="height" constant="1" id="bVJ-7g-hdN"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-ms-aUz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-ms-aUz">
                                 <rect key="frame" x="148" y="381" width="25" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="0R6-WN-To7"/>
                                     <constraint firstAttribute="height" constant="37" id="yr2-5d-rBk"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-F5-K3H">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-F5-K3H">
                                 <rect key="frame" x="137" y="426" width="45" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="xYx-P4-lTg"/>

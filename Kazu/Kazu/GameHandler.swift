@@ -17,6 +17,8 @@ public class GameHandler {
         
         if coinToss > 5 {
             var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(-10, maximumValue: 10)
+            if randomNumberToMinus == 0 {randomNumberToMinus + 1}
+            
             return (calculate(operatorToUse, firstNumber: augend, secondNumber: addend) + randomNumberToMinus, false)
         }
         else {

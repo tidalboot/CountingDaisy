@@ -35,9 +35,8 @@
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
 		FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */; };
 		FCAE9EA61B1F196C00BBBAD0 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */; };
-		FCBC97451B1E107000A8FEE8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC97441B1E107000A8FEE8 /* Operators.swift */; };
-		FCBC97471B1E136100A8FEE8 /* OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC97461B1E136100A8FEE8 /* OperatorTests.swift */; };
 		FCD8ACE51B16761C0052910B /* HighScoreHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */; };
+		FCEC9EDD1B21ECA8008C8BD3 /* RankCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,9 +83,8 @@
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
 		FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 		FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHandler.swift; sourceTree = "<group>"; };
-		FCBC97441B1E107000A8FEE8 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		FCBC97461B1E136100A8FEE8 /* OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorTests.swift; sourceTree = "<group>"; };
 		FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreHandler.swift; sourceTree = "<group>"; };
+		FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 				FC6F0A811ACB18EC00C0C78C /* Media */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
-				FCBC97441B1E107000A8FEE8 /* Operators.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
@@ -159,12 +156,9 @@
 		FC2330EA1AC49B2F00F6BCF2 /* KazuTests */ = {
 			isa = PBXGroup;
 			children = (
+				FCEC9EDF1B21ECFC008C8BD3 /* CalculatorTests */,
+				FCEC9EDE1B21ECF5008C8BD3 /* HandlerTests */,
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
-				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
-				FC2331011AC4B81800F6BCF2 /* GameHandlerTests.swift */,
-				FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */,
-				FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */,
-				FCBC97461B1E136100A8FEE8 /* OperatorTests.swift */,
 			);
 			path = KazuTests;
 			sourceTree = "<group>";
@@ -247,6 +241,25 @@
 				FC2330FA1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift */,
 			);
 			name = Calculators;
+			sourceTree = "<group>";
+		};
+		FCEC9EDE1B21ECF5008C8BD3 /* HandlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2331011AC4B81800F6BCF2 /* GameHandlerTests.swift */,
+				FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */,
+				FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */,
+			);
+			name = HandlerTests;
+			sourceTree = "<group>";
+		};
+		FCEC9EDF1B21ECFC008C8BD3 /* CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */,
+				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
+			);
+			name = CalculatorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +383,6 @@
 				FC2330FB1AC49BBB00F6BCF2 /* RandomNumberCalculator.swift in Sources */,
 				FC2331041AC4BAB800F6BCF2 /* GameHandler.swift in Sources */,
 				FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */,
-				FCBC97451B1E107000A8FEE8 /* Operators.swift in Sources */,
 				FCD8ACE51B16761C0052910B /* HighScoreHandler.swift in Sources */,
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 				FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */,
@@ -383,9 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2331021AC4B81800F6BCF2 /* GameHandlerTests.swift in Sources */,
+				FCEC9EDD1B21ECA8008C8BD3 /* RankCalculatorTests.swift in Sources */,
 				FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */,
 				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
-				FCBC97471B1E136100A8FEE8 /* OperatorTests.swift in Sources */,
 				FC31C1171B1C732B00EE5A82 /* HighScoreHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
