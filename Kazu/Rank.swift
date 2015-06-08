@@ -8,17 +8,12 @@ import Foundation
 
 public class Rank {
     
-    public var score: Int!
+    private var score: Int!
+    public init (Score: Int) {score = Score}
     
-    public init (currentScore: Int) {score = currentScore}
-    
-    public var currentRank: Int {
-        get {return score / 40}
-        set {}
-    }
-    
-    public var pointsToNextRank: Int {
-        get {return ((currentRank + 1) * 40) - (score)}
-        set {}
-    }
+    public var currentRank: Int {get {return score / 40}}
+    public var pointsToNextRank: Int {get {return ((currentRank + 1) * 40) - (score)}}
 }
+
+
+

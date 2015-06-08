@@ -23,7 +23,7 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.frame = CGRect(x: 0, y: 0, width: 250, height: 350)
+        contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 400)
         contentView.layer.cornerRadius = 2
         
         let facebookLoginButton: FBSDKLoginButton = FBSDKLoginButton()

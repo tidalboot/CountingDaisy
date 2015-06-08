@@ -12,7 +12,7 @@ import XCTest
 
 class RankTests: XCTestCase {
     
-    let rank = Rank(currentScore: 50)
+    let rank = Rank(Score: 50)
     
     func test_rank_returns_the_current_rank () {
         XCTAssertEqual(rank.currentRank, 1, "Expected rank one but got \(rank.currentRank)")
