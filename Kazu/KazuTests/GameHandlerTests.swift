@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import Kazu
+@testable import Kazu
 
 class GameHandlerTests: XCTestCase {
     
@@ -29,7 +29,7 @@ class GameHandlerTests: XCTestCase {
         var numberOfExactResults = 0
         
         for timesToTest = 0; timesToTest < 100; timesToTest++ {
-            var additionResult = gameHandler!.generateResult("+", augend: 1, addend: 2)
+            let additionResult = gameHandler!.generateResult("+", augend: 1, addend: 2)
             
             if additionResult.answer == 3 {
                 numberOfExactResults++

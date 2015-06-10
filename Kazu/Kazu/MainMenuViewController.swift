@@ -19,7 +19,7 @@ class MainMenuViewController: UIViewController {
     
     func updateHighScores () {
         let highScores = highScoreHandler.retrieveHighScores()
-        var totalScore = highScores.reduce(0, combine: +)
+        let totalScore = highScores.reduce(0, combine: +)
         let rank = Rank(Score: totalScore)
         
         let additionHighScore = highScoreHandler.retrieveHighScore("+")

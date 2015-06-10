@@ -9,30 +9,31 @@
 import Foundation
 import SpriteKit
 
-public class HighScoreHandler {
+class HighScoreHandler {
     
     var iCloudStore = NSUbiquitousKeyValueStore()
     var userDefaults = NSUserDefaults()
     
-    public init () {}
     
-    public func setHighScore(score:Int, highScoreToSet: String) {
-        var latestScore = score
-        var localHighScore = userDefaults.integerForKey("\(highScoreToSet)")
-        var iCloudHighScore = Int(iCloudStore.doubleForKey("\(highScoreToSet)"))
-        var scores = [latestScore, iCloudHighScore, localHighScore]
+    func setHighScore(score:Int, highScoreToSet: String) {
+        let latestScore = score
+        let localHighScore = userDefaults.integerForKey("\(highScoreToSet)")
+        let iCloudHighScore = Int(iCloudStore.doubleForKey("\(highScoreToSet)"))
+        let scores = [latestScore, iCloudHighScore, localHighScore]
+//        let scores = [latestScore, localHighScore]
+
         
         updateUserDefaultHighScore(scores.reduce(0, combine: {max($0, $1)}), highScoreToSet: highScoreToSet)
         updateiCloudHighScore(Double(scores.reduce(0, combine: {max($0, $1)})), highScoreToSet: highScoreToSet)
     }
     
-    public func retrieveHighScore(highScoreToGet: String) -> (Int) {
-        var localHighScore = userDefaults.integerForKey("\(highScoreToGet)")
-        var iCloudHighScore = Int(iCloudStore.doubleForKey("\(highScoreToGet)"))
+    func retrieveHighScore(highScoreToGet: String) -> (Int) {
+        let localHighScore = userDefaults.integerForKey("\(highScoreToGet)")
+        let iCloudHighScore = Int(iCloudStore.doubleForKey("\(highScoreToGet)"))
         return max(localHighScore, iCloudHighScore)
     }
     
-    public func retrieveHighScores () -> Array<Int> {
+    func retrieveHighScores () -> Array<Int> {
         var arrayToReturn: Array<Int> = Array()
         for score in iCloudStore.dictionaryRepresentation.keys {
             arrayToReturn.append(retrieveHighScore(score as! String))
@@ -40,7 +41,7 @@ public class HighScoreHandler {
         return arrayToReturn
     }
     
-    public func resetHighScore() {
+    func resetHighScore() {
         for item in iCloudStore.dictionaryRepresentation.keys {
                 iCloudStore.removeObjectForKey(item as! String)
         }

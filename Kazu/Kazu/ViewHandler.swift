@@ -14,7 +14,7 @@ class ViewHandler {
     var viewsAdded = []
     
     func addPopoverViewWithFade (viewToPopover: UIView, viewControllerToFade: UIViewController) {
-        var fadeView = UIView(frame: CGRect(x: 0, y: 0, width: viewControllerToFade.view.frame.width, height: viewControllerToFade.view.frame.height))
+        let fadeView = UIView(frame: CGRect(x: 0, y: 0, width: viewControllerToFade.view.frame.width, height: viewControllerToFade.view.frame.height))
         fadeView.backgroundColor = viewControllerToFade.view.backgroundColor
         fadeView.alpha = 0
         viewToPopover.alpha = 0
@@ -35,7 +35,7 @@ class ViewHandler {
     
     func removeViews (viewToRemoveViewsFrom: UIViewController) {
         for views in viewsAdded {
-            var viewToRemove = views as! UIView
+            let viewToRemove = views as! UIView
             viewToRemove.removeFromSuperview()
         }
     }

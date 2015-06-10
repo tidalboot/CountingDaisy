@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
 
 class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -19,16 +16,12 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var contentView: UIView!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var retryButton: UIButton!
+    @IBOutlet var homeButton: UIButton!
     @IBAction func touchedRetry(sender: AnyObject) {}
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 400)
         contentView.layer.cornerRadius = 2
-        
-        let facebookLoginButton: FBSDKLoginButton = FBSDKLoginButton()
-        facebookLoginButton.center.x = self.view.center.x
-        facebookLoginButton.center.y = self.view.center.y + 150
-        self.view.addSubview(facebookLoginButton)
     }
 }

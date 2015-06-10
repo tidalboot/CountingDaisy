@@ -14,7 +14,7 @@ class SocialMediaHandler {
     
     func postToFacebook (textToPost: String, destinationViewController: UIViewController) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            var faceBookViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let faceBookViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             //            var shareImage = UIImage(named: "FacebookShare")
             faceBookViewController.editing = false
             //            faceBookViewController.addImage(shareImage)

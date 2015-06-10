@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC04020F1B25B1C100BE1184 /* RankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04020E1B25B1C100BE1184 /* RankTests.swift */; };
-		FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFA1B13BC2B00B270F8 /* Lock.png */; };
-		FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */ = {isa = PBXBuildFile; fileRef = FC08FBFE1B13CD6300B270F8 /* SectionLock.png */; };
 		FC18CC1A1B20A2F3006061E9 /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC18CC191B20A2F3006061E9 /* Countdown.mp3 */; };
 		FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */; };
 		FC2330DA1AC49B2F00F6BCF2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2330D91AC49B2F00F6BCF2 /* MainMenuViewController.swift */; };
@@ -26,10 +24,6 @@
 		FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */; };
 		FC43B49C1ACF2775001CC989 /* CloudKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */; };
 		FC6ECA841B1EEB5800B26708 /* SocialMediaHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6ECA831B1EEB5800B26708 /* SocialMediaHandler.swift */; };
-		FC6ECA8C1B1EEF2200B26708 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */; };
-		FC6ECA8D1B1EEF2200B26708 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */; };
-		FC6ECA8E1B1EEF2200B26708 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */; };
-		FC6ECA901B1F003C00B26708 /* FacebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */; };
 		FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */; };
 		FC74D74A1B1F4B64006CD223 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74D7491B1F4B64006CD223 /* GameOverViewController.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
@@ -38,7 +32,6 @@
 		FCAE9EA61B1F196C00BBBAD0 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */; };
 		FCCC06C21B25AB2000485357 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC06C11B25AB2000485357 /* Rank.swift */; };
 		FCD8ACE51B16761C0052910B /* HighScoreHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */; };
-		FCEC9EDD1B21ECA8008C8BD3 /* RankCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		FC04020E1B25B1C100BE1184 /* RankTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTests.swift; sourceTree = "<group>"; };
-		FC08FBFA1B13BC2B00B270F8 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
-		FC08FBFE1B13CD6300B270F8 /* SectionLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SectionLock.png; sourceTree = "<group>"; };
 		FC18CC191B20A2F3006061E9 /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
 		FC2330D21AC49B2F00F6BCF2 /* Kazu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2330D61AC49B2F00F6BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,15 +62,11 @@
 		FC2331031AC4BAB800F6BCF2 /* GameHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHandler.swift; sourceTree = "<group>"; };
 		FC31C1161B1C732B00EE5A82 /* HighScoreHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreHandlerTests.swift; sourceTree = "<group>"; };
 		FC3656171B1397110068D806 /* diamondCapsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diamondCapsule.png; sourceTree = "<group>"; };
-		FC3656191B139A4A0068D806 /* Kazu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kazu.entitlements; sourceTree = SOURCE_ROOT; };
-		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FC36561B1B139C650068D806 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FC43B4991ACECCDC001CC989 /* iCloudHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudHandlerTests.swift; sourceTree = "<group>"; };
 		FC43B49B1ACF2775001CC989 /* CloudKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHandler.swift; sourceTree = "<group>"; };
+		FC4D1E221B284B930028207D /* Kazu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kazu.entitlements; sourceTree = "<group>"; };
 		FC6ECA831B1EEB5800B26708 /* SocialMediaHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaHandler.swift; sourceTree = "<group>"; };
-		FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookIcon.png; sourceTree = "<group>"; };
 		FC6F0A941ACB39EC00C0C78C /* NodeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		FC74D7491B1F4B64006CD223 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
@@ -88,7 +75,6 @@
 		FCAE9EA51B1F196C00BBBAD0 /* ViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHandler.swift; sourceTree = "<group>"; };
 		FCCC06C11B25AB2000485357 /* Rank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rank.swift; path = ../Rank.swift; sourceTree = "<group>"; };
 		FCD8ACE41B16761C0052910B /* HighScoreHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreHandler.swift; sourceTree = "<group>"; };
-		FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6ECA8C1B1EEF2200B26708 /* FBSDKCoreKit.framework in Frameworks */,
-				FC6ECA8D1B1EEF2200B26708 /* FBSDKShareKit.framework in Frameworks */,
-				FC6ECA8E1B1EEF2200B26708 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +98,6 @@
 		FC2330C91AC49B2F00F6BCF2 = {
 			isa = PBXGroup;
 			children = (
-				FC36561B1B139C650068D806 /* Default-568h@2x.png */,
-				FC6ECA8B1B1EEEF500B26708 /* Frameworks */,
 				FC2330D41AC49B2F00F6BCF2 /* Kazu */,
 				FC2330EA1AC49B2F00F6BCF2 /* KazuTests */,
 				FC2330D31AC49B2F00F6BCF2 /* Products */,
@@ -135,15 +116,13 @@
 		FC2330D41AC49B2F00F6BCF2 /* Kazu */ = {
 			isa = PBXGroup;
 			children = (
-				FC3656191B139A4A0068D806 /* Kazu.entitlements */,
+				FC4D1E221B284B930028207D /* Kazu.entitlements */,
 				FCCC06C11B25AB2000485357 /* Rank.swift */,
 				FC6F0A971ACB410600C0C78C /* Calculators */,
 				FC6F0A931ACB39DF00C0C78C /* Handlers */,
 				FC6F0A811ACB18EC00C0C78C /* Media */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
-				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
-				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
 			);
 			name = Kazu;
@@ -153,6 +132,9 @@
 		FC2330D51AC49B2F00F6BCF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC36561B1B139C650068D806 /* Default-568h@2x.png */,
+				FC2330D71AC49B2F00F6BCF2 /* AppDelegate.swift */,
+				FC2330DE1AC49B2F00F6BCF2 /* Images.xcassets */,
 				FC2330D61AC49B2F00F6BCF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,10 +143,10 @@
 		FC2330EA1AC49B2F00F6BCF2 /* KazuTests */ = {
 			isa = PBXGroup;
 			children = (
+				FC04020E1B25B1C100BE1184 /* RankTests.swift */,
 				FCEC9EDF1B21ECFC008C8BD3 /* CalculatorTests */,
 				FCEC9EDE1B21ECF5008C8BD3 /* HandlerTests */,
 				FC2330EB1AC49B2F00F6BCF2 /* Supporting Files */,
-				FC04020E1B25B1C100BE1184 /* RankTests.swift */,
 			);
 			path = KazuTests;
 			sourceTree = "<group>";
@@ -197,16 +179,6 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
-		FC6ECA8B1B1EEEF500B26708 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC6ECA851B1EEEDD00B26708 /* FBSDKCoreKit.framework */,
-				FC6ECA891B1EEEF200B26708 /* FBSDKShareKit.framework */,
-				FC6ECA871B1EEEE900B26708 /* FBSDKLoginKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FC6F0A811ACB18EC00C0C78C /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,9 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				FC3656171B1397110068D806 /* diamondCapsule.png */,
-				FC6ECA8F1B1F003C00B26708 /* FacebookIcon.png */,
-				FC08FBFE1B13CD6300B270F8 /* SectionLock.png */,
-				FC08FBFA1B13BC2B00B270F8 /* Lock.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -262,7 +231,6 @@
 		FCEC9EDF1B21ECFC008C8BD3 /* CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCEC9EDC1B21ECA8008C8BD3 /* RankCalculatorTests.swift */,
 				FC2330F71AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift */,
 			);
 			name = CalculatorTests;
@@ -312,7 +280,8 @@
 		FC2330CA1AC49B2F00F6BCF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Nick Jones";
 				TargetAttributes = {
 					FC2330D11AC49B2F00F6BCF2 = {
@@ -354,15 +323,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC08FBFF1B13CD6300B270F8 /* SectionLock.png in Resources */,
-				FC6ECA901B1F003C00B26708 /* FacebookIcon.png in Resources */,
 				FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */,
 				FC2330DD1AC49B2F00F6BCF2 /* Main.storyboard in Resources */,
 				FC36561C1B139C650068D806 /* Default-568h@2x.png in Resources */,
 				FC2330DF1AC49B2F00F6BCF2 /* Images.xcassets in Resources */,
 				FC18CC1A1B20A2F3006061E9 /* Countdown.mp3 in Resources */,
 				FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */,
-				FC08FBFB1B13BC2B00B270F8 /* Lock.png in Resources */,
 				FC3656181B1397110068D806 /* diamondCapsule.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2331021AC4B81800F6BCF2 /* GameHandlerTests.swift in Sources */,
-				FCEC9EDD1B21ECA8008C8BD3 /* RankCalculatorTests.swift in Sources */,
 				FC43B49A1ACECCDC001CC989 /* iCloudHandlerTests.swift in Sources */,
 				FC2330F91AC49B8100F6BCF2 /* RandomNumberCalculatorTests.swift in Sources */,
 				FC31C1171B1C732B00EE5A82 /* HighScoreHandlerTests.swift in Sources */,
@@ -449,10 +414,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -472,7 +439,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				"SDKROOT[arch=*]" = iphoneos8.3;
+				"SDKROOT[arch=*]" = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -494,6 +461,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -518,9 +486,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Kazu/Kazu.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nickjones/Documents/FacebookSDK,
@@ -529,6 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "nickjones.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -541,9 +510,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Kazu.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Kazu/Kazu.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nick Jones (H8V9WTFYHU)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nickjones/Documents/FacebookSDK,
@@ -552,6 +521,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "nickjones.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kazu;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -575,7 +545,9 @@
 				);
 				INFOPLIST_FILE = KazuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nickjones.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KazuTests;
+				"SDKROOT[arch=*]" = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
@@ -592,6 +564,7 @@
 				);
 				INFOPLIST_FILE = KazuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nickjones.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = KazuTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazu.app/Kazu";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";

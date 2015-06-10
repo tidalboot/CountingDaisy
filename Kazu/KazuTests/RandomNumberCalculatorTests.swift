@@ -2,7 +2,7 @@
 
 import Foundation
 import XCTest
-import Kazu
+@testable import Kazu
 
 class randomNumberCalculatorTests: XCTestCase {
     
@@ -23,9 +23,9 @@ class randomNumberCalculatorTests: XCTestCase {
         var numberOfMatchesFound = 0
         
         for randomPairsToCheck = 0; randomPairsToCheck < 10; randomPairsToCheck++ {
-            var arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(2,minumumValue: 1,maximumValue: 100)
-            var firstNum = arrayOfRandomNumbers[0] as! Int
-            var secondNum = arrayOfRandomNumbers[1] as! Int
+            let arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(2,minumumValue: 1,maximumValue: 100)
+            let firstNum = arrayOfRandomNumbers[0] as! Int
+            let secondNum = arrayOfRandomNumbers[1] as! Int
 
             if  firstNum == secondNum {
                 numberOfMatchesFound++
@@ -37,9 +37,9 @@ class randomNumberCalculatorTests: XCTestCase {
     
     func test_generate_random_numbers_produces_numbers_within_the_specified_range () {
         
-        var arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(1,minumumValue: 10,maximumValue: 50)
+        let arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(1,minumumValue: 10,maximumValue: 50)
         
-        var numberInArray = arrayOfRandomNumbers[0] as! Int
+        let numberInArray = arrayOfRandomNumbers[0] as! Int
         
         XCTAssertGreaterThanOrEqual(numberInArray, 10, "Number produced was less than the minimum specified")
         XCTAssertLessThanOrEqual(numberInArray, 50, "Number produced was greater than the maximum specified")
@@ -48,8 +48,8 @@ class randomNumberCalculatorTests: XCTestCase {
     
     func test_generate_random_numbers_procudes_an_array_with_the_correct_number_of_objects_specifed () {
         
-        var arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(20,minumumValue: 1,maximumValue: 100)
-        var numberOfObjectsInArray = arrayOfRandomNumbers.count
+        let arrayOfRandomNumbers = randomNumberCalculator!.generateRandomNumbers(20,minumumValue: 1,maximumValue: 100)
+        let numberOfObjectsInArray = arrayOfRandomNumbers.count
         
         XCTAssertEqual(numberOfObjectsInArray, 20, "generateRandomNumbers created an array of \(numberOfObjectsInArray) objects, expected 20")
         
@@ -67,7 +67,7 @@ class randomNumberCalculatorTests: XCTestCase {
             numbersAreSorted = true
         }
         
-        XCTAssertFalse(numbersAreSorted, "Numbers were not sorted correctly in descending order")
+        XCTAssertTrue(numbersAreSorted, "Numbers were not sorted correctly in descending order")
     }
     
 }

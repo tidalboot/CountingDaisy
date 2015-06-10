@@ -6,13 +6,12 @@
 
 import Foundation
 
-public class Rank {
-    
+class Rank {
     private var score: Int!
-    public init (Score: Int) {score = Score}
+    init (Score: Int) {score = Score}
     
-    public var currentRank: Int {get {return score / 40}}
-    public var pointsToNextRank: Int {get {return ((currentRank + 1) * 40) - (score)}}
+    var currentRank: Int {get {return score / 40}}
+    var pointsToNextRank: Int {get {return ((currentRank + 1) * 40) - (score)}}
 }
 
 

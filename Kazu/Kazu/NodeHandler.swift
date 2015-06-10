@@ -12,7 +12,7 @@ import UIKit
 class NodeHandler {
     
     func hideNodes (objectsToHide: [UIView]) {
-        var objectArray = objectsToHide
+        let objectArray = objectsToHide
         for object in objectArray {
             if object is UIActivityIndicatorView {
                 (object as! UIActivityIndicatorView).stopAnimating()
@@ -25,7 +25,7 @@ class NodeHandler {
     }
     
     func showNodes (objectsToShow: [UIView]) {
-        var objectArray = objectsToShow
+        let objectArray = objectsToShow
         for object in objectArray {
             if object is UIActivityIndicatorView {
                 (object as! UIActivityIndicatorView).startAnimating()

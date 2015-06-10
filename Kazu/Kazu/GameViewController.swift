@@ -45,11 +45,12 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     var gameOverViewController: GameOverViewController!
     
     override func viewDidLoad() {
-        var gameOverStoryboardView: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
+        let gameOverStoryboardView: AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("GameOver")
         gameOverViewController = gameOverStoryboardView as! GameOverViewController
         let popoverView = gameOverViewController.view
  
-        gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
+        gameOverViewController.homeButton.addTarget(self, action: "goHome", forControlEvents: UIControlEvents.TouchUpInside)
+//        gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
         operatorLabel.text = gameTypeToLoad
@@ -59,9 +60,12 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         startCountdown()
     }
     
+    func goHome () {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func startCountdown () {
-        var genericView = UILabel()
+        let genericView = UILabel()
         viewHandler.addPopoverViewWithFade(genericView, viewControllerToFade: self)
         countDownLabel.hidden = false
         self.view.bringSubviewToFront(countDownLabel)
@@ -92,7 +96,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     }
     
     func updateTimerLabel () {
-        var rounded = round(timeLeft*10)/10
+        let rounded = round(timeLeft*10)/10
         if timeLeft <= 0 {
             gameOver()
         } else {

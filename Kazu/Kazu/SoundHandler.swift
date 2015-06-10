@@ -6,9 +6,8 @@ import UIKit
 class SoundHandler {
     
     func createAudioPlayer (nameOfSoundToPlay: String, extensionOfSound: String) -> AVAudioPlayer {
-        var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(nameOfSoundToPlay)", ofType: "\(extensionOfSound)")!)
+        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(nameOfSoundToPlay)", ofType: "\(extensionOfSound)")!)
         var newAudioPlayer = AVAudioPlayer(contentsOfURL: sound, error: nil)
-        
         newAudioPlayer.prepareToPlay()
         newAudioPlayer.volume = 0.4
         

@@ -21,7 +21,7 @@ public class CloudKitHandler {
     }
     
     public func doesUserHaveiCloudAccount () -> Bool {
-        var doesUserHaveiCloudAccount = NSFileManager.defaultManager().ubiquityIdentityToken
+        let doesUserHaveiCloudAccount = NSFileManager.defaultManager().ubiquityIdentityToken
         
         if doesUserHaveiCloudAccount == nil {
             return false
@@ -36,7 +36,7 @@ public class CloudKitHandler {
         
         container!.fetchUserRecordIDWithCompletionHandler({
             recordID, error in
-            var userIDToReturn = recordID.recordName
+            let userIDToReturn = recordID!.recordName
             userID = userIDToReturn
         })
         return userID

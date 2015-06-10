@@ -2,21 +2,16 @@
 import Foundation
 import UIKit
 
-public class GameHandler {
+class GameHandler {
     
     var randomNumberCalculator = RandomNumberCalculator()
     var nodeHandler = NodeHandler()
     
-    public init () {}
-    
-    public func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
-        
-        var answerToReturn: Int = 0
-        var isAnswerCorrect: Bool
-        var coinToss = Int(arc4random_uniform(10))
-        
+    func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
+
+        let coinToss = Int(arc4random_uniform(10))
         if coinToss > 5 {
-            var randomNumberToMinus = randomNumberCalculator.generateRandomNumber(-10, maximumValue: 10)
+            let randomNumberToMinus = randomNumberCalculator.generateRandomNumber(-10, maximumValue: 10)
             if randomNumberToMinus == 0 {randomNumberToMinus + 1}
             
             return (calculate(operatorToUse, firstNumber: augend, secondNumber: addend) + randomNumberToMinus, false)
