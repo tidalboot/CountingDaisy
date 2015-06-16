@@ -68,33 +68,52 @@ class StatsTests: XCTestCase {
         stats!.correctAnswer()
         XCTAssertEqual(stats!.currentStreak, 6, "Expected 6 but got \(stats!.currentStreak)")
     }
-    
     func test_correct_answer_updates_highest_streak_when_current_streak_is_greater () {
         stats!.highestStreak = 8
         stats!.currentStreak = 8
         stats!.correctAnswer()
         XCTAssertEqual(stats!.highestStreak, 9, "Expected 9 but got \(stats!.highestStreak)")
     }
-    
     func test_incorrect_answer_sets_current_streak_to_zero () {
         stats!.currentStreak = 8
         stats!.incorrectAnswer()
         XCTAssertEqual(stats!.currentStreak, 0, "Expected 0 but got \(stats!.currentStreak)")
     }
-    
     func test_stats_reset_sets_current_streak_to_zero () {
         stats!.currentStreak = 8
         stats!.reset()
         XCTAssertEqual(stats!.currentStreak, 0, "Expected 0 but got \(stats!.currentStreak)")
     }
-    
     func test_stats_reset_sets_highest_streak_to_zero () {
         stats!.highestStreak = 8
         stats!.reset()
         XCTAssertEqual(stats!.highestStreak, 0, "Expected 0 but got \(stats!.highestStreak)")
     }
+    //---------------------
+
     
+    
+    //High score difference tests
+//    
+//    func test_calculate_high_score_difference_correctly_returns_the_score_difference () {
+////        var highScore = HighScoreHandler().retrieveHighScore("+")
+//        var difference = stats!.calculateHighScore("+",)
+//    }
+    
+    
+    //---------------------
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

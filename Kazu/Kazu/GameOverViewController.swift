@@ -28,4 +28,10 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
         contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 400)
         contentView.layer.cornerRadius = 2
     }
+    
+    func loadStats (stats: Stats) {
+        scoreLabel.text = "\(stats.score)"
+        wrongAnswersLabel.text = "\(stats.wrongAnswers)"
+        longestStreakLabel.text = "\(stats.highestStreak)"
+    }
 }

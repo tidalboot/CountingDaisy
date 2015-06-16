@@ -29,6 +29,7 @@
 		FC74D74A1B1F4B64006CD223 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74D7491B1F4B64006CD223 /* GameOverViewController.swift */; };
 		FC7FF2D31B304D1E00182B7E /* StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FF2D21B304D1E00182B7E /* StatsTests.swift */; };
 		FC7FF2D51B30566500182B7E /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FF2D41B30566500182B7E /* Stats.swift */; };
+		FC7FF2D71B3063F100182B7E /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FF2D61B3063F100182B7E /* GameMode.swift */; };
 		FC83F7D51ACA099C00B9BA15 /* Pop_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */; };
 		FC83F7D71ACA0A8000B9BA15 /* Pop_Fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */; };
 		FC83F7DA1ACA0B8A00B9BA15 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */; };
@@ -75,6 +76,7 @@
 		FC74D7491B1F4B64006CD223 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		FC7FF2D21B304D1E00182B7E /* StatsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTests.swift; sourceTree = "<group>"; };
 		FC7FF2D41B30566500182B7E /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		FC7FF2D61B3063F100182B7E /* GameMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		FC83F7D41ACA099C00B9BA15 /* Pop_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Success.mp3; sourceTree = "<group>"; };
 		FC83F7D61ACA0A8000B9BA15 /* Pop_Fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop_Fail.mp3; sourceTree = "<group>"; };
 		FC83F7D91ACA0B8A00B9BA15 /* SoundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
@@ -124,13 +126,14 @@
 			children = (
 				FC4D1E221B284B930028207D /* Kazu.entitlements */,
 				FCCC06C11B25AB2000485357 /* Rank.swift */,
+				FC7FF2D41B30566500182B7E /* Stats.swift */,
+				FC7FF2D61B3063F100182B7E /* GameMode.swift */,
 				FC6F0A971ACB410600C0C78C /* Calculators */,
 				FC6F0A931ACB39DF00C0C78C /* Handlers */,
 				FC6F0A811ACB18EC00C0C78C /* Media */,
 				FC2330FE1AC4B33600F6BCF2 /* ViewControllers */,
 				FC2330DB1AC49B2F00F6BCF2 /* Main.storyboard */,
 				FC2330D51AC49B2F00F6BCF2 /* Supporting Files */,
-				FC7FF2D41B30566500182B7E /* Stats.swift */,
 			);
 			name = Kazu;
 			path = "/Users/nickjones/Documents/My Apps/Kazu/Kazu/Kazu";
@@ -371,6 +374,7 @@
 				FC2330D81AC49B2F00F6BCF2 /* AppDelegate.swift in Sources */,
 				FC6F0A951ACB39EC00C0C78C /* NodeHandler.swift in Sources */,
 				FCCC06C21B25AB2000485357 /* Rank.swift in Sources */,
+				FC7FF2D71B3063F100182B7E /* GameMode.swift in Sources */,
 				FC74D74A1B1F4B64006CD223 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
