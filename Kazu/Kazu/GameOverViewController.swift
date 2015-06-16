@@ -12,6 +12,10 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
 
     let viewHandler = ViewHandler()
     
+    @IBOutlet var highScoreDifferenceLabel: UILabel!
+    
+    @IBOutlet var longestStreakLabel: UILabel!
+    @IBOutlet var wrongAnswersLabel: UILabel!
     @IBOutlet var facebookShareButton: UIButton!
     @IBOutlet var contentView: UIView!
     @IBOutlet var scoreLabel: UILabel!

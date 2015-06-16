@@ -36,6 +36,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     var myTimer = NSTimer()
     var countDownTimer = NSTimer()
     var score: Int = 0
+    var wrongAnswers: Int = 0
     var firstNumber: Int = 0
     var secondNumber: Int = 0
     var countDown = 4
@@ -50,7 +51,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         let popoverView = gameOverViewController.view
  
         gameOverViewController.homeButton.addTarget(self, action: "goHome", forControlEvents: UIControlEvents.TouchUpInside)
-//        gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
+        gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
         operatorLabel.text = gameTypeToLoad
@@ -58,6 +59,9 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
         countdownAudioPlayer = soundHandler.createAudioPlayer("Countdown", extensionOfSound: "mp3")
         startCountdown()
+        
+        
+        println(123)
     }
     
     func goHome () {
@@ -89,6 +93,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     //Timer handling
     func startNewGame () {
         score = 0
+        wrongAnswers = 0
         scoreLabel.text = "\(score)"
         timeLeft = 10
         nextSetOfNumbers()
@@ -111,6 +116,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         nodeHandler.showNodes([incorrectLabel])
         highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
         gameOverViewController.scoreLabel.text = "\(score)"
+        gameOverViewController.wrongAnswersLabel.text = "\(wrongAnswers)"
         viewHandler.addPopoverViewWithFade(gameOverViewController.view,viewControllerToFade: self)
     }
     
@@ -126,6 +132,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
             nodeHandler.hideNodes([correctLabel])
             nodeHandler.showNodes([incorrectLabel])
             soundHandler.playAudio(failAudioPlayer)
+            wrongAnswers++
             timeLeft = timeLeft - 5
         }
         nextSetOfNumbers()

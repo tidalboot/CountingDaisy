@@ -2,12 +2,15 @@
 import Foundation
 import UIKit
 
-class GameHandler {
+public class GameHandler {
     
     var randomNumberCalculator = RandomNumberCalculator()
     var nodeHandler = NodeHandler()
     
     func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
+    public init(){}
+    
+    public func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
 
         let coinToss = Int(arc4random_uniform(10))
         if coinToss > 5 {
@@ -35,7 +38,7 @@ class GameHandler {
     }
     
     
-    func getNextSetOfNumbers (gameType: String, augendLabel: UILabel, addendLabel: UILabel, answerLabel: UILabel) -> Bool {
+    public func getNextSetOfNumbers (gameType: String, augendLabel: UILabel, addendLabel: UILabel, answerLabel: UILabel) -> Bool {
         var arrayOfRandomNumbers = []
         
         if gameType == "×" || gameType == "÷" {

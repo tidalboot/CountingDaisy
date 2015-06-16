@@ -8,9 +8,11 @@
 
 import Foundation
 
-class RandomNumberCalculator {
+public class RandomNumberCalculator {
+    
+    public init(){}
         
-    func generateRandomNumber (minumumValue: Int32, maximumValue: Int32) -> Int {
+    public func generateRandomNumber (minumumValue: Int32, maximumValue: Int32) -> Int {
         
         if maximumValue < minumumValue {return 0}
         
@@ -24,7 +26,7 @@ class RandomNumberCalculator {
         return Int(arc4random_uniform(UInt32(maximumValue - minumumValue))) + Int(minumumValue)
     }
     
-    func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int32, maximumValue: Int32) -> NSArray {
+    public func generateRandomNumbers (quantityOfNumbersToGenerate: Int, minumumValue: Int32, maximumValue: Int32) -> NSArray {
         var arrayToReturn: [Int] = []
         var i = 0
         

@@ -2,7 +2,7 @@
 
 import Foundation
 import XCTest
-@testable import Kazu
+import Kazu
 
 class randomNumberCalculatorTests: XCTestCase {
     
@@ -63,7 +63,7 @@ class randomNumberCalculatorTests: XCTestCase {
         let secondNumberInArray = arrayOfRandomNumbers[1] as! Int
         let thirdNumberInArray = arrayOfRandomNumbers[2] as! Int
         
-        if ((firstNumberInArray > secondNumberInArray) && (secondNumberInArray > thirdNumberInArray)) {
+        if ((firstNumberInArray >= secondNumberInArray) && (secondNumberInArray >= thirdNumberInArray)) {
             numbersAreSorted = true
         }
         

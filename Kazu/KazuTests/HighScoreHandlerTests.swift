@@ -8,13 +8,14 @@
 
 import Foundation
 import XCTest
-@testable import Kazu
+import Kazu
 
 class HighScoreHandlerTests: XCTestCase {
     
     var highScoreHandler: HighScoreHandler? = nil
     
     override func setUp() {
+        highScoreHandler?.resetHighScore()
         super.setUp()
         highScoreHandler = HighScoreHandler()
     }
