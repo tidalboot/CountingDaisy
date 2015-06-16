@@ -41,7 +41,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     var countDown = 4
     var timeLeft = 10.0
     var answerIsCorrect: Bool!
-    var gameTypeToLoad: String!
+    var gameTypeToLoad: GameMode!
     var gameOverViewController: GameOverViewController!
     
     override func viewDidLoad() {
@@ -53,14 +53,12 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
-        operatorLabel.text = gameTypeToLoad
+        operatorLabel.text = gameTypeToLoad.rawValue
+        
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
         failAudioPlayer = soundHandler.createAudioPlayer("Pop_Fail", extensionOfSound: "mp3")
         countdownAudioPlayer = soundHandler.createAudioPlayer("Countdown", extensionOfSound: "mp3")
         startCountdown()
-        
-        
-        println(123)
     }
     
     func goHome () {
@@ -110,12 +108,8 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     func gameOver () {
         myTimer.invalidate()
-        nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
-        nodeHandler.showNodes([incorrectLabel])
-        highScoreHandler.setHighScore(stats.score, highScoreToSet: gameTypeToLoad)
-        gameOverViewController.scoreLabel.text = "\(stats.score)"
-        gameOverViewController.wrongAnswersLabel.text = "\(stats.wrongAnswers)"
-        gameOverViewController.longestStreakLabel.text = "\(stats.highestStreak)"
+        highScoreHandler.setHighScore(stats.score, highScoreToSet: gameTypeToLoad.rawValue)
+        gameOverViewController.loadStats(stats)
         viewHandler.addPopoverViewWithFade(gameOverViewController.view,viewControllerToFade: self)
     }
     
