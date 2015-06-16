@@ -15,6 +15,7 @@ public class Stats{
     public var wrongAnswers = 0
     public var highestStreak = 0
     public var currentStreak = 0
+    public var gameMode: GameMode!
     
     public init(){}
     
@@ -34,6 +35,11 @@ public class Stats{
         wrongAnswers = 0
         highestStreak = 0
         currentStreak = 0
+    }
+    
+    public func calculateHighScoreDifference () -> Int {
+        let highScore = HighScoreHandler().retrieveHighScore(gameMode.rawValue)
+        return score - highScore
     }
     
 }

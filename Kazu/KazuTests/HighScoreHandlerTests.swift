@@ -25,15 +25,15 @@ class HighScoreHandlerTests: XCTestCase {
         highScoreHandler?.resetHighScore()
     }
     
-    func test_retrieve_high_scores_correctly_returns_an_array_of_all_scores () {
+    func test_retrieve_total_score_correctly_returns_the_sum_of_all_scores () {
         highScoreHandler?.resetHighScore()
         highScoreHandler?.setHighScore(20, highScoreToSet: "First")
         highScoreHandler?.setHighScore(30, highScoreToSet: "Second")
         highScoreHandler?.setHighScore(40, highScoreToSet: "Third")
         
-        let totalScore = highScoreHandler?.retrieveHighScores()
+        let totalScore = highScoreHandler!.retrieveTotalScore()
         
-        XCTAssertEqual(totalScore!.count, 3, "foo")
+        XCTAssertEqual(totalScore, 90, "Expected 90 but got \(totalScore)")
     }
     
     func test_set_highscore_updates_the_highscore_if_new_score_is_higher_than_stored_highscore() {

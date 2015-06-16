@@ -33,7 +33,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     var successAudioPlayer = AVAudioPlayer()
     var failAudioPlayer = AVAudioPlayer()
     var countdownAudioPlayer = AVAudioPlayer()
-    
     var myTimer = NSTimer()
     var countDownTimer = NSTimer()
     var firstNumber: Int = 0
@@ -53,6 +52,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
+        stats.gameMode = gameTypeToLoad
         operatorLabel.text = gameTypeToLoad.rawValue
         
         successAudioPlayer = soundHandler.createAudioPlayer("Pop_Success", extensionOfSound: "mp3")
@@ -62,7 +62,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     }
     
     func goHome () {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.performSegueWithIdentifier("homeSegue", sender: self)
     }
     
     func startCountdown () {

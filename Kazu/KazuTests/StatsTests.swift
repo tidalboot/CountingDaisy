@@ -94,11 +94,13 @@ class StatsTests: XCTestCase {
     
     
     //High score difference tests
-//    
-//    func test_calculate_high_score_difference_correctly_returns_the_score_difference () {
-////        var highScore = HighScoreHandler().retrieveHighScore("+")
-//        var difference = stats!.calculateHighScore("+",)
-//    }
+    func test_calculate_high_score_difference_correctly_returns_the_score_difference () {
+        HighScoreHandler().resetHighScore()
+        stats!.gameMode = GameMode.addition
+        stats!.score = 10
+        var difference = stats!.calculateHighScoreDifference()
+        XCTAssertEqual(difference, 10, "Expected 10 but got \(difference)")
+    }
     
     
     //---------------------

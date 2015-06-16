@@ -13,7 +13,6 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
     let viewHandler = ViewHandler()
     
     @IBOutlet var highScoreDifferenceLabel: UILabel!
-    
     @IBOutlet var longestStreakLabel: UILabel!
     @IBOutlet var wrongAnswersLabel: UILabel!
     @IBOutlet var facebookShareButton: UIButton!
@@ -33,5 +32,6 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
         scoreLabel.text = "\(stats.score)"
         wrongAnswersLabel.text = "\(stats.wrongAnswers)"
         longestStreakLabel.text = "\(stats.highestStreak)"
+        highScoreDifferenceLabel.text = "\(stats.calculateHighScoreDifference())"
     }
 }
