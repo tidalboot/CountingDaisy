@@ -14,15 +14,26 @@ public class Stats{
     public var highScoreDifference = 0
     public var wrongAnswers = 0
     public var highestStreak = 0
+    public var currentStreak = 0
     
     public init(){}
     
     public func correctAnswer() {
         score++
+        currentStreak++
+        highestStreak = max(highestStreak, currentStreak)
     }
     
-    public func resetScore() {
+    public func incorrectAnswer() {
+        wrongAnswers++
+        currentStreak = 0
+    }
+    
+    public func reset() {
         score = 0
+        wrongAnswers = 0
+        highestStreak = 0
+        currentStreak = 0
     }
     
 }

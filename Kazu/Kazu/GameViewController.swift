@@ -12,6 +12,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     let highScoreHandler = HighScoreHandler()
     let socialMediaHandler = SocialMediaHandler()
     let viewHandler = ViewHandler()
+    let stats = Stats()
     
     @IBOutlet var augendLabel: UILabel!
     @IBOutlet var addendLabel: UILabel!
@@ -35,8 +36,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     var myTimer = NSTimer()
     var countDownTimer = NSTimer()
-    var score: Int = 0
-    var wrongAnswers: Int = 0
     var firstNumber: Int = 0
     var secondNumber: Int = 0
     var countDown = 4
@@ -92,9 +91,8 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     //Timer handling
     func startNewGame () {
-        score = 0
-        wrongAnswers = 0
-        scoreLabel.text = "\(score)"
+        stats.reset()
+        scoreLabel.text = "\(stats.score)"
         timeLeft = 10
         nextSetOfNumbers()
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateTimerLabel"), userInfo: nil, repeats: true)
@@ -114,25 +112,26 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         myTimer.invalidate()
         nodeHandler.hideNodes([noButton, yesButton, timerLabel, correctLabel, augendLabel, addendLabel, operatorLabel, equalsLabel, summationLabel])
         nodeHandler.showNodes([incorrectLabel])
-        highScoreHandler.setHighScore(score, highScoreToSet: gameTypeToLoad)
-        gameOverViewController.scoreLabel.text = "\(score)"
-        gameOverViewController.wrongAnswersLabel.text = "\(wrongAnswers)"
+        highScoreHandler.setHighScore(stats.score, highScoreToSet: gameTypeToLoad)
+        gameOverViewController.scoreLabel.text = "\(stats.score)"
+        gameOverViewController.wrongAnswersLabel.text = "\(stats.wrongAnswers)"
+        gameOverViewController.longestStreakLabel.text = "\(stats.highestStreak)"
         viewHandler.addPopoverViewWithFade(gameOverViewController.view,viewControllerToFade: self)
     }
     
     func answer (correctAnswer: Bool) {
         if correctAnswer {
-            score++
-            scoreLabel.text = "\(score)"
+            stats.correctAnswer()
+            scoreLabel.text = "\(stats.score)"
             nodeHandler.showNodes([correctLabel])
             nodeHandler.hideNodes([incorrectLabel])
             soundHandler.playAudio(successAudioPlayer)
             timeLeft = timeLeft + 1
         } else {
+            stats.incorrectAnswer()
             nodeHandler.hideNodes([correctLabel])
             nodeHandler.showNodes([incorrectLabel])
             soundHandler.playAudio(failAudioPlayer)
-            wrongAnswers++
             timeLeft = timeLeft - 5
         }
         nextSetOfNumbers()
@@ -160,7 +159,7 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     }
     
     func facebookShare() {
-        socialMediaHandler.postToFacebook("I got \(score) on Kazu!", destinationViewController: self)
+        socialMediaHandler.postToFacebook("I got \(stats.score) on Kazu!", destinationViewController: self)
     }
 }
 

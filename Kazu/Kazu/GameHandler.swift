@@ -7,7 +7,6 @@ public class GameHandler {
     var randomNumberCalculator = RandomNumberCalculator()
     var nodeHandler = NodeHandler()
     
-    func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
     public init(){}
     
     public func generateResult (operatorToUse: String, augend: Int, addend: Int) -> (answer: Int, answerIsCorrect: Bool) {
@@ -24,7 +23,7 @@ public class GameHandler {
         }
     }
     
-    func calculate (operatorToUse: String, firstNumber: Int, secondNumber: Int) -> Int {
+    public func calculate (operatorToUse: String, firstNumber: Int, secondNumber: Int) -> Int {
         var answerToReturn: Int = 0
         
         switch operatorToUse {
