@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum GameMode {
-    case addition
-    case subtraction
-    case division
-    case multiplication
+public enum GameMode: String {
+    case addition = "+"
+    case subtraction = "−"
+    case division = "÷"
+    case multiplication = "×"
 }

@@ -18,18 +18,13 @@ class MainMenuViewController: UIViewController {
     }
     
     func updateHighScores () {
-        let highScores = highScoreHandler.retrieveHighScores()
-        let totalScore = highScores.reduce(0, combine: +)
+        let totalScore = highScoreHandler.retrieveTotalScore()
         let rank = Rank(Score: totalScore)
         
-        let additionHighScore = highScoreHandler.retrieveHighScore("+")
-        let subtractionHighScore = highScoreHandler.retrieveHighScore("−")
-        let multiplicationHighScore = highScoreHandler.retrieveHighScore("×")
-        let divisionHighScore = highScoreHandler.retrieveHighScore("÷")
-        additionHighScoreLabel.text = "\(additionHighScore)"
-        subtractionHighScoreLabel.text = "\(subtractionHighScore)"
-        divisionHighScoreLabel.text = "\(divisionHighScore)"
-        multiplicationHighScoreLabel.text = "\(multiplicationHighScore)"
+        additionHighScoreLabel.text = "\(highScoreHandler.retrieveHighScore(GameMode.addition.rawValue))"
+        subtractionHighScoreLabel.text = "\(highScoreHandler.retrieveHighScore(GameMode.subtraction.rawValue))"
+        divisionHighScoreLabel.text = "\(highScoreHandler.retrieveHighScore(GameMode.division.rawValue))"
+        multiplicationHighScoreLabel.text = "\(highScoreHandler.retrieveHighScore(GameMode.multiplication.rawValue))"
         totalScoreLabel.text = "\(totalScore)"
         rankLabel.text = "\(rank.currentRank)"
         pointsToNextRankLabel.text = "\(rank.pointsToNextRank) points to next rank"
@@ -42,8 +37,17 @@ class MainMenuViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "gameScene" {
             let gameSceneController = segue.destinationViewController as! GameViewController
-            let optionSelected = sender as! String
-            gameSceneController.gameTypeToLoad = optionSelected
+            switch sender as! String {
+            case GameMode.addition.rawValue:
+                gameSceneController.gameTypeToLoad = GameMode.addition
+            case GameMode.subtraction.rawValue:
+                gameSceneController.gameTypeToLoad = GameMode.subtraction
+            case GameMode.division.rawValue:
+                gameSceneController.gameTypeToLoad = GameMode.division
+            case GameMode.multiplication.rawValue:
+                gameSceneController.gameTypeToLoad = GameMode.multiplication
+            default:break
+            }
         }
     }
     

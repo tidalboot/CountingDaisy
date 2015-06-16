@@ -22,7 +22,6 @@ public class RandomNumberCalculator {
             let randomNumber = Int(arc4random_uniform(minimumValueAsPositive - maximumValueAsPositive) + maximumValueAsPositive)
             return randomNumber - (randomNumber * 2)
         }
-        
         return Int(arc4random_uniform(UInt32(maximumValue - minumumValue))) + Int(minumumValue)
     }
     
