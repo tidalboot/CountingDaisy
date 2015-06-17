@@ -39,6 +39,7 @@ public class Stats{
     
     public func calculateHighScoreDifference () -> Int {
         let highScore = HighScoreHandler().retrieveHighScore(gameMode.rawValue)
+        HighScoreHandler().setHighScore(score, highScoreToSet: gameMode.rawValue)
         return score - highScore
     }
     

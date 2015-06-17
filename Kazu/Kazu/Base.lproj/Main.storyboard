@@ -60,7 +60,6 @@
             <string>OriyaSangamMN</string>
             <string>OriyaSangamMN</string>
             <string>OriyaSangamMN</string>
-            <string>OriyaSangamMN</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -962,14 +961,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vid-7j-6r8">
-                                <rect key="frame" x="56" y="28" width="163.5" height="39.5"/>
+                                <rect key="frame" x="56" y="40" width="163.5" height="39.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="33"/>
                                 <color key="textColor" red="0.98431372549019602" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-nk-cnW">
-                                <rect key="frame" x="37" y="152" width="200" height="40"/>
+                                <rect key="frame" x="37" y="164" width="200" height="40"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GZQ-uL-Jwo"/>
@@ -980,7 +979,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your final score was" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xym-KY-p4n">
-                                <rect key="frame" x="37" y="119" width="200" height="25"/>
+                                <rect key="frame" x="37" y="131" width="200" height="25"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="sLe-Oq-Epu"/>
@@ -1018,14 +1017,14 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(How shameful)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H10-ui-Qoo">
-                                <rect key="frame" x="94" y="65" width="87" height="15.5"/>
+                                <rect key="frame" x="94" y="77" width="87" height="15.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
                                 <color key="textColor" red="0.81960784313725488" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.81960784313725488" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4JU-2F-fDR">
-                                <rect key="frame" x="21" y="103" width="233" height="2"/>
+                                <rect key="frame" x="21" y="115" width="233" height="2"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1033,7 +1032,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00k-YP-9V1">
-                                <rect key="frame" x="21" y="277" width="233" height="2"/>
+                                <rect key="frame" x="21" y="271" width="233" height="2"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1057,27 +1056,15 @@
                                     <constraint firstAttribute="height" constant="1" id="HpN-A6-QH0"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-LE-PcD">
-                                <rect key="frame" x="113" y="217" width="49" height="35"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="19"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookShare:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5wy-PG-6KW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-LN-JkX">
-                                <rect key="frame" x="104" y="282" width="64.5" height="19"/>
+                                <rect key="frame" x="105" y="281" width="64.5" height="19"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong answers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFt-sM-2uh">
-                                <rect key="frame" x="101" y="309" width="73.5" height="13.5"/>
+                                <rect key="frame" x="101" y="308" width="73.5" height="13.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13.5" id="ZuS-9G-nli"/>
@@ -1087,7 +1074,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest streak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYF-UH-5cN">
-                                <rect key="frame" x="189" y="309" width="72" height="13.5"/>
+                                <rect key="frame" x="186" y="308" width="72" height="13.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13.5" id="u19-rO-d4j"/>
@@ -1097,7 +1084,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+/- High score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOu-jm-Hzd">
-                                <rect key="frame" x="21.5" y="309" width="68" height="13.5"/>
+                                <rect key="frame" x="21" y="308" width="68" height="13.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13.5" id="TZh-nR-TdC"/>
@@ -1107,21 +1094,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s31-iQ-T96">
-                                <rect key="frame" x="49.5" y="326" width="11.5" height="24"/>
+                                <rect key="frame" x="49" y="325" width="11.5" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-uZ-5HT">
-                                <rect key="frame" x="131" y="326" width="11.5" height="24"/>
+                                <rect key="frame" x="132" y="325" width="11.5" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-NV-BeI">
-                                <rect key="frame" x="219" y="326" width="11.5" height="24"/>
+                                <rect key="frame" x="216" y="325" width="11.5" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1138,10 +1125,10 @@
                             <constraint firstItem="ZFt-sM-2uh" firstAttribute="top" secondItem="Acw-LN-JkX" secondAttribute="bottom" constant="8" id="4aj-dr-fBv"/>
                             <constraint firstAttribute="width" secondItem="cMU-Sk-i8h" secondAttribute="width" id="7FL-7t-Z9C"/>
                             <constraint firstAttribute="centerX" secondItem="H10-ui-Qoo" secondAttribute="centerX" id="8Xg-wv-7Cy"/>
-                            <constraint firstItem="Acw-LN-JkX" firstAttribute="top" secondItem="00k-YP-9V1" secondAttribute="bottom" constant="3" id="B0D-U0-2EO"/>
+                            <constraint firstItem="Acw-LN-JkX" firstAttribute="top" secondItem="00k-YP-9V1" secondAttribute="bottom" constant="8" id="B0D-U0-2EO"/>
                             <constraint firstAttribute="centerX" secondItem="wCB-nk-cnW" secondAttribute="centerX" id="BBp-pG-0NJ"/>
                             <constraint firstItem="Xym-KY-p4n" firstAttribute="top" secondItem="4JU-2F-fDR" secondAttribute="bottom" constant="14" id="BXR-pB-hkd"/>
-                            <constraint firstItem="TYF-UH-5cN" firstAttribute="leading" secondItem="ZFt-sM-2uh" secondAttribute="trailing" constant="14.5" id="BYj-EK-s9Y"/>
+                            <constraint firstItem="TYF-UH-5cN" firstAttribute="leading" secondItem="ZFt-sM-2uh" secondAttribute="trailing" constant="12" id="BYj-EK-s9Y"/>
                             <constraint firstItem="Yfy-NV-BeI" firstAttribute="top" secondItem="TYF-UH-5cN" secondAttribute="bottom" constant="3.5" id="CEb-J9-2Pv"/>
                             <constraint firstItem="TYF-UH-5cN" firstAttribute="top" secondItem="Acw-LN-JkX" secondAttribute="bottom" constant="8" id="DQ1-WI-EcF"/>
                             <constraint firstItem="Yfy-NV-BeI" firstAttribute="centerX" secondItem="TYF-UH-5cN" secondAttribute="centerX" id="F0I-w6-T9S"/>
@@ -1157,27 +1144,24 @@
                             <constraint firstItem="00k-YP-9V1" firstAttribute="leading" secondItem="1wO-iO-UH2" secondAttribute="leadingMargin" constant="5" id="Va9-NH-Ird"/>
                             <constraint firstAttribute="centerX" secondItem="ZFt-sM-2uh" secondAttribute="centerX" id="YQF-tk-tdJ"/>
                             <constraint firstItem="oOH-he-ebq" firstAttribute="leading" secondItem="8he-ZN-35f" secondAttribute="trailing" constant="51" id="Yjp-Z3-FR3"/>
-                            <constraint firstAttribute="centerX" secondItem="b4v-LE-PcD" secondAttribute="centerX" constant="-0.5" id="YkC-js-khx"/>
                             <constraint firstItem="wzM-rn-maj" firstAttribute="top" secondItem="cMU-Sk-i8h" secondAttribute="bottom" constant="13" id="Yzn-YW-fLN"/>
                             <constraint firstAttribute="centerX" secondItem="8he-ZN-35f" secondAttribute="centerX" id="flo-1P-hgU"/>
-                            <constraint firstAttribute="centerX" secondItem="Acw-LN-JkX" secondAttribute="centerX" constant="0.5" id="gYM-C3-YsW"/>
+                            <constraint firstAttribute="centerX" secondItem="Acw-LN-JkX" secondAttribute="centerX" id="gYM-C3-YsW"/>
                             <constraint firstItem="4y3-Ub-BZX" firstAttribute="top" secondItem="8he-ZN-35f" secondAttribute="bottom" id="hTq-hi-QxC"/>
                             <constraint firstItem="4JU-2F-fDR" firstAttribute="trailing" secondItem="1wO-iO-UH2" secondAttribute="trailingMargin" constant="-5" id="j7H-Il-Bqb"/>
                             <constraint firstItem="4JU-2F-fDR" firstAttribute="leading" secondItem="1wO-iO-UH2" secondAttribute="leadingMargin" constant="5" id="mYo-bk-lIZ"/>
                             <constraint firstItem="s31-iQ-T96" firstAttribute="top" secondItem="lOu-jm-Hzd" secondAttribute="bottom" constant="3.5" id="mlg-3n-ibo"/>
-                            <constraint firstItem="aGe-uZ-5HT" firstAttribute="centerX" secondItem="ZFt-sM-2uh" secondAttribute="centerX" constant="-0.75" id="oNL-CI-Wb8"/>
-                            <constraint firstItem="00k-YP-9V1" firstAttribute="top" secondItem="wCB-nk-cnW" secondAttribute="bottom" constant="85" id="owY-Vn-bul"/>
+                            <constraint firstItem="aGe-uZ-5HT" firstAttribute="centerX" secondItem="ZFt-sM-2uh" secondAttribute="centerX" id="oNL-CI-Wb8"/>
+                            <constraint firstItem="00k-YP-9V1" firstAttribute="top" secondItem="wCB-nk-cnW" secondAttribute="bottom" constant="67" id="owY-Vn-bul"/>
                             <constraint firstItem="00k-YP-9V1" firstAttribute="trailing" secondItem="1wO-iO-UH2" secondAttribute="trailingMargin" constant="-5" id="sJT-95-U6r"/>
                             <constraint firstAttribute="centerX" secondItem="vid-7j-6r8" secondAttribute="centerX" id="vug-rD-fYB"/>
-                            <constraint firstItem="vid-7j-6r8" firstAttribute="top" secondItem="Xbv-Lp-66S" secondAttribute="bottom" constant="8" id="wKp-Mc-9Z8"/>
-                            <constraint firstItem="b4v-LE-PcD" firstAttribute="top" secondItem="wCB-nk-cnW" secondAttribute="bottom" constant="25" id="zEm-XI-f6G"/>
+                            <constraint firstItem="vid-7j-6r8" firstAttribute="top" secondItem="Xbv-Lp-66S" secondAttribute="bottom" constant="20" id="wKp-Mc-9Z8"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="275" height="425"/>
                     <connections>
                         <outlet property="contentView" destination="1wO-iO-UH2" id="lm6-Kg-4je"/>
-                        <outlet property="facebookShareButton" destination="b4v-LE-PcD" id="2tZ-59-fL6"/>
                         <outlet property="highScoreDifferenceLabel" destination="s31-iQ-T96" id="D5c-8T-CDg"/>
                         <outlet property="homeButton" destination="wzM-rn-maj" id="2xf-c6-MwZ"/>
                         <outlet property="longestStreakLabel" destination="Yfy-NV-BeI" id="IBW-1A-oOH"/>

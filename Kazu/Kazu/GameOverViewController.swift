@@ -32,6 +32,11 @@ class GameOverViewController: UIViewController, UIGestureRecognizerDelegate {
         scoreLabel.text = "\(stats.score)"
         wrongAnswersLabel.text = "\(stats.wrongAnswers)"
         longestStreakLabel.text = "\(stats.highestStreak)"
-        highScoreDifferenceLabel.text = "\(stats.calculateHighScoreDifference())"
+        var highScoreDifference = stats.calculateHighScoreDifference()
+        if  highScoreDifference > 0 {
+            highScoreDifferenceLabel.text = "+\(highScoreDifference)"
+            return
+        }
+        highScoreDifferenceLabel.text = "\(highScoreDifference)"
     }
 }

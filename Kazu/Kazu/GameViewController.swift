@@ -10,7 +10,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     let soundHandler = SoundHandler()
     let nodeHandler = NodeHandler()
     let highScoreHandler = HighScoreHandler()
-    let socialMediaHandler = SocialMediaHandler()
     let viewHandler = ViewHandler()
     let stats = Stats()
     
@@ -50,7 +49,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
  
         gameOverViewController.homeButton.addTarget(self, action: "goHome", forControlEvents: UIControlEvents.TouchUpInside)
         gameOverViewController.retryButton.addTarget(self, action: "clickedRetry", forControlEvents: UIControlEvents.TouchUpInside)
-        gameOverViewController.facebookShareButton.addTarget(self, action: "facebookShare", forControlEvents: UIControlEvents.TouchUpInside)
 
         stats.gameMode = gameTypeToLoad
         operatorLabel.text = gameTypeToLoad.rawValue
@@ -108,7 +106,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
     
     func gameOver () {
         myTimer.invalidate()
-        highScoreHandler.setHighScore(stats.score, highScoreToSet: gameTypeToLoad.rawValue)
         gameOverViewController.loadStats(stats)
         viewHandler.addPopoverViewWithFade(gameOverViewController.view,viewControllerToFade: self)
     }
@@ -150,10 +147,6 @@ class GameViewController: UIViewController, UIPopoverControllerDelegate {
         nodeHandler.hideNodes([correctLabel, incorrectLabel])
         viewHandler.removeViews(self)
         startCountdown()
-    }
-    
-    func facebookShare() {
-        socialMediaHandler.postToFacebook("I got \(stats.score) on Kazu!", destinationViewController: self)
     }
 }
 
